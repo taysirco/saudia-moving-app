@@ -41,7 +41,16 @@ const nextConfig = {
           { key: 'Access-Control-Allow-Methods', value: 'GET,DELETE,PATCH,POST,PUT' },
           { key: 'Access-Control-Allow-Headers', value: 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version' },
         ]
-      }
+      },
+      {
+        source: '/google7Q9FsYxtglZcnse9V8wp5qw5qaGPGst7-PJc-gktbow.html',
+        headers: [
+          {
+            key: 'Content-Type',
+            value: 'text/html',
+          },
+        ],
+      },
     ]
   }
 }
