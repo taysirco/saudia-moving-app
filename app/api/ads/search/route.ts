@@ -2,11 +2,13 @@ import { NextResponse } from 'next/server'
 import { Advertisement } from '@/lib/models/Advertisement'
 import { connectToDatabase } from '@/lib/mongodb'
 
+export const dynamic = 'force-dynamic'
+
 export async function GET(request: Request) {
   try {
-    const { searchParams } = new URL(request.url)
-    const city = searchParams.get('city')
-    const service = searchParams.get('service')
+    const url = new URL(request.url)
+    const city = url.searchParams.get('city')
+    const service = url.searchParams.get('service')
 
     if (!city || !service) {
       return NextResponse.json({ error: 'City and service are required' }, { status: 400 })
