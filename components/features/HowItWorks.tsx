@@ -2,58 +2,42 @@
 
 import { motion } from 'framer-motion'
 
-export default function HowItWorks() {
-  const steps = [
-    {
-      number: "1",
-      title: "اختر الخدمة",
-      description: "حدد نوع الخدمة التي تحتاجها من قائمة خدماتنا المتنوعة"
-    },
-    {
-      number: "2",
-      title: "اختر المدينة",
-      description: "اختر مدينتك من قائمة المدن التي نخدمها في المملكة"
-    },
-    {
-      number: "3",
-      title: "احصل على عرض سعر",
-      description: "سيتواصل معك فريقنا لتقديم عرض سعر مناسب لاحتياجاتك"
-    },
-    {
-      number: "4",
-      title: "استمتع بالخدمة",
-      description: "نقوم بتنفيذ الخدمة باحترافية وضمان سلامة ممتلكاتك"
-    }
-  ]
-
+const HowItWorks = () => {
   return (
-    <section className="py-16">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold mb-4">كيف نعمل؟</h2>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            خطوات بسيطة للحصول على خدمة نقل عفش احترافية
-          </p>
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="text-center">
+        <div className="bg-blue-500 rounded-full w-12 h-12 flex items-center justify-center text-white mx-auto mb-4">
+          1
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {steps.map((step, index) => (
-            <motion.div
-              key={step.number}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="text-center"
-            >
-              <div className="w-12 h-12 bg-primary text-white rounded-full flex items-center justify-center text-xl font-bold mx-auto mb-4">
-                {step.number}
-              </div>
-              <h3 className="text-xl font-bold mb-2">{step.title}</h3>
-              <p className="text-gray-600">{step.description}</p>
-            </motion.div>
-          ))}
-        </div>
+        <h3 className="font-bold text-xl mb-2">اختر الخدمة</h3>
+        <p className="text-gray-600">حدد نوع الخدمة التي تحتاجها</p>
       </div>
-    </section>
-  )
-} 
+
+      <div className="text-center">
+        <div className="bg-blue-500 rounded-full w-12 h-12 flex items-center justify-center text-white mx-auto mb-4">
+          2
+        </div>
+        <h3 className="font-bold text-xl mb-2">اختر المدينة</h3>
+        <p className="text-gray-600">حدد موقعك من قائمة المدن المتوفرة في المملكة</p>
+      </div>
+
+      <div className="text-center">
+        <div className="bg-blue-500 rounded-full w-12 h-12 flex items-center justify-center text-white mx-auto mb-4">
+          3
+        </div>
+        <h3 className="font-bold text-xl mb-2">احصل على عرض سعر</h3>
+        <p className="text-gray-600">سنتواصل معك فوراً بعرض سعر مناسب لمتطلباتك</p>
+      </div>
+
+      <div className="text-center">
+        <div className="bg-blue-500 rounded-full w-12 h-12 flex items-center justify-center text-white mx-auto mb-4">
+          4
+        </div>
+        <h3 className="font-bold text-xl mb-2">استمتع بالخدمة</h3>
+        <p className="text-gray-600">نقوم بتنفيذ الخدمة بكل دقة وضمان سلامة ممتلكاتك</p>
+      </div>
+    </div>
+  );
+};
+
+export default HowItWorks; 
