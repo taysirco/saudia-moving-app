@@ -3,12 +3,11 @@ const nextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
   env: {
-    NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || 'https://saudiamoving.com'
+    NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.saudimoving.com'
   },
   experimental: {
-    // تعطيل webpack cache مؤقتاً لحل المشكلة
-    webpackBuildWorker: false,
-    serverActions: true,
+    // Remove serverActions as it's now enabled by default
+    webpackBuildWorker: true
   },
   // Add these settings to help with build
   typescript: {
