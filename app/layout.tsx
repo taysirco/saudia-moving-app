@@ -9,20 +9,15 @@ import { Toaster } from 'react-hot-toast'
 const font = Noto_Kufi_Arabic({ subsets: ['arabic'] })
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://saudiamoving.com'),
+  metadataBase: new URL('https://your-domain.com'),
   title: {
-    default: 'نقل عفش - خدمات نقل الأثاث في المملكة العربية السعودية',
-    template: '%s | نقل عفش'
+    template: '%s | سعودي موفينج',
+    default: 'سعودي موفينج - خدمات نقل العفش في السعودية'
   },
-  description: 'خدمات نقل العفش والأثاث في جميع مدن المملكة العربية السعودية مع أفضل الشركات المرخصة',
-  openGraph: {
-    type: 'website',
-    locale: 'ar_SA',
-    siteName: 'نقل عفش'
-  },
+  description: 'خدمات نقل العفش في جميع مدن المملكة العربية السعودية',
   verification: {
-    google: '7Q9FsYxtglZcnse9V8wp5qw5qaGPGst7-PJc-gktbow',
-  },
+    google: '7Q9FsYxtglZcnse9V8wp5qw5qaGPGst7-PJc-gktbow'
+  }
 }
 
 export default function RootLayout({
