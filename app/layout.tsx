@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'ar_SA',
     siteName: 'نقل عفش'
-  }
+  },
 }
 
 export default function RootLayout({
