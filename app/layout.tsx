@@ -20,6 +20,9 @@ export const metadata: Metadata = {
     locale: 'ar_SA',
     siteName: 'نقل عفش'
   },
+  verification: {
+    google: '7Q9FsYxtglZcnse9V8wp5qw5qaGPGst7-PJc-gktbow',
+  },
 }
 
 export default function RootLayout({
