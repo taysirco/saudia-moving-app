@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next'
-import { services } from '@/lib/constants'
+import { services } from '../lib/constants'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_DOMAIN || 'https://www.saudiamoving.com'
