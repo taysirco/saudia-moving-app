@@ -31,6 +31,14 @@ const nextConfig = {
     return config
   },
   swcMinify: false,
+  async rewrites() {
+    return [
+      {
+        source: '/google7Q9FsYxtglZcnse9V8wp5qw5qaGPGst7-PJc-gktbow.html',
+        destination: '/google7Q9FsYxtglZcnse9V8wp5qw5qaGPGst7-PJc-gktbow.html',
+      },
+    ]
+  },
   async headers() {
     return [
       {
