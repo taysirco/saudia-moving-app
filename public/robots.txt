@@ -1,4 +1,11 @@
+# https://www.saudiamoving.com/robots.txt
 User-agent: *
 Allow: /
 
-Sitemap: https://saudiamoving.com/sitemap.xml 
+# Sitemaps
+Sitemap: https://your-domain.com/sitemap.xml
+
+# Directories
+Disallow: /api/
+Disallow: /_next/
+Disallow: /admin/ 

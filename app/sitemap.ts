@@ -1,39 +1,54 @@
-import { cities, keywords } from '@/lib/utils/data'
-import { arabicToSlug } from '@/lib/utils/text'
+import { MetadataRoute } from 'next'
+import { cities } from '@/lib/constants'
 
-export default async function sitemap() {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://yourwebsite.com'
-
-  // الصفحات الثابتة
+export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://your-domain.com'
+  
+  // Static pages
   const staticPages = [
     '',
-    '/services',
-    '/contact',
     '/about',
-    '/privacy-policy',
-    '/terms'
+    '/contact',
+    '/privacy',
+    '/terms',
+    '/services',
+    '/calculator',
+    '/add-company'
   ].map(route => ({
     url: `${baseUrl}${route}`,
-    lastModified: new Date().toISOString(),
-    changeFrequency: 'daily',
+    lastModified: new Date(),
+    changeFrequency: 'daily' as const,
     priority: route === '' ? 1 : 0.8
   }))
 
-  // صفحات المدن
+  // City pages
   const cityPages = cities.map(city => ({
-    url: `${baseUrl}/${arabicToSlug(city)}`,
-    lastModified: new Date().toISOString(),
-    changeFrequency: 'weekly',
-    priority: 0.8
+    url: `${baseUrl}/${city.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'daily' as const,
+    priority: 0.9
   }))
 
-  // صفحات الخدمات في كل مدينة
-  const servicePages = cities.flatMap(city => 
-    keywords.map(service => ({
-      url: `${baseUrl}/${arabicToSlug(city)}/${arabicToSlug(service)}`,
-      lastModified: new Date().toISOString(),
-      changeFrequency: 'daily',
-      priority: 0.8
+  // Service pages for each city
+  const services = [
+    'moving-furniture',
+    'moving-company',
+    'best-moving-company',
+    'furniture-moving',
+    'cheap-moving-company',
+    'moving-companies',
+    'moving-prices',
+    'moving-with-installation',
+    'moving-with-packaging',
+    'moving-trucks'
+  ]
+
+  const servicePages = cities.flatMap(city =>
+    services.map(service => ({
+      url: `${baseUrl}/${city.slug}/${service}`,
+      lastModified: new Date(),
+      changeFrequency: 'daily' as const,
+      priority: 0.7
     }))
   )
 

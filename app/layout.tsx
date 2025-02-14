@@ -29,6 +29,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="ar" dir="rtl">
+      <head>
+        <meta 
+          name="google-site-verification" 
+          content="7Q9FsYxtglZcnse9V8wp5qw5qaGPGst7-PJc-gktbow" 
+        />
+      </head>
       <body className={font.className}>
         <RootProvider>
           {children}

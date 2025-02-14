@@ -11,15 +11,23 @@ interface Props {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const cityName = getArabicText(params.city)
-  const serviceName = getArabicText(params.service)
+  const { city, service } = params
+  const cityName = getArabicText(city)
+  const serviceName = getArabicText(service)
 
   return {
-    title: `أفضل شركات ${serviceName} في ${cityName} - مقارنة أسعار وتقييمات`,
-    description: `دليل شامل لأفضل شركات ${serviceName} في ${cityName} مع مقارنة أسعار وتقييمات حقيقية من العملاء ✓ خدمة 24 ساعة ✓ ضمان ✓ أسعار تنافسية`,
+    title: `${serviceName} ${cityName} - سعودي موفينج`,
+    description: `خدمة ${serviceName} في ${cityName} - نقل عفش آمن وسريع مع ضمان سلامة الأثاث`,
+    alternates: {
+      canonical: `https://your-domain.com/${city}/${service}`
+    },
     openGraph: {
-      title: `شركات ${serviceName} في ${cityName} - مقارنة الأسعار والخدمات`,
-      description: `اختر أفضل شركة ${serviceName} في ${cityName} من خلال مقارنة شاملة للأسعار والخدمات مع تقييمات حقيقية من العملاء السابقين`
+      title: `${serviceName} ${cityName}`,
+      description: `خدمة ${serviceName} في ${cityName} - نقل عفش آمن وسريع مع ضمان سلامة الأثاث`,
+      url: `https://your-domain.com/${city}/${service}`,
+      siteName: 'سعودي موفينج',
+      locale: 'ar_SA',
+      type: 'website'
     }
   }
 }

@@ -1,6 +1,6 @@
-import { writeFileSync } from 'fs'
-import { globby } from 'globby'
-import prettier from 'prettier'
+const { writeFileSync } = require('fs')
+const { globby } = require('globby')
+const prettier = require('prettier')
 
 const DOMAIN = 'https://www.saudiamoving.com'
 
@@ -8,7 +8,6 @@ async function generateSitemap() {
   try {
     const prettierConfig = await prettier.resolveConfig('./.prettierrc')
     
-    // Get all pages except API routes, _* files, and admin pages
     const pages = await globby([
       'app/**/page.tsx',
       '!app/api/**/*',
@@ -16,7 +15,6 @@ async function generateSitemap() {
       '!app/_*/**/*',
     ])
 
-    // Add static service URLs
     const services = [
       '/services/filipino-movers',
       '/services/pickup-moving',
@@ -29,7 +27,6 @@ async function generateSitemap() {
     const sitemap = `
       <?xml version="1.0" encoding="UTF-8"?>
       <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-        <!-- Pages -->
         ${pages
           .map((page) => {
             const path = page
@@ -49,7 +46,6 @@ async function generateSitemap() {
           })
           .join('')}
           
-        <!-- Services -->
         ${services
           .map(
             (service) => `
@@ -77,7 +73,4 @@ async function generateSitemap() {
   }
 }
 
-// IIFE to handle async/await
-;(async () => {
-  await generateSitemap()
-})() 
+generateSitemap() 
