@@ -73,12 +73,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { slug: 'tabuk', name: 'تبوك' },
     { slug: 'hail', name: 'حائل' },
     { slug: 'arar', name: 'عرعر' },
+    { slug: 'sakaka', name: 'سكاكا' },
+    { slug: 'rafha', name: 'رفحاء' },
+    { slug: 'turaif', name: 'طريف' },
     
     // المنطقة الجنوبية
     { slug: 'khamis-mushait', name: 'خميس مشيط' },
     { slug: 'abha', name: 'أبها' },
     { slug: 'najran', name: 'نجران' },
-    { slug: 'jizan', name: 'جازان' }
+    { slug: 'jizan', name: 'جازان' },
+    { slug: 'al-baha', name: 'الباحة' },
+    { slug: 'bisha', name: 'بيشة' },
+    { slug: 'sabya', name: 'صبيا' },
+    { slug: 'sharorah', name: 'شرورة' }
   ]
 
   // الخدمات الرئيسية
@@ -111,43 +118,56 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // الخدمات المتوفرة في كل مدينة
   const cityServices = [
-    // خدمات نقل العفش
-    'moving-furniture',
-    'furniture-moving',
-    'furniture-transport',
-    'moving-company',
-    'furniture-moving-company',
-    'best-moving-company',
-    'cheap-moving-company',
-    'professional-moving-company',
-    'licensed-moving-company',
+    // خدمات نقل العفش الأساسية
+    'moving-furniture',                    // نقل عفش
+    'furniture-moving',                    // نقل اثاث
+    'furniture-transport',                 // نقل العفش والاثاث
+    'moving-company',                      // شركة نقل
+    'furniture-moving-company',            // شركة نقل اثاث
+    'best-moving-company',                 // افضل شركة نقل
+    'cheap-moving-company',                // شركة نقل رخيصة
+    'professional-moving-company',         // شركة نقل محترفة
+    'licensed-moving-company',             // شركة نقل مرخصة
     
-    // خدمات متخصصة
-    'house-moving',
-    'villa-moving',
-    'apartment-moving',
-    'office-moving',
-    'shop-moving',
-    'warehouse-moving',
+    // خدمات نقل متخصصة
+    'house-moving',                        // نقل منازل
+    'villa-moving',                        // نقل فلل
+    'apartment-moving',                    // نقل شقق
+    'office-moving',                       // نقل مكاتب
+    'shop-moving',                         // نقل محلات
+    'warehouse-moving',                    // نقل مستودعات
+    'company-moving',                      // نقل شركات
+    'hotel-moving',                        // نقل فنادق
     
     // خدمات إضافية
-    'moving-with-packaging',
-    'moving-with-assembly',
-    'moving-with-disassembly',
-    'moving-with-storage',
-    'moving-with-insurance',
-    'moving-with-guarantee',
+    'moving-with-packaging',               // نقل مع التغليف
+    'moving-with-assembly',                // نقل مع التركيب
+    'moving-with-disassembly',            // نقل مع الفك
+    'moving-with-storage',                 // نقل مع التخزين
+    'moving-with-insurance',               // نقل مع التأمين
+    'moving-with-guarantee',               // نقل مع الضمان
+    'moving-with-cleaning',                // نقل مع التنظيف
     
     // خدمات حسب نوع الأثاث
-    'heavy-furniture-moving',
-    'delicate-furniture-moving',
-    'antiques-moving',
-    'electronics-moving',
+    'heavy-furniture-moving',              // نقل الأثاث الثقيل
+    'delicate-furniture-moving',           // نقل الأثاث الحساس
+    'antiques-moving',                     // نقل التحف
+    'electronics-moving',                  // نقل الأجهزة الإلكترونية
+    'piano-moving',                        // نقل البيانو
+    'gym-equipment-moving',                // نقل معدات الجيم
+    'medical-equipment-moving',            // نقل المعدات الطبية
     
     // خدمات حسب المسافة
-    'local-moving',
-    'intercity-moving',
-    'long-distance-moving'
+    'local-moving',                        // نقل داخل المدينة
+    'intercity-moving',                    // نقل بين المدن
+    'long-distance-moving',                // نقل لمسافات طويلة
+    'international-moving',                // نقل دولي
+    
+    // خدمات حسب الوقت
+    'same-day-moving',                     // نقل في نفس اليوم
+    'emergency-moving',                    // نقل طارئ
+    'weekend-moving',                      // نقل في العطلة
+    'night-moving'                         // نقل ليلي
   ]
 
   // صفحات المدن
