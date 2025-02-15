@@ -27,8 +27,8 @@ export function CityServiceSchema({ city, service }: { city: string, service: st
   )
 }
 
-export function WebsiteSchema() {
-  return {
+export const WebsiteSchema = () => {
+  const schema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "name": "سعودي موفينج",
@@ -39,26 +39,32 @@ export function WebsiteSchema() {
       "query-input": "required name=search_term_string"
     }
   }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
 }
 
-export function OrganizationSchema() {
-  return {
+export const OrganizationSchema = () => {
+  const schema = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "سعودي موفينج",
     "url": "https://saudimoving.com",
     "logo": "https://saudimoving.com/logo.png",
     "sameAs": [
-      "https://facebook.com/saudimoving",
-      "https://twitter.com/saudimoving",
-      "https://instagram.com/saudimoving"
-    ],
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+966-XX-XXXXXXX",
-      "contactType": "customer service",
-      "areaServed": "SA",
-      "availableLanguage": ["Arabic", "English"]
-    }
+      "https://www.facebook.com/saudimoving",
+      "https://twitter.com/saudimoving"
+    ]
   }
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  )
 } 
