@@ -2,9 +2,9 @@ import { MetadataRoute } from 'next'
 import { services } from '../lib/constants'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.saudimoving.com'
+  const baseUrl = 'https://saudimoving.com'
 
-  // الصفحات الثابتة
+  // الصفحات الثابتة الموجودة فعلياً
   const staticPages = [
     {
       url: baseUrl,
@@ -50,57 +50,46 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
-  // صفحات الخدمات
+  // صفحات الخدمات الرئيسية
   const servicePages = services.map((service) => ({
-    url: `${baseUrl}${service.path}`,
+    url: `${baseUrl}/services${service.path}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.9,
   }))
 
-  // المدن الرئيسية
-  const cities = [
+  // المدن الرئيسية مع الخدمات المتوفرة فقط
+  const mainCities = [
     'الرياض',
     'جدة',
-    'مكة',
-    'المدينة',
-    'الدمام',
-    'الخبر',
-    'تبوك',
-    'خميس-مشيط',
-    'القصيم'
+    'الدمام'
   ]
 
-  // صفحات المدن
-  const cityPages = cities.map(city => ({
-    url: `${baseUrl}/${city}`,
+  // صفحات المدن الرئيسية فقط
+  const cityPages = mainCities.map(city => ({
+    url: `${baseUrl}/city/${city}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.8,
   }))
 
-  // صفحات الخدمات في كل مدينة
-  const cityServicePages = cities.flatMap(city =>
-    [
-      'نقل-عفش',
-      'شركة-نقل-عفش',
-      'افضل-شركة-نقل-عفش',
-      'نقل-اثاث',
-      'شركة-نقل-اثاث',
-      'دينا-نقل-عفش',
-      'ونش-رفع-اثاث',
-      'نقل-عفش-رخيص',
-      'نقل-عفش-مع-التركيب',
-      'نقل-عفش-مع-الفك-والتركيب'
-    ].map(service => ({
-      url: `${baseUrl}/${city}/${service}`,
+  // الخدمات المتوفرة فعلياً
+  const availableServices = [
+    'نقل-عفش',
+    'شركة-نقل-عفش',
+    'نقل-اثاث'
+  ]
+
+  // صفحات الخدمات في المدن المتوفرة فقط
+  const cityServicePages = mainCities.flatMap(city =>
+    availableServices.map(service => ({
+      url: `${baseUrl}/city/${city}/${service}`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.7,
     }))
   )
 
-  // دمج جميع الروابط
   return [
     ...staticPages,
     ...servicePages,
