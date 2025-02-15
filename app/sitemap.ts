@@ -3,141 +3,73 @@ import { MetadataRoute } from 'next'
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://saudimoving.com'
 
-  // الخدمات القياسية المتوفرة في كل المدن
-  const standardServices = [
-    // خدمات نقل الأثاث الأساسية
-    'moving-furniture',
-    'furniture-transport',
-    'furniture-moving',
-    'home-moving',
-    'house-moving',
-    'apartment-moving',
-    'villa-moving',
-    'office-moving',
-
-    // خدمات الشركات
-    'moving-company',
-    'furniture-moving-company',
-    'best-moving-company',
-    'cheap-moving-company',
-    'professional-moving-company',
-    'licensed-moving-company',
-
-    // خدمات متخصصة
-    'moving-with-packaging',
-    'moving-with-assembly',
-    'moving-with-disassembly',
-    'moving-with-storage',
-    'moving-with-insurance',
-    
-    // خدمات النقل الخاصة
-    'filipino-movers',
-    'trained-movers',
-    'professional-movers',
-    'expert-movers',
-    
-    // خدمات المركبات
-    'pickup-moving',
-    'motorcycle-moving',
-    'truck-moving',
-    'crane-lifting',
-    
-    // خدمات التخزين
-    'furniture-storage',
-    'temporary-storage',
-    'long-term-storage',
-    'secure-storage',
-    
-    // خدمات إضافية
-    'packaging-service',
-    'assembly-service',
-    'disassembly-service',
-    'cleaning-service'
+  // الخدمات الرئيسية في صفحة /services
+  const mainServices = [
+    {
+      path: '/filipino-movers',
+      name: 'نقل عفش عمالة فلبينية'
+    },
+    {
+      path: '/pickup-moving',
+      name: 'دينا نقل عفش'
+    },
+    {
+      path: '/motorcycle-moving',
+      name: 'دباب نقل عفش'
+    },
+    {
+      path: '/trained-movers',
+      name: 'عمالة مدربة لنقل العفش'
+    },
+    {
+      path: '/crane-lifting',
+      name: 'ونش رفع عفش'
+    },
+    {
+      path: '/furniture-storage',
+      name: 'تخزين عفش'
+    }
   ]
 
-  // المدن حسب المناطق
-  const cities = {
-    // المنطقة الوسطى
-    central: [
-      'riyadh',          // الرياض
-      'buraidah',        // بريدة
-      'unaizah',         // عنيزة
-      'al-kharj',        // الخرج
-      'majmaah',         // المجمعة
-      'zulfi',           // الزلفي
-      'dawadmi',         // الدوادمي
-      'afif',            // عفيف
-      'al-ghat',         // الغاط
-      'shaqra',          // شقراء
-    ],
-    
-    // المنطقة الغربية
-    western: [
-      'jeddah',          // جدة
-      'makkah',          // مكة
-      'madinah',         // المدينة
-      'taif',            // الطائف
-      'yanbu',           // ينبع
-      'rabigh',          // رابغ
-      'badr',            // بدر
-      'thuwal',          // ثول
-    ],
-    
-    // المنطقة الشرقية
-    eastern: [
-      'dammam',          // الدمام
-      'khobar',          // الخبر
-      'dhahran',         // الظهران
-      'qatif',           // القطيف
-      'jubail',          // الجبيل
-      'hafar-al-batin',  // حفر الباطن
-      'al-ahsa',         // الأحساء
-      'khafji',          // الخفجي
-    ],
-    
-    // المنطقة الشمالية
-    northern: [
-      'tabuk',           // تبوك
-      'arar',            // عرعر
-      'sakaka',          // سكاكا
-      'hail',            // حائل
-      'rafha',           // رفحاء
-      'turaif',          // طريف
-    ],
-    
-    // المنطقة الجنوبية
-    southern: [
-      'khamis-mushait',  // خميس مشيط
-      'abha',            // أبها
-      'najran',          // نجران
-      'jizan',           // جازان
-      'al-baha',         // الباحة
-      'bisha',           // بيشة
-      'sabya',           // صبيا
-      'sharorah'         // شرورة
-    ]
-  }
+  // الخدمات المتوفرة في كل مدينة
+  const cityServices = [
+    'moving-furniture',              // نقل عفش
+    'furniture-moving-company',      // شركة نقل اثاث
+    'best-moving-company',          // افضل شركة نقل
+    'cheap-moving-company',         // شركة نقل رخيصة
+    'moving-with-packaging',        // نقل مع التغليف
+    'moving-with-installation',     // نقل مع التركيب
+    'moving-with-warranty',         // نقل مع الضمان
+    'moving-with-insurance',        // نقل مع التأمين
+    'house-moving',                 // نقل منازل
+    'villa-moving',                 // نقل فلل
+    'apartment-moving',             // نقل شقق
+    'office-moving'                 // نقل مكاتب
+  ]
 
-  // تحويل المدن إلى مصفوفة واحدة
-  const allCities = Object.values(cities).flat()
-
-  // إنشاء صفحات المدن
-  const cityPages = allCities.map(city => ({
-    url: `${baseUrl}/${city}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: 0.8,
-  }))
-
-  // إنشاء صفحات الخدمات لكل مدينة
-  const cityServicePages = allCities.flatMap(city =>
-    standardServices.map(service => ({
-      url: `${baseUrl}/${city}/${service}`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.7,
-    }))
-  )
+  // المدن الرئيسية
+  const mainCities = [
+    {
+      slug: 'riyadh',
+      name: 'الرياض'
+    },
+    {
+      slug: 'jeddah',
+      name: 'جدة'
+    },
+    {
+      slug: 'dammam',
+      name: 'الدمام'
+    },
+    {
+      slug: 'makkah',
+      name: 'مكة'
+    },
+    {
+      slug: 'madinah',
+      name: 'المدينة'
+    }
+  ]
 
   // الصفحات الثابتة
   const staticPages = [
@@ -164,18 +96,59 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: 0.8,
+    }
+  ]
+
+  // صفحات الخدمات الرئيسية
+  const servicePages = mainServices.map(service => ({
+    url: `${baseUrl}/services${service.path}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.9,
+  }))
+
+  // صفحات المدن
+  const cityPages = mainCities.map(city => ({
+    url: `${baseUrl}/${city.slug}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.8,
+  }))
+
+  // صفحات الخدمات في كل مدينة
+  const cityServicePages = mainCities.flatMap(city =>
+    cityServices.map(service => ({
+      url: `${baseUrl}/${city.slug}/${service}`,
+      lastModified: new Date(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.7,
+    }))
+  )
+
+  // صفحات API (إذا كنت تريد إضافتها للـ sitemap)
+  const apiPages = [
+    {
+      url: `${baseUrl}/api/ads/search`,
+      lastModified: new Date(),
+      changeFrequency: 'hourly' as const,
+      priority: 0.6,
     },
     {
-      url: `${baseUrl}/calculator`,
+      url: `${baseUrl}/api/ads/stats`,
       lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
+      changeFrequency: 'hourly' as const,
+      priority: 0.6,
     }
   ]
 
   return [
     ...staticPages,
+    ...servicePages,
     ...cityPages,
-    ...cityServicePages
-  ]
+    ...cityServicePages,
+    ...apiPages
+  ].map(page => ({
+    ...page,
+    lastModified: new Date().toISOString()
+  }))
 } 
