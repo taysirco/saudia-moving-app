@@ -57,8 +57,6 @@ export default function RootLayout({
           name="google-site-verification" 
           content="7Q9FsYxtglZcnse9V8wp5qw5qaGPGst7-PJc-gktbow" 
         />
-        <WebsiteSchema />
-        <OrganizationSchema />
       </head>
       <body className={font.className}>
         <RootProvider>
@@ -66,6 +64,8 @@ export default function RootLayout({
           <ChatBot />
           <Toaster position="top-center" />
           <SpeedInsights />
+          <WebsiteSchema />
+          <OrganizationSchema />
         </RootProvider>
       </body>
     </html>
