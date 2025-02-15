@@ -60,9 +60,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // المدن الرئيسية مع الخدمات المتوفرة فقط
   const mainCities = [
-    'الرياض',
-    'جدة',
-    'الدمام'
+    'riyadh',
+    'jeddah',
+    'dammam'
   ]
 
   // صفحات المدن الرئيسية فقط
@@ -75,9 +75,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // الخدمات المتوفرة فعلياً
   const availableServices = [
-    'نقل-عفش',
-    'شركة-نقل-عفش',
-    'نقل-اثاث'
+    'moving-furniture',
+    'moving-company',
+    'furniture-moving'
   ]
 
   // صفحات الخدمات في المدن المتوفرة فقط
