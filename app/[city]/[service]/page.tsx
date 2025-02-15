@@ -10,20 +10,720 @@ interface Props {
   }
 }
 
+// الخدمات الرئيسية في صفحة الخدمات
+const mainServices = {
+  'filipino-movers': 'عمالة فلبينية لنقل العفش - نقل احترافي بأيدي خبيرة | سعودي موفينج',
+  'pickup-moving': 'نقل عفش بالونيت - خدمة نقل سريعة وآمنة | سعودي موفينج',
+  'motorcycle-moving': 'نقل دراجات نارية - خدمة نقل متخصصة للدراجات | سعودي موفينج',
+  'trained-movers': 'عمالة مدربة لنقل العفش - فنيين محترفين | سعودي موفينج',
+  'crane-lifting': 'رافعات نقل الأثاث - خدمة الونش لنقل العفش | سعودي موفينج',
+  'furniture-storage': 'تخزين أثاث - مستودعات آمنة ومؤمنة | سعودي موفينج'
+}
+
+// المدن الرئيسية
+const cities = {
+  'riyadh': {
+    base: 'نقل عفش في الرياض - خدمات نقل متكاملة | سعودي موفينج',
+    services: {
+      'furniture-moving-company': 'شركة نقل اثاث في الرياض - خدمة احترافية',
+      'best-moving-company': 'افضل شركة نقل عفش في الرياض - خبرة وكفاءة',
+      'cheap-moving-company': 'شركة نقل عفش رخيصة في الرياض - اسعار مناسبة',
+      'professional-moving-company': 'شركة نقل اثاث محترفة في الرياض - خدمة متميزة',
+      'licensed-moving-company': 'شركة نقل عفش مرخصة في الرياض - ضمان وموثوقية',
+      // إضافة باقي الخدمات للرياض
+      'furniture-transport': 'نقل اثاث في الرياض - خدمة نقل متكاملة',
+      'moving-company': 'شركة نقل عفش في الرياض - خدمة شاملة',
+      'moving-furniture': 'نقل عفش في الرياض - خدمة نقل منزلي شاملة'
+    }
+  },
+  'buraidah': {
+    base: 'نقل عفش في بريدة - خدمات نقل احترافية | سعودي موفينج',
+    services: {
+      'moving-furniture': 'نقل عفش في بريدة - خدمة نقل منزلي شاملة',
+      'furniture-moving': 'نقل اثاث في بريدة - خدمة نقل متكاملة',
+      'furniture-transport': 'شركة نقل عفش في بريدة - خدمة نقل احترافية',
+      'moving-company': 'شركة نقل اثاث في بريدة - خدمة متميزة',
+      'furniture-moving-company': 'افضل شركة نقل عفش في بريدة - خبرة وكفاءة',
+      'best-moving-company': 'شركة نقل عفش موثوقة في بريدة - جودة عالية',
+      'cheap-moving-company': 'شركة نقل عفش رخيصة في بريدة - اسعار تنافسية',
+      'professional-moving-company': 'شركة نقل اثاث محترفة في بريدة - خدمة متميزة',
+      'licensed-moving-company': 'شركة نقل عفش مرخصة في بريدة - ضمان وموثوقية'
+    }
+  },
+  'unaizah': {
+    base: 'نقل عفش في عنيزة - خدمات نقل متكاملة | سعودي موفينج',
+    services: {
+      'moving-furniture': 'نقل عفش في عنيزة - خدمة نقل منزلي شاملة',
+      'furniture-moving': 'نقل اثاث في عنيزة - خدمة نقل متكاملة',
+      'furniture-transport': 'شركة نقل عفش في عنيزة - خدمة نقل احترافية',
+      'moving-company': 'شركة نقل اثاث في عنيزة - خدمة متميزة',
+      'furniture-moving-company': 'افضل شركة نقل عفش في عنيزة - خبرة وكفاءة',
+      'best-moving-company': 'شركة نقل عفش موثوقة في عنيزة - جودة عالية',
+      'cheap-moving-company': 'شركة نقل عفش رخيصة في عنيزة - اسعار تنافسية',
+      'professional-moving-company': 'شركة نقل اثاث محترفة في عنيزة - خدمة متميزة',
+      'licensed-moving-company': 'شركة نقل عفش مرخصة في عنيزة - ضمان وموثوقية'
+    }
+  },
+  'al-kharj': {
+    base: 'نقل عفش في الخرج - خدمات نقل متكاملة | سعودي موفينج',
+    services: {
+      'moving-furniture': 'نقل عفش في الخرج - خدمة نقل منزلي شاملة ومضمونة',
+      'furniture-moving': 'نقل اثاث في الخرج - خدمة نقل متكاملة مع الفك والتركيب',
+      'furniture-transport': 'شركة نقل عفش في الخرج - خدمة نقل احترافية بأحدث المعدات',
+      'moving-company': 'شركة نقل اثاث في الخرج - خدمة متميزة مع الضمان',
+      'furniture-moving-company': 'افضل شركة نقل عفش في الخرج - خبرة 15 عام',
+      'best-moving-company': 'شركة نقل عفش موثوقة في الخرج - جودة عالية وأسعار منافسة',
+      'cheap-moving-company': 'شركة نقل عفش رخيصة في الخرج - اسعار تنافسية مع جودة الخدمة',
+      'professional-moving-company': 'شركة نقل اثاث محترفة في الخرج - خدمة متميزة وعمالة مدربة',
+      'licensed-moving-company': 'شركة نقل عفش مرخصة في الخرج - ضمان وموثوقية في النقل',
+      
+      // خدمات نقل المباني
+      'house-moving': 'نقل منازل في الخرج - خدمة نقل منزلي شاملة مع الضمان',
+      'villa-moving': 'نقل فلل في الخرج - خدمة متخصصة لنقل الفلل والقصور',
+      'apartment-moving': 'نقل شقق في الخرج - خدمة نقل الشقق السكنية مع الفك والتركيب',
+      'office-moving': 'نقل مكاتب في الخرج - خدمة نقل الشركات والمكاتب التجارية',
+      'shop-moving': 'نقل محلات في الخرج - خدمة نقل المحلات التجارية والمعارض',
+      'warehouse-moving': 'نقل مستودعات في الخرج - خدمة نقل المخازن والبضائع',
+      'company-moving': 'نقل شركات في الخرج - خدمة نقل مقرات الشركات والمؤسسات'
+    }
+  },
+  'dhahran': {
+    base: 'نقل عفش في الظهران - خدمات نقل متكاملة | سعودي موفينج',
+    services: {
+      'moving-furniture': 'نقل عفش في الظهران - خدمة نقل منزلي شاملة',
+      'furniture-moving': 'نقل اثاث في الظهران - خدمة نقل متكاملة',
+      'furniture-transport': 'شركة نقل عفش في الظهران - خدمة نقل احترافية'
+    }
+  },
+  'al-ahsa': {
+    base: 'نقل عفش في الأحساء - خدمات نقل متكاملة | سعودي موفينج',
+    services: {
+      'moving-furniture': 'نقل عفش في الأحساء - خدمة نقل منزلي شاملة',
+      'furniture-moving': 'نقل اثاث في الأحساء - خدمة نقل متكاملة',
+      'furniture-transport': 'شركة نقل عفش في الأحساء - خدمة نقل احترافية'
+    }
+  },
+  'hafar-al-batin': {
+    base: 'نقل عفش في حفر الباطن - خدمات نقل متكاملة | سعودي موفينج',
+    services: {
+      'moving-furniture': 'نقل عفش في حفر الباطن - خدمة نقل منزلي شاملة',
+      'furniture-moving': 'نقل اثاث في حفر الباطن - خدمة نقل متكاملة',
+      'furniture-transport': 'شركة نقل عفش في حفر الباطن - خدمة نقل احترافية'
+    }
+  },
+  'khafji': {
+    base: 'نقل عفش في الخفجي - خدمات نقل متكاملة | سعودي موفينج',
+    services: {
+      'moving-furniture': 'نقل عفش في الخفجي - خدمة نقل منزلي شاملة',
+      'furniture-moving': 'نقل اثاث في الخفجي - خدمة نقل متكاملة',
+      'furniture-transport': 'شركة نقل عفش في الخفجي - خدمة نقل احترافية'
+    }
+  },
+  'jizan': {
+    base: 'نقل عفش في جازان - خدمات نقل متكاملة | سعودي موفينج',
+    services: {
+      'moving-furniture': 'نقل عفش في جازان - خدمة نقل منزلي شاملة',
+      'furniture-moving': 'نقل اثاث في جازان - خدمة نقل متكاملة',
+      'furniture-transport': 'شركة نقل عفش في جازان - خدمة نقل احترافية'
+    }
+  },
+  'al-baha': {
+    base: 'نقل عفش في الباحة - خدمات نقل متكاملة | سعودي موفينج',
+    services: {
+      'moving-furniture': 'نقل عفش في الباحة - خدمة نقل منزلي شاملة',
+      'furniture-moving': 'نقل اثاث في الباحة - خدمة نقل متكاملة',
+      'furniture-transport': 'شركة نقل عفش في الباحة - خدمة نقل احترافية'
+    }
+  },
+  'sharorah': {
+    base: 'نقل عفش في شرورة - خدمات نقل متكاملة | سعودي موفينج',
+    services: {
+      'moving-furniture': 'نقل عفش في شرورة - خدمة نقل منزلي شاملة',
+      'furniture-moving': 'نقل اثاث في شرورة - خدمة نقل متكاملة',
+      'furniture-transport': 'شركة نقل عفش في شرورة - خدمة نقل احترافية'
+    }
+  }
+}
+
+// المدن الإضافية
+const additionalCities = {
+  'jeddah': {
+    base: 'نقل عفش في جدة - خدمات نقل متكاملة | سعودي موفينج',
+    services: {
+      'moving-furniture': 'نقل عفش في جدة - خدمة نقل منزلي شاملة',
+      'furniture-moving': 'نقل اثاث في جدة - خدمة نقل متكاملة',
+      'furniture-transport': 'شركة نقل عفش في جدة - خدمة نقل احترافية',
+      'moving-company': 'شركة نقل اثاث في جدة - خدمة متميزة',
+      'furniture-moving-company': 'افضل شركة نقل عفش في جدة - خبرة وكفاءة',
+      'best-moving-company': 'شركة نقل عفش موثوقة في جدة - جودة عالية',
+      'cheap-moving-company': 'شركة نقل عفش رخيصة في جدة - اسعار تنافسية'
+    }
+  },
+  'makkah': {
+    base: 'نقل عفش في مكة المكرمة - خدمات نقل متكاملة | سعودي موفينج',
+    services: {
+      'moving-furniture': 'نقل عفش في مكة - خدمة نقل منزلي شاملة',
+      'furniture-moving': 'نقل اثاث في مكة - خدمة نقل متكاملة',
+      'furniture-transport': 'شركة نقل عفش في مكة - خدمة نقل احترافية'
+    }
+  },
+  'madinah': {
+    base: 'نقل عفش في المدينة المنورة - خدمات نقل متكاملة | سعودي موفينج',
+    services: {
+      'moving-furniture': 'نقل عفش في المدينة المنورة - خدمة نقل منزلي شاملة',
+      'furniture-moving': 'نقل اثاث في المدينة المنورة - خدمة نقل متكاملة',
+      'furniture-transport': 'شركة نقل عفش في المدينة المنورة - خدمة نقل احترافية'
+    }
+  },
+  'taif': {
+    base: 'نقل عفش في الطائف - خدمات نقل متكاملة | سعودي موفينج',
+    services: {
+      'moving-furniture': 'نقل عفش في الطائف - خدمة نقل منزلي شاملة',
+      'furniture-moving': 'نقل اثاث في الطائف - خدمة نقل متكاملة',
+      'furniture-transport': 'شركة نقل عفش في الطائف - خدمة نقل احترافية'
+    }
+  },
+  'yanbu': {
+    base: 'نقل عفش في ينبع - خدمات نقل متكاملة | سعودي موفينج',
+    services: {
+      'moving-furniture': 'نقل عفش في ينبع - خدمة نقل منزلي شاملة',
+      'furniture-moving': 'نقل اثاث في ينبع - خدمة نقل متكاملة',
+      'furniture-transport': 'شركة نقل عفش في ينبع - خدمة نقل احترافية'
+    }
+  },
+  'khobar': {
+    base: 'نقل عفش في الخبر - خدمات نقل متكاملة | سعودي موفينج',
+    services: {
+      'moving-furniture': 'نقل عفش في الخبر - خدمة نقل منزلي شاملة',
+      'furniture-moving': 'نقل اثاث في الخبر - خدمة نقل متكاملة',
+      'furniture-transport': 'شركة نقل عفش في الخبر - خدمة نقل احترافية'
+    }
+  },
+  'jubail': {
+    base: 'نقل عفش في الجبيل - خدمات نقل متكاملة | سعودي موفينج',
+    services: {
+      'moving-furniture': 'نقل عفش في الجبيل - خدمة نقل منزلي شاملة',
+      'furniture-moving': 'نقل اثاث في الجبيل - خدمة نقل متكاملة',
+      'furniture-transport': 'شركة نقل عفش في الجبيل - خدمة نقل احترافية'
+    }
+  },
+  'qatif': {
+    base: 'نقل عفش في القطيف - خدمات نقل متكاملة | سعودي موفينج',
+    services: {
+      'moving-furniture': 'نقل عفش في القطيف - خدمة نقل منزلي شاملة',
+      'furniture-moving': 'نقل اثاث في القطيف - خدمة نقل متكاملة',
+      'furniture-transport': 'شركة نقل عفش في القطيف - خدمة نقل احترافية'
+    }
+  },
+  'tabuk': {
+    base: 'نقل عفش في تبوك - خدمات نقل متكاملة | سعودي موفينج',
+    services: {
+      'moving-furniture': 'نقل عفش في تبوك - خدمة نقل منزلي شاملة',
+      'furniture-moving': 'نقل اثاث في تبوك - خدمة نقل متكاملة',
+      'furniture-transport': 'شركة نقل عفش في تبوك - خدمة نقل احترافية'
+    }
+  },
+  'hail': {
+    base: 'نقل عفش في حائل - خدمات نقل متكاملة | سعودي موفينج',
+    services: {
+      'moving-furniture': 'نقل عفش في حائل - خدمة نقل منزلي شاملة',
+      'furniture-moving': 'نقل اثاث في حائل - خدمة نقل متكاملة',
+      'furniture-transport': 'شركة نقل عفش في حائل - خدمة نقل احترافية'
+    }
+  },
+  'najran': {
+    base: 'نقل عفش في نجران - خدمات نقل متكاملة | سعودي موفينج',
+    services: {
+      'moving-furniture': 'نقل عفش في نجران - خدمة نقل منزلي شاملة',
+      'furniture-moving': 'نقل اثاث في نجران - خدمة نقل متكاملة',
+      'furniture-transport': 'شركة نقل عفش في نجران - خدمة نقل احترافية'
+    }
+  }
+}
+
+// المدن المتبقية
+const remainingCities = {
+  'abha': {
+    base: 'نقل عفش في أبها - خدمات نقل متكاملة | سعودي موفينج',
+    services: {
+      'moving-furniture': 'نقل عفش في أبها - خدمة نقل منزلي شاملة',
+      'furniture-moving': 'نقل اثاث في أبها - خدمة نقل متكاملة',
+      'furniture-transport': 'شركة نقل عفش في أبها - خدمة نقل احترافية'
+    }
+  },
+  'khamis-mushait': {
+    base: 'نقل عفش في خميس مشيط - خدمات نقل متكاملة | سعودي موفينج',
+    services: {
+      'moving-furniture': 'نقل عفش في خميس مشيط - خدمة نقل منزلي شاملة',
+      'furniture-moving': 'نقل اثاث في خميس مشيط - خدمة نقل متكاملة',
+      'furniture-transport': 'شركة نقل عفش في خميس مشيط - خدمة نقل احترافية'
+    }
+  },
+  'arar': {
+    base: 'نقل عفش في عرعر - خدمات نقل متكاملة | سعودي موفينج',
+    services: {
+      'moving-furniture': 'نقل عفش في عرعر - خدمة نقل منزلي شاملة',
+      'furniture-moving': 'نقل اثاث في عرعر - خدمة نقل متكاملة',
+      'furniture-transport': 'شركة نقل عفش في عرعر - خدمة نقل احترافية'
+    }
+  },
+  'sakaka': {
+    base: 'نقل عفش في سكاكا - خدمات نقل متكاملة | سعودي موفينج',
+    services: {
+      'moving-furniture': 'نقل عفش في سكاكا - خدمة نقل منزلي شاملة',
+      'furniture-moving': 'نقل اثاث في سكاكا - خدمة نقل متكاملة',
+      'furniture-transport': 'شركة نقل عفش في سكاكا - خدمة نقل احترافية'
+    }
+  },
+  'bisha': {
+    base: 'نقل عفش في بيشة - خدمات نقل متكاملة | سعودي موفينج',
+    services: {
+      'moving-furniture': 'نقل عفش في بيشة - خدمة نقل منزلي شاملة',
+      'furniture-moving': 'نقل اثاث في بيشة - خدمة نقل متكاملة',
+      'furniture-transport': 'شركة نقل عفش في بيشة - خدمة نقل احترافية'
+    }
+  },
+  'wadi-aldawasir': {
+    base: 'نقل عفش في وادي الدواسر - خدمات نقل متكاملة | سعودي موفينج',
+    services: {
+      'moving-furniture': 'نقل عفش في وادي الدواسر - خدمة نقل منزلي شاملة',
+      'furniture-moving': 'نقل اثاث في وادي الدواسر - خدمة نقل متكاملة',
+      'furniture-transport': 'شركة نقل عفش في وادي الدواسر - خدمة نقل احترافية'
+    }
+  },
+  'dawadmi': {
+    base: 'نقل عفش في الدوادمي - خدمات نقل متكاملة | سعودي موفينج',
+    services: {
+      'moving-furniture': 'نقل عفش في الدوادمي - خدمة نقل منزلي شاملة',
+      'furniture-moving': 'نقل اثاث في الدوادمي - خدمة نقل متكاملة',
+      'furniture-transport': 'شركة نقل عفش في الدوادمي - خدمة نقل احترافية'
+    }
+  },
+  'zulfi': {
+    base: 'نقل عفش في الزلفي - خدمات نقل متكاملة | سعودي موفينج',
+    services: {
+      'moving-furniture': 'نقل عفش في الزلفي - خدمة نقل منزلي شاملة',
+      'furniture-moving': 'نقل اثاث في الزلفي - خدمة نقل متكاملة',
+      'furniture-transport': 'شركة نقل عفش في الزلفي - خدمة نقل احترافية'
+    }
+  },
+  'majmaah': {
+    base: 'نقل عفش في المجمعة - خدمات نقل متكاملة | سعودي موفينج',
+    services: {
+      'moving-furniture': 'نقل عفش في المجمعة - خدمة نقل منزلي شاملة',
+      'furniture-moving': 'نقل اثاث في المجمعة - خدمة نقل متكاملة',
+      'furniture-transport': 'شركة نقل عفش في المجمعة - خدمة نقل احترافية'
+    }
+  }
+}
+
+// الخدمات المتخصصة للمدن الكبرى
+const majorCityServices = {
+  'dammam': {
+    base: 'نقل عفش في الدمام - خدمات نقل متكاملة | سعودي موفينج',
+    services: {
+      'moving-furniture': 'نقل عفش في الدمام - خدمة نقل منزلي شاملة',
+      'furniture-moving-company': 'شركة نقل اثاث في الدمام - خدمة احترافية',
+      'best-moving-company': 'افضل شركة نقل عفش في الدمام - خبرة وكفاءة',
+      'cheap-moving-company': 'شركة نقل عفش رخيصة في الدمام - اسعار مناسبة',
+      'professional-moving-company': 'شركة نقل اثاث محترفة في الدمام - خدمة متميزة'
+    }
+  },
+  'khobar': {
+    base: 'نقل عفش في الخبر - خدمات نقل متكاملة | سعودي موفينج',
+    services: {
+      'moving-furniture': 'نقل عفش في الخبر - خدمة نقل منزلي شاملة',
+      'furniture-moving-company': 'شركة نقل اثاث في الخبر - خدمة احترافية',
+      'best-moving-company': 'افضل شركة نقل عفش في الخبر - خبرة وكفاءة',
+      'cheap-moving-company': 'شركة نقل عفش رخيصة في الخبر - اسعار مناسبة',
+      'professional-moving-company': 'شركة نقل اثاث محترفة في الخبر - خدمة متميزة'
+    }
+  }
+}
+
+// خدمات متخصصة إضافية
+const additionalSpecializedServices = {
+  // خدمات النقل حسب نوع المبنى
+  'residential-moving': 'نقل المنازل السكنية - خدمة نقل متخصصة للمساكن',
+  'commercial-moving': 'نقل المنشآت التجارية - خدمة نقل متخصصة للشركات',
+  'industrial-moving': 'نقل المصانع - خدمة نقل متخصصة للمنشآت الصناعية',
+  'educational-moving': 'نقل المؤسسات التعليمية - خدمة نقل متخصصة للمدارس والجامعات',
+  'hospital-moving': 'نقل المستشفيات - خدمة نقل متخصصة للمنشآت الطبية',
+
+  // خدمات النقل حسب الحجم
+  'small-moving': 'نقل الأغراض الصغيرة - خدمة نقل للشقق الصغيرة',
+  'medium-moving': 'نقل متوسط الحجم - خدمة نقل للمنازل المتوسطة',
+  'large-moving': 'نقل كبير الحجم - خدمة نقل للفلل والقصور',
+  'partial-moving': 'نقل جزئي - خدمة نقل لبعض القطع المختارة',
+  'complete-moving': 'نقل كامل - خدمة نقل شاملة لكل المحتويات',
+
+  // خدمات النقل المتخصصة الإضافية
+  'art-moving': 'نقل اللوحات الفنية - خدمة نقل متخصصة للأعمال الفنية',
+  'library-moving': 'نقل المكتبات - خدمة نقل متخصصة للكتب والمكتبات',
+  'safe-moving': 'نقل الخزائن - خدمة نقل متخصصة للخزائن والخزنات',
+  'aquarium-moving': 'نقل أحواض السمك - خدمة نقل متخصصة للأحواض المائية',
+  'plant-moving': 'نقل النباتات - خدمة نقل متخصصة للنباتات والأشجار المنزلية'
+}
+
+// خدمات النقل المتخصصة الإضافية
+const specializedMovingServices = {
+  // خدمات النقل حسب نوع العمالة
+  'indian-movers': 'عمالة هندية لنقل العفش - نقل احترافي بأيدي متخصصة',
+  'pakistani-movers': 'عمالة باكستانية لنقل العفش - خدمة نقل متميزة',
+  'bengali-movers': 'عمالة بنغالية لنقل العفش - خدمة نقل موثوقة',
+  'professional-movers': 'عمالة محترفة لنقل العفش - فنيين ذوي خبرة',
+  'expert-movers': 'عمالة خبيرة لنقل العفش - متخصصون في النقل',
+
+  // خدمات النقل حسب نوع المركبة
+  'truck-moving': 'نقل عفش بالشاحنات - خدمة نقل للكميات الكبيرة',
+  'van-moving': 'نقل عفش بالسيارات - خدمة نقل للكميات الصغيرة',
+  'container-moving': 'نقل عفش بالحاويات - خدمة نقل آمنة ومحمية',
+  'refrigerated-moving': 'نقل عفش مبرد - خدمة نقل للمواد الحساسة للحرارة',
+  'specialized-vehicle-moving': 'نقل عفش بسيارات متخصصة - خدمة نقل مجهزة',
+
+  // خدمات النقل حسب الوقت
+  'morning-moving': 'نقل عفش صباحي - خدمة نقل في الفترة الصباحية',
+  'afternoon-moving': 'نقل عفش مسائي - خدمة نقل في فترة الظهيرة',
+  'evening-moving': 'نقل عفش ليلي - خدمة نقل في المساء',
+  'scheduled-moving': 'نقل عفش مجدول - خدمة نقل بموعد محدد',
+  'flexible-moving': 'نقل عفش مرن - خدمة نقل حسب الطلب',
+
+  // خدمات النقل المتخصصة
+  'vip-moving': 'نقل عفش VIP - خدمة نقل فاخرة ومميزة',
+  'express-moving': 'نقل عفش سريع - خدمة نقل عاجلة وفورية',
+  'careful-moving': 'نقل عفش بعناية - خدمة نقل آمنة وحذرة',
+  'secure-moving': 'نقل عفش آمن - خدمة نقل موثوقة ومضمونة',
+  'comprehensive-moving': 'نقل عفش شامل - خدمة نقل متكاملة',
+
+  // خدمات إضافية للنقل
+  'packing-service': 'خدمة تغليف الأثاث - تغليف احترافي وآمن',
+  'assembly-service': 'خدمة تركيب الأثاث - فك وتركيب احترافي',
+  'storage-service': 'خدمة تخزين الأثاث - تخزين آمن ومؤمن',
+  'cleaning-service': 'خدمة تنظيف الأثاث - تنظيف شامل ومتكامل',
+  'maintenance-service': 'خدمة صيانة الأثاث - صيانة وإصلاح احترافي'
+}
+
+// خدمات النقل التجارية
+const commercialMovingServices = {
+  'office-equipment-moving': 'نقل معدات المكاتب - خدمة نقل متخصصة للشركات',
+  'retail-moving': 'نقل المحلات التجارية - خدمة نقل للمتاجر والمعارض',
+  'restaurant-moving': 'نقل المطاعم - خدمة نقل للمطاعم والمطابخ',
+  'factory-moving': 'نقل المصانع - خدمة نقل للمنشآت الصناعية',
+  'warehouse-equipment-moving': 'نقل معدات المستودعات - خدمة نقل للمخازن'
+}
+
+// خدمات النقل المتخصصة للمناطق
+const regionalServices = {
+  // المنطقة الشرقية
+  'eastern-region-moving': 'نقل عفش المنطقة الشرقية - خدمة نقل بين مدن الشرق',
+  'dammam-khobar-moving': 'نقل عفش بين الدمام والخبر - خدمة نقل سريعة',
+  'jubail-dammam-moving': 'نقل عفش من الجبيل للدمام - خدمة نقل مباشرة',
+  
+  // المنطقة الوسطى
+  'central-region-moving': 'نقل عفش المنطقة الوسطى - خدمة نقل بين مدن القصيم والرياض',
+  'riyadh-qassim-moving': 'نقل عفش من الرياض للقصيم - خدمة نقل مباشرة',
+  'buraidah-riyadh-moving': 'نقل عفش من بريدة للرياض - خدمة نقل سريعة',
+
+  // المنطقة الغربية
+  'western-region-moving': 'نقل عفش المنطقة الغربية - خدمة نقل بين مدن الغرب',
+  'jeddah-makkah-moving': 'نقل عفش من جدة لمكة - خدمة نقل مباشرة',
+  'madinah-yanbu-moving': 'نقل عفش من المدينة لينبع - خدمة نقل سريعة'
+}
+
+// خدمات النقل حسب الموسم
+const seasonalServices = {
+  'summer-moving': 'نقل عفش صيفي - خدمة نقل في فصل الصيف',
+  'winter-moving': 'نقل عفش شتوي - خدمة نقل في فصل الشتاء',
+  'ramadan-moving': 'نقل عفش في رمضان - خدمة نقل خلال شهر رمضان',
+  'hajj-moving': 'نقل عفش موسم الحج - خدمة نقل خلال موسم الحج',
+  'vacation-moving': 'نقل عفش الإجازات - خدمة نقل في فترات الإجازات'
+}
+
+// خدمات النقل المتخصصة للمؤسسات
+const institutionalServices = {
+  'school-moving': 'نقل المدارس - خدمة نقل متخصصة للمؤسسات التعليمية',
+  'university-moving': 'نقل الجامعات - خدمة نقل متخصصة للمنشآت الجامعية',
+  'clinic-moving': 'نقل العيادات - خدمة نقل متخصصة للمراكز الطبية',
+  'laboratory-moving': 'نقل المختبرات - خدمة نقل متخصصة للمعامل',
+  'pharmacy-moving': 'نقل الصيدليات - خدمة نقل متخصصة للصيدليات'
+}
+
+// خدمات النقل المتخصصة للمناسبات
+const eventServices = {
+  'wedding-moving': 'نقل تجهيزات الأعراس - خدمة نقل متخصصة للمناسبات',
+  'exhibition-moving': 'نقل المعارض - خدمة نقل متخصصة للفعاليات',
+  'conference-moving': 'نقل المؤتمرات - خدمة نقل متخصصة للمؤتمرات',
+  'party-moving': 'نقل الحفلات - خدمة نقل متخصصة للحفلات',
+  'event-equipment-moving': 'نقل معدات المناسبات - خدمة نقل متخصصة للتجهيزات'
+}
+
+// خدمات النقل المتخصصة للرياضة
+const sportsServices = {
+  'gym-moving': 'نقل الصالات الرياضية - خدمة نقل متخصصة للجيم',
+  'sports-club-moving': 'نقل النوادي الرياضية - خدمة نقل متخصصة للمنشآت الرياضية',
+  'sports-equipment-moving': 'نقل المعدات الرياضية - خدمة نقل متخصصة للأجهزة الرياضية',
+  'swimming-pool-moving': 'نقل معدات المسابح - خدمة نقل متخصصة لتجهيزات المسابح',
+  'playground-moving': 'نقل الملاعب - خدمة نقل متخصصة للملاعب الرياضية'
+}
+
+// خدمات النقل المتخصصة للمركبات
+const vehicleMovingServices = {
+  'car-transport': 'نقل السيارات - خدمة نقل متخصصة للمركبات',
+  'motorcycle-transport': 'نقل الدراجات النارية - خدمة نقل متخصصة للدراجات',
+  'boat-transport': 'نقل القوارب - خدمة نقل متخصصة للقوارب واليخوت',
+  'heavy-equipment-transport': 'نقل المعدات الثقيلة - خدمة نقل متخصصة للمعدات',
+  'construction-equipment-moving': 'نقل معدات البناء - خدمة نقل متخصصة لمواد البناء'
+}
+
+// خدمات النقل المتخصصة للمطاعم
+const restaurantMovingServices = {
+  'restaurant-equipment-moving': 'نقل معدات المطاعم - خدمة نقل متخصصة للمطابخ',
+  'cafe-moving': 'نقل المقاهي - خدمة نقل متخصصة للكافيهات',
+  'bakery-moving': 'نقل المخابز - خدمة نقل متخصصة للمخابز',
+  'food-truck-moving': 'نقل عربات الطعام - خدمة نقل متخصصة للمطاعم المتنقلة',
+  'catering-equipment-moving': 'نقل معدات التموين - خدمة نقل متخصصة لمعدات الضيافة'
+}
+
+// خدمات النقل المتخصصة للمصانع
+const factoryMovingServices = {
+  'factory-equipment-moving': 'نقل معدات المصانع - خدمة نقل متخصصة للآلات',
+  'production-line-moving': 'نقل خطوط الإنتاج - خدمة نقل متخصصة للمصانع',
+  'industrial-machinery-moving': 'نقل الماكينات الصناعية - خدمة نقل متخصصة للمعدات',
+  'workshop-moving': 'نقل الورش - خدمة نقل متخصصة للورش الصناعية',
+  'manufacturing-equipment-moving': 'نقل معدات التصنيع - خدمة نقل متخصصة للمصانع'
+}
+
+// خدمات النقل المتخصصة للمستشفيات
+const hospitalMovingServices = {
+  'hospital-equipment-moving': 'نقل معدات المستشفيات - خدمة نقل متخصصة للأجهزة الطبية',
+  'medical-center-moving': 'نقل المراكز الطبية - خدمة نقل متخصصة للعيادات',
+  'dental-clinic-moving': 'نقل عيادات الأسنان - خدمة نقل متخصصة لعيادات الأسنان',
+  'pharmacy-equipment-moving': 'نقل معدات الصيدليات - خدمة نقل متخصصة للصيدليات',
+  'laboratory-equipment-moving': 'نقل معدات المختبرات - خدمة نقل متخصصة للمختبرات'
+}
+
+// خدمات النقل المتخصصة للفنادق
+const hotelMovingServices = {
+  'hotel-furniture-moving': 'نقل أثاث الفنادق - خدمة نقل متخصصة للفنادق',
+  'resort-moving': 'نقل المنتجعات - خدمة نقل متخصصة للمنتجعات',
+  'furnished-apartment-moving': 'نقل الشقق المفروشة - خدمة نقل متخصصة للشقق',
+  'hotel-equipment-moving': 'نقل معدات الفنادق - خدمة نقل متخصصة للفنادق',
+  'hospitality-equipment-moving': 'نقل معدات الضيافة - خدمة نقل متخصصة للفنادق'
+}
+
+// خدمات النقل المتخصصة للمجمعات السكنية
+const residentialComplexServices = {
+  'residential-complex-moving': 'نقل عفش المجمعات السكنية - خدمة نقل متكاملة للمجمعات',
+  'compound-moving': 'نقل عفش الكمباوند - خدمة نقل متخصصة للمجمعات المغلقة',
+  'villa-complex-moving': 'نقل عفش مجمعات الفلل - خدمة نقل احترافية للمجمعات',
+  'tower-moving': 'نقل عفش الأبراج السكنية - خدمة نقل متخصصة للأبراج',
+  'building-moving': 'نقل عفش العمارات - خدمة نقل شاملة للمباني السكنية'
+}
+
+// خدمات النقل المتخصصة للمكتبات
+const libraryServices = {
+  'public-library-moving': 'نقل المكتبات العامة - خدمة نقل متخصصة للمكتبات',
+  'private-library-moving': 'نقل المكتبات الخاصة - خدمة نقل للمكتبات الشخصية',
+  'university-library-moving': 'نقل المكتبات الجامعية - خدمة نقل للمكتبات الأكاديمية',
+  'school-library-moving': 'نقل المكتبات المدرسية - خدمة نقل للمكتبات التعليمية',
+  'research-center-moving': 'نقل مراكز الأبحاث - خدمة نقل للمراكز البحثية'
+}
+
+// خدمات النقل المتخصصة للمتاحف
+const museumServices = {
+  'museum-moving': 'نقل المتاحف - خدمة نقل متخصصة للمقتنيات الأثرية',
+  'art-gallery-moving': 'نقل المعارض الفنية - خدمة نقل للوحات والمنحوتات',
+  'antique-collection-moving': 'نقل المجموعات الأثرية - خدمة نقل للقطع النادرة',
+  'heritage-items-moving': 'نقل المقتنيات التراثية - خدمة نقل للتراث',
+  'exhibition-hall-moving': 'نقل قاعات العرض - خدمة نقل للمعارض المتخصصة'
+}
+
+// خدمات النقل المتخصصة للحدائق
+const gardenServices = {
+  'garden-equipment-moving': 'نقل معدات الحدائق - خدمة نقل متخصصة للحدائق',
+  'greenhouse-moving': 'نقل البيوت المحمية - خدمة نقل للصوبات الزراعية',
+  'landscaping-equipment-moving': 'نقل معدات تنسيق الحدائق - خدمة نقل متخصصة',
+  'nursery-moving': 'نقل المشاتل - خدمة نقل للنباتات والأشجار',
+  'garden-furniture-moving': 'نقل أثاث الحدائق - خدمة نقل للجلسات الخارجية'
+}
+
+// خدمات النقل المتخصصة للمسابح
+const poolServices = {
+  'pool-equipment-moving': 'نقل معدات المسابح - خدمة نقل متخصصة للمسابح',
+  'spa-moving': 'نقل معدات السبا - خدمة نقل لمراكز السبا',
+  'jacuzzi-moving': 'نقل الجاكوزي - خدمة نقل متخصصة للجاكوزي',
+  'sauna-moving': 'نقل الساونا - خدمة نقل لغرف الساونا',
+  'pool-accessories-moving': 'نقل مستلزمات المسابح - خدمة نقل للاكسسوارات'
+}
+
+// خدمات النقل المتخصصة للمناطق الجنوبية
+const southernRegionServices = {
+  'asir-region-moving': 'نقل عفش منطقة عسير - خدمة نقل بين مدن الجنوب',
+  'abha-khamis-moving': 'نقل عفش بين أبها وخميس مشيط - خدمة نقل سريعة',
+  'jazan-region-moving': 'نقل عفش منطقة جازان - خدمة نقل متكاملة',
+  'najran-region-moving': 'نقل عفش منطقة نجران - خدمة نقل شاملة',
+  'baha-region-moving': 'نقل عفش منطقة الباحة - خدمة نقل احترافية'
+}
+
+// خدمات النقل المتخصصة للمناطق الشمالية
+const northernRegionServices = {
+  'northern-region-moving': 'نقل عفش المنطقة الشمالية - خدمة نقل متكاملة',
+  'tabuk-region-moving': 'نقل عفش منطقة تبوك - خدمة نقل شاملة',
+  'hail-region-moving': 'نقل عفش منطقة حائل - خدمة نقل احترافية',
+  'aljouf-region-moving': 'نقل عفش منطقة الجوف - خدمة نقل متميزة',
+  'northern-borders-moving': 'نقل عفش الحدود الشمالية - خدمة نقل متخصصة'
+}
+
+// خدمات النقل المتخصصة للمؤسسات التعليمية
+const educationalServices = {
+  'kindergarten-moving': 'نقل روضات الأطفال - خدمة نقل متخصصة للروضات',
+  'primary-school-moving': 'نقل المدارس الابتدائية - خدمة نقل للمدارس',
+  'secondary-school-moving': 'نقل المدارس الثانوية - خدمة نقل تعليمية',
+  'college-moving': 'نقل الكليات - خدمة نقل للمنشآت الجامعية',
+  'training-center-moving': 'نقل مراكز التدريب - خدمة نقل تعليمية'
+}
+
+// خدمات النقل المتخصصة للمراكز الطبية
+const medicalCenterServices = {
+  'medical-clinic-moving': 'نقل العيادات الطبية - خدمة نقل متخصصة للعيادات',
+  'dental-center-moving': 'نقل مراكز الأسنان - خدمة نقل لعيادات الأسنان',
+  'physiotherapy-center-moving': 'نقل مراكز العلاج الطبيعي - خدمة نقل طبية',
+  'radiology-center-moving': 'نقل مراكز الأشعة - خدمة نقل للمراكز الطبية',
+  'beauty-center-moving': 'نقل مراكز التجميل - خدمة نقل للمراكز التجميلية'
+}
+
+// خدمات النقل المتخصصة للمطاعم والكافيهات
+const foodServiceMoving = {
+  'restaurant-kitchen-moving': 'نقل مطابخ المطاعم - خدمة نقل متخصصة للمطابخ',
+  'coffee-shop-moving': 'نقل الكافيهات - خدمة نقل متخصصة للمقاهي',
+  'food-court-moving': 'نقل المطاعم في المولات - خدمة نقل للمجمعات',
+  'central-kitchen-moving': 'نقل المطابخ المركزية - خدمة نقل للمطابخ الكبيرة',
+  'buffet-equipment-moving': 'نقل معدات البوفيهات - خدمة نقل لمعدات الضيافة'
+}
+
+// دمج كل العناوين
+const pageTitles = {
+  ...mainServices,
+  ...cities,
+  ...additionalCities,
+  ...remainingCities,
+  ...majorCityServices,
+  ...additionalSpecializedServices,
+  ...specializedMovingServices,
+  ...commercialMovingServices,
+  ...regionalServices,
+  ...seasonalServices,
+  ...institutionalServices,
+  ...eventServices,
+  ...sportsServices,
+  ...vehicleMovingServices,
+  ...restaurantMovingServices,
+  ...factoryMovingServices,
+  ...hospitalMovingServices,
+  ...hotelMovingServices,
+  ...residentialComplexServices,
+  ...libraryServices,
+  ...museumServices,
+  ...gardenServices,
+  ...poolServices,
+  ...southernRegionServices,
+  ...northernRegionServices,
+  ...educationalServices,
+  ...medicalCenterServices,
+  ...foodServiceMoving
+}
+
+// الخدمات المتخصصة لكل المدن
+const specializedServices = {
+  // خدمات نقل المباني
+  'house-moving': 'نقل منازل - خدمة نقل منزلي شاملة مع الضمان',
+  'villa-moving': 'نقل فلل - خدمة متخصصة للفلل والقصور',
+  'apartment-moving': 'نقل شقق - خدمة نقل الشقق السكنية مع الفك والتركيب',
+  'office-moving': 'نقل مكاتب - خدمة نقل الشركات والمكاتب التجارية',
+  'shop-moving': 'نقل محلات - خدمة نقل المحلات التجارية والمعارض',
+  'warehouse-moving': 'نقل مستودعات - خدمة نقل المخازن والبضائع',
+  'hotel-moving': 'نقل فنادق - خدمة نقل المنشآت الفندقية والمفروشات',
+  'company-moving': 'نقل شركات - خدمة نقل مقرات الشركات والمؤسسات',
+
+  // خدمات النقل المتخصصة
+  'moving-with-packaging': 'نقل مع التغليف - خدمة تغليف وحماية الأثاث',
+  'moving-with-assembly': 'نقل مع التركيب - خدمة فك وتركيب الأثاث احترافياً',
+  'moving-with-disassembly': 'نقل مع الفك - خدمة فك الأثاث بأيدي متخصصة',
+  'moving-with-storage': 'نقل مع التخزين - خدمة تخزين آمن في مستودعات مؤمنة',
+  'moving-with-insurance': 'نقل مع التأمين - خدمة نقل مؤمنة ضد المخاطر',
+  'moving-with-guarantee': 'نقل مع الضمان - خدمة نقل مضمونة بالكامل',
+  'moving-with-cleaning': 'نقل مع التنظيف - خدمة تنظيف شاملة مع النقل',
+
+  // نقل الأثاث المتخصص
+  'heavy-furniture-moving': 'نقل الأثاث الثقيل - خدمة نقل متخصصة للقطع الثقيلة',
+  'delicate-furniture-moving': 'نقل الأثاث الحساس - عناية خاصة بالقطع الثمينة',
+  'antiques-moving': 'نقل التحف والانتيكات - خبرة في نقل القطع النادرة',
+  'electronics-moving': 'نقل الأجهزة الإلكترونية - نقل آمن للأجهزة الحساسة',
+  'piano-moving': 'نقل البيانو - خدمة متخصصة في نقل آلات البيانو',
+  'gym-equipment-moving': 'نقل معدات الجيم - خبرة في نقل الأجهزة الرياضية',
+  'medical-equipment-moving': 'نقل المعدات الطبية - نقل احترافي للأجهزة الطبية',
+
+  // أنواع النقل حسب المسافة
+  'local-moving': 'نقل محلي - خدمة نقل داخل المدينة بأفضل الأسعار',
+  'intercity-moving': 'نقل بين المدن - خدمة نقل آمنة بين مدن المملكة',
+  'long-distance-moving': 'نقل لمسافات طويلة - خدمة نقل احترافية للمسافات البعيدة',
+  'international-moving': 'نقل دولي - خدمة شحن دولي لجميع دول العالم',
+
+  // توقيت الخدمة
+  'same-day-moving': 'نقل في نفس اليوم - خدمة نقل سريعة وفورية',
+  'emergency-moving': 'نقل طارئ - خدمة نقل عاجلة على مدار الساعة',
+  'weekend-moving': 'نقل في العطلة - خدمة نقل متوفرة في أيام الإجازات',
+  'night-moving': 'نقل ليلي - خدمة نقل متوفرة في الفترة المسائية',
+
+  // خدمات إضافية
+  'furniture-transport': 'نقل اثاث - خدمة نقل متكاملة مع الضمان',
+  'moving-company': 'شركة نقل - خدمات نقل احترافية ومتكاملة',
+  'furniture-moving': 'نقل عفش - خدمة نقل شاملة مع الفك والتركيب',
+  'moving-furniture': 'نقل منزلي - خدمة نقل منزلية شاملة ومضمونة'
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const city = cities.find(c => c.slug === params.city)
-  const service = city?.services.find(s => s === params.service)
+  const { city, service } = params
+  
+  // التحقق من نوع الصفحة (خدمة رئيسية أم صفحة مدينة)
+  if (mainServices[service]) {
+    return {
+      title: mainServices[service],
+      description: `خدمة ${service} - خدمة نقل عفش احترافية مع الضمان. نقدم أفضل خدمات نقل الأثاث في جميع مدن المملكة.`,
+      alternates: {
+        canonical: `https://saudimoving.com/services/${service}`
+      },
+      openGraph: {
+        title: mainServices[service],
+        description: `خدمة ${service} - خدمة نقل عفش احترافية مع الضمان. نقدم أفضل خدمات نقل الأثاث في جميع مدن المملكة.`,
+        url: `https://saudimoving.com/services/${service}`,
+        siteName: 'سعودي موفينج',
+        locale: 'ar_SA',
+        type: 'website'
+      }
+    }
+  }
+
+  // باقي المنطق للمدن والخدمات
+  const cityTitle = pageTitles[city]?.base || `نقل عفش في ${city}`
+  const serviceTitle = pageTitles[city]?.services?.[service] || specializedServices[service]
+  
+  const title = serviceTitle ? 
+    `${serviceTitle} في ${city}` : 
+    `${specializedServices[service]} - ${cityTitle}`
+
+  const description = `خدمات ${service} في ${city} - نقل عفش احترافي مع الضمان وبأسعار مناسبة. فك وتركيب ونقل جميع أنواع الأثاث والمفروشات مع عمالة مدربة ومتخصصة.`
 
   return {
-    title: `${service} في ${city?.name}`,
-    description: `خدمة ${service} في ${city?.name} - خدمة احترافية وأسعار مناسبة`,
+    title,
+    description,
     alternates: {
-      canonical: `https://your-domain.com/${params.city}/${params.service}`
+      canonical: `https://saudimoving.com/${city}/${service}`
     },
     openGraph: {
-      title: `${service} في ${city?.name}`,
-      description: `خدمة ${service} في ${city?.name} - خدمة احترافية وأسعار مناسبة`,
-      url: `https://your-domain.com/${params.city}/${params.service}`,
+      title,
+      description,
+      url: `https://saudimoving.com/${city}/${service}`,
       siteName: 'سعودي موفينج',
       locale: 'ar_SA',
       type: 'website'
