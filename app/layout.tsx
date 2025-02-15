@@ -1,3 +1,4 @@
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import React from 'react'
 import { Metadata } from 'next'
 import { Noto_Kufi_Arabic } from 'next/font/google'
@@ -5,6 +6,7 @@ import RootProvider from '@/components/providers/RootProvider'
 import './globals.css'
 import ChatBot from '@/components/ChatBot'
 import { Toaster } from 'react-hot-toast'
+import { WebsiteSchema, OrganizationSchema } from '@/components/StructuredData'
 
 const font = Noto_Kufi_Arabic({ subsets: ['arabic'] })
 
@@ -30,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'ar_SA',
-    siteName: 'نقل عفش'
+    siteName: 'سعودي موفينج'
   },
   verification: {
     google: '7Q9FsYxtglZcnse9V8wp5qw5qaGPGst7-PJc-gktbow',
@@ -55,12 +57,15 @@ export default function RootLayout({
           name="google-site-verification" 
           content="7Q9FsYxtglZcnse9V8wp5qw5qaGPGst7-PJc-gktbow" 
         />
+        <WebsiteSchema />
+        <OrganizationSchema />
       </head>
       <body className={font.className}>
         <RootProvider>
           {children}
           <ChatBot />
           <Toaster position="top-center" />
+          <SpeedInsights />
         </RootProvider>
       </body>
     </html>

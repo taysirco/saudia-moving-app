@@ -16,6 +16,7 @@
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
     "@types/js-cookie": "^3.0.6",
+    "@vercel/speed-insights": "^1.2.0",
     "axios": "^1.6.7",
     "date-fns": "^2.30.0",
     "framer-motion": "^10.18.0",
