@@ -44,6 +44,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { slug: 'buraidah', name: 'بريدة' },
     { slug: 'unaizah', name: 'عنيزة' },
     { slug: 'al-kharj', name: 'الخرج' },
+    { slug: 'majmaah', name: 'المجمعة' },
+    { slug: 'zulfi', name: 'الزلفي' },
+    { slug: 'shaqra', name: 'شقراء' },
+    { slug: 'dawadmi', name: 'الدوادمي' },
     
     // المنطقة الغربية
     { slug: 'jeddah', name: 'جدة' },
@@ -51,6 +55,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { slug: 'madinah', name: 'المدينة' },
     { slug: 'taif', name: 'الطائف' },
     { slug: 'yanbu', name: 'ينبع' },
+    { slug: 'rabigh', name: 'رابغ' },
+    { slug: 'badr', name: 'بدر' },
+    { slug: 'thuwal', name: 'ثول' },
     
     // المنطقة الشرقية
     { slug: 'dammam', name: 'الدمام' },
@@ -59,6 +66,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { slug: 'jubail', name: 'الجبيل' },
     { slug: 'qatif', name: 'القطيف' },
     { slug: 'al-ahsa', name: 'الأحساء' },
+    { slug: 'hafar-al-batin', name: 'حفر الباطن' },
+    { slug: 'khafji', name: 'الخفجي' },
     
     // المنطقة الشمالية
     { slug: 'tabuk', name: 'تبوك' },
