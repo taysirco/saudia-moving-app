@@ -50,50 +50,94 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
-  // صفحات الخدمات الرئيسية
-  const servicePages = services.map((service) => ({
-    url: `${baseUrl}/services${service.path}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: 0.9,
-  }))
-
-  // المدن الرئيسية مع الخدمات المتوفرة فقط
-  const mainCities = [
-    'riyadh',
-    'jeddah',
-    'dammam'
+  // المدن الرئيسية
+  const cities = [
+    {
+      slug: 'riyadh',
+      services: [
+        'moving-furniture',
+        'furniture-transport',
+        'best-moving-company',
+        'furniture-moving',
+        'cheap-moving',
+        'moving-companies',
+        'moving-prices',
+        'moving-with-installation',
+        'moving-with-packaging',
+        'moving-trucks'
+      ]
+    },
+    {
+      slug: 'jeddah',
+      services: [
+        'moving-furniture',
+        'furniture-transport',
+        'best-moving-company',
+        'furniture-moving',
+        'cheap-moving',
+        'moving-companies',
+        'moving-prices',
+        'moving-with-installation',
+        'moving-with-packaging',
+        'moving-trucks'
+      ]
+    },
+    {
+      slug: 'dammam',
+      services: [
+        'moving-furniture',
+        'furniture-transport',
+        'best-moving-company',
+        'furniture-moving',
+        'cheap-moving',
+        'moving-companies',
+        'moving-prices',
+        'moving-with-installation',
+        'moving-with-packaging',
+        'moving-trucks'
+      ]
+    }
   ]
 
-  // صفحات المدن الرئيسية فقط
-  const cityPages = mainCities.map(city => ({
-    url: `${baseUrl}/city/${city}`,
+  // صفحات المدن
+  const cityPages = cities.map(city => ({
+    url: `${baseUrl}/${city.slug}`,
     lastModified: new Date(),
     changeFrequency: 'weekly' as const,
     priority: 0.8,
   }))
 
-  // الخدمات المتوفرة فعلياً
-  const availableServices = [
-    'moving-furniture',
-    'moving-company',
-    'furniture-moving'
-  ]
-
-  // صفحات الخدمات في المدن المتوفرة فقط
-  const cityServicePages = mainCities.flatMap(city =>
-    availableServices.map(service => ({
-      url: `${baseUrl}/city/${city}/${service}`,
+  // صفحات الخدمات في المدن
+  const cityServicePages = cities.flatMap(city =>
+    city.services.map(service => ({
+      url: `${baseUrl}/${city.slug}/${service}`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.7,
     }))
   )
 
+  // صفحات الخدمات الرئيسية
+  const mainServices = [
+    { path: '/filipino-movers', slug: 'filipino-moving-service' },
+    { path: '/pickup-moving', slug: 'pickup-moving-service' },
+    { path: '/motorcycle-moving', slug: 'motorcycle-moving-service' },
+    { path: '/trained-movers', slug: 'trained-moving-service' },
+    { path: '/crane-lifting', slug: 'crane-lifting-service' },
+    { path: '/furniture-storage', slug: 'furniture-storage-service' }
+  ]
+
+  const servicePages = mainServices.map(service => ({
+    url: `${baseUrl}/services${service.path}`,
+    lastModified: new Date(),
+    changeFrequency: 'weekly' as const,
+    priority: 0.9,
+  }))
+
   return [
     ...staticPages,
-    ...servicePages,
     ...cityPages,
-    ...cityServicePages
+    ...cityServicePages,
+    ...servicePages
   ]
 } 
