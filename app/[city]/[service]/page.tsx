@@ -943,57 +943,69 @@ const specializedServices = {
   'moving-furniture': 'نقل عفش منزلي - خدمة نقل منزلية شاملة ومضمونة'
 }
 
-// تعريف المدن مع slugs موحدة
+// تعريف المدن مع slugs موحدة (50 مدينة)
 const cityMappings = {
+  // المنطقة الوسطى
   'riyadh': 'الرياض',
+  'alkharj': 'الخرج',
+  'dawadmi': 'الدوادمي',
+  'almajmaah': 'المجمعة',
+  'shaqra': 'شقراء',
+  'diriyah': 'الدرعية',
+  'zulfi': 'الزلفي',
+  'aflaj': 'الأفلاج',
+
+  // منطقة القصيم
+  'buraidah': 'بريدة',
+  'unaizah': 'عنيزة',
+  'alrass': 'الرس',
+
+  // المنطقة الغربية
   'jeddah': 'جدة',
   'makkah': 'مكة المكرمة',
   'madinah': 'المدينة المنورة',
-  'dammam': 'الدمام',
   'taif': 'الطائف',
-  'khobar': 'الخبر',
-  'tabuk': 'تبوك',
-  'buraidah': 'بريدة',
-  'hail': 'حائل',
-  'hafr-albatin': 'حفر الباطن',
-  'hofuf': 'الهفوف',
-  'jubail': 'الجبيل',
-  'najran': 'نجران',
   'yanbu': 'ينبع',
-  'arar': 'عرعر',
-  'jazan': 'جازان', // توحيد جازان/جيزان تحت slug واحد
-  'sakaka': 'سكاكا',
+  'rabigh': 'رابغ',
+  'laith': 'الليث',
+  'qunfudah': 'القنفذة',
+
+  // المنطقة الشرقية
+  'dammam': 'الدمام',
+  'khobar': 'الخبر',
+  'dhahran': 'الظهران',
+  'alahsa': 'الأحساء',
   'qatif': 'القطيف',
-  'albaha': 'الباحة',
-  'wadi-aldawasir': 'وادي الدواسر',
+  'jubail': 'الجبيل',
+  'hafr-albatin': 'حفر الباطن',
+  'khafji': 'الخفجي',
+  'buqayq': 'بقيق',
+  'tarut': 'تاروت',
+  'saihat': 'سيهات',
+
+  // المنطقة الجنوبية
   'abha': 'أبها',
   'khamis-mushait': 'خميس مشيط',
-  'qunfudah': 'القنفذة',
-  'alkharj': 'الخرج',
-  'unaizah': 'عنيزة',
-  'zulfi': 'الزلفي',
-  'alrass': 'الرس',
-  'saihat': 'سيهات',
+  'jazan': 'جازان',
+  'najran': 'نجران',
+  'albaha': 'الباحة',
   'bisha': 'بيشة',
-  'qurayyat': 'القريات',
-  'alahsa': 'الأحساء',
-  'almajmaah': 'المجمعة',
-  'rabigh': 'رابغ',
-  'shaqra': 'شقراء',
-  'dawadmi': 'الدوادمي',
   'sabya': 'صبيا',
-  'laith': 'الليث',
+  'sharorah': 'شرورة',
   'balqarn': 'بلجرشي',
-  'khafji': 'الخفجي',
+  'wadi-aldawasir': 'وادي الدواسر',
+
+  // المنطقة الشمالية
+  'tabuk': 'تبوك',
+  'arar': 'عرعر',
+  'sakaka': 'سكاكا',
+  'hail': 'حائل',
+  'qurayyat': 'القريات',
   'turaif': 'طريف',
   'alwajh': 'الوجه',
-  'aflaj': 'الأفلاج',
+  'duba': 'ضباء',
   'rafha': 'رفحاء',
   'shnan': 'الشنان',
-  'duba': 'ضباء',
-  'tarut': 'تاروت',
-  'diriyah': 'الدرعية',
-  'buqayq': 'بقيق',
   'umluj': 'أملج'
 }
 
