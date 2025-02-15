@@ -455,50 +455,98 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   ]
 
-  // قائمة الخدمات الموحدة لكل مدينة
-  const standardServices = [
-    // خدمات نقل العفش الأساسية
-    'moving-furniture-company',
-    'furniture-moving-company',
-    'best-moving-company',
-    'cheap-moving-company',
-    
-    // خدمات متخصصة
-    'house-moving-company',
-    'villa-moving-company',
-    'apartment-moving-company',
-    'office-moving-company',
-    
-    // خدمات إضافية
-    'moving-with-packaging',
-    'moving-with-disassembly',
-    'moving-with-assembly',
-    'moving-with-storage',
-    
-    // خدمات خاصة
-    'furniture-storage-company',
-    'crane-lifting-service',
-    'filipino-movers',
-    'pickup-moving',
-    'motorcycle-moving',
-    
-    // خدمات حسب نوع المنقولات
-    'heavy-furniture-moving',
-    'delicate-furniture-moving',
-    'electronics-moving',
-    
-    // خدمات حسب المسافة
-    'local-moving-company',
-    'long-distance-moving',
-    'international-moving',
-    
-    // خدمات حسب الوقت
-    'same-day-moving',
-    'weekend-moving',
-    'night-moving-service'
+  // إضافة مدن جديدة للقائمة
+  const additionalCities = [
+    // المنطقة الغربية
+    {
+      slug: 'taif',
+      name: 'Taif',
+      services: standardServices
+    },
+    {
+      slug: 'yanbu',
+      name: 'Yanbu',
+      services: standardServices
+    },
+    // المنطقة الشرقية
+    {
+      slug: 'hafar-al-batin',
+      name: 'Hafar Al-Batin',
+      services: standardServices
+    },
+    {
+      slug: 'al-ahsa',
+      name: 'Al-Ahsa',
+      services: standardServices
+    },
+    // المنطقة الوسطى
+    {
+      slug: 'al-kharj',
+      name: 'Al-Kharj',
+      services: standardServices
+    },
+    {
+      slug: 'dawadmi',
+      name: 'Dawadmi',
+      services: standardServices
+    },
+    // المنطقة الشمالية
+    {
+      slug: 'sakaka',
+      name: 'Sakaka',
+      services: standardServices
+    },
+    {
+      slug: 'rafha',
+      name: 'Rafha',
+      services: standardServices
+    },
+    // المنطقة الجنوبية
+    {
+      slug: 'bisha',
+      name: 'Bisha',
+      services: standardServices
+    },
+    {
+      slug: 'al-baha',
+      name: 'Al-Baha',
+      services: standardServices
+    }
   ]
 
-  // تحديث خدمات كل مدينة
+  // إضافة المدن الجديدة للقائمة الرئيسية
+  cities.push(...additionalCities)
+
+  // إضافة خدمات جديدة للقائمة الموحدة
+  const additionalServices = [
+    // خدمات التخزين
+    'temporary-storage',
+    'long-term-storage',
+    'climate-controlled-storage',
+    
+    // خدمات متخصصة إضافية
+    'piano-moving',
+    'art-moving',
+    'antiques-moving',
+    'gym-equipment-moving',
+    
+    // خدمات تجارية
+    'shop-moving',
+    'warehouse-moving',
+    'factory-moving',
+    'hotel-moving',
+    
+    // خدمات خاصة إضافية
+    'vip-moving-service',
+    'emergency-moving',
+    'student-moving',
+    'senior-moving'
+  ]
+
+  // إضافة الخدمات الجديدة للقائمة الموحدة
+  standardServices.push(...additionalServices)
+
+  // تحديث خدمات جميع المدن بالقائمة الكاملة
   cities.forEach(city => {
     city.services = standardServices
   })
