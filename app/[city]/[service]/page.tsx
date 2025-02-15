@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { cities } from '@/lib/constants'
+import { cities as citiesFromConstants } from '@/lib/constants'
 import CityServiceClient from './CityServiceClient'
 import { arabicToSlug, getArabicText } from '@/lib/utils/text'
 
@@ -21,7 +21,7 @@ const mainServices = {
 }
 
 // المدن الرئيسية
-const cities = {
+const citiesServices = {
   'riyadh': {
     base: 'نقل عفش في الرياض - خدمات نقل متكاملة | سعودي موفينج',
     services: {
@@ -53,15 +53,56 @@ const cities = {
   'unaizah': {
     base: 'نقل عفش في عنيزة - خدمات نقل متكاملة | سعودي موفينج',
     services: {
-      'moving-furniture': 'نقل عفش في عنيزة - خدمة نقل منزلي شاملة',
-      'furniture-moving': 'نقل اثاث في عنيزة - خدمة نقل متكاملة',
-      'furniture-transport': 'شركة نقل عفش في عنيزة - خدمة نقل احترافية',
-      'moving-company': 'شركة نقل اثاث في عنيزة - خدمة متميزة',
-      'furniture-moving-company': 'افضل شركة نقل عفش في عنيزة - خبرة وكفاءة',
-      'best-moving-company': 'شركة نقل عفش موثوقة في عنيزة - جودة عالية',
-      'cheap-moving-company': 'شركة نقل عفش رخيصة في عنيزة - اسعار تنافسية',
-      'professional-moving-company': 'شركة نقل اثاث محترفة في عنيزة - خدمة متميزة',
-      'licensed-moving-company': 'شركة نقل عفش مرخصة في عنيزة - ضمان وموثوقية'
+      // الخدمات الأساسية
+      'moving-furniture': 'نقل عفش في عنيزة - خدمة نقل منزلي شاملة مع الضمان والتأمين',
+      'furniture-moving': 'نقل اثاث في عنيزة - خدمة نقل متكاملة مع الفك والتركيب',
+      'furniture-transport': 'شركة نقل عفش في عنيزة - خدمة نقل احترافية بأحدث المعدات',
+      'moving-company': 'شركة نقل اثاث في عنيزة - خدمة متميزة مع الضمان',
+      'furniture-moving-company': 'افضل شركة نقل عفش في عنيزة - خبرة 15 عام في النقل',
+      'best-moving-company': 'شركة نقل عفش موثوقة في عنيزة - جودة عالية وأسعار منافسة',
+      'cheap-moving-company': 'شركة نقل عفش رخيصة في عنيزة - اسعار تنافسية مع جودة الخدمة',
+      'professional-moving-company': 'شركة نقل اثاث محترفة في عنيزة - خدمة متميزة وعمالة مدربة',
+      'licensed-moving-company': 'شركة نقل عفش مرخصة في عنيزة - ضمان وموثوقية في النقل',
+
+      // خدمات نقل المباني
+      'house-moving': 'نقل منازل في عنيزة - خدمة نقل منزلي شاملة مع الضمان',
+      'villa-moving': 'نقل فلل في عنيزة - خدمة متخصصة لنقل الفلل والقصور',
+      'apartment-moving': 'نقل شقق في عنيزة - خدمة نقل الشقق السكنية مع الفك والتركيب',
+      'office-moving': 'نقل مكاتب في عنيزة - خدمة نقل الشركات والمكاتب التجارية',
+      'shop-moving': 'نقل محلات في عنيزة - خدمة نقل المحلات التجارية والمعارض',
+      'warehouse-moving': 'نقل مستودعات في عنيزة - خدمة نقل المخازن والبضائع',
+      'company-moving': 'نقل شركات في عنيزة - خدمة نقل مقرات الشركات والمؤسسات',
+      'hotel-moving': 'نقل فنادق في عنيزة - خدمة نقل المنشآت الفندقية والمفروشات',
+
+      // خدمات النقل المتخصصة
+      'moving-with-packaging': 'نقل مع التغليف في عنيزة - خدمة تغليف وحماية الأثاث',
+      'moving-with-assembly': 'نقل مع التركيب في عنيزة - فك وتركيب الأثاث احترافياً',
+      'moving-with-disassembly': 'نقل مع الفك في عنيزة - خدمة فك الأثاث بأيدي متخصصة',
+      'moving-with-storage': 'نقل مع التخزين في عنيزة - تخزين آمن في مستودعات مؤمنة',
+      'moving-with-insurance': 'نقل مع التأمين في عنيزة - خدمة نقل مؤمنة ضد المخاطر',
+      'moving-with-guarantee': 'نقل مع الضمان في عنيزة - خدمة نقل مضمونة بالكامل',
+      'moving-with-cleaning': 'نقل مع التنظيف في عنيزة - خدمة تنظيف شاملة مع النقل',
+
+      // نقل الأثاث المتخصص
+      'heavy-furniture-moving': 'نقل الأثاث الثقيل في عنيزة - خدمة متخصصة للقطع الثقيلة',
+      'delicate-furniture-moving': 'نقل الأثاث الحساس في عنيزة - عناية خاصة بالقطع الثمينة',
+      'antiques-moving': 'نقل التحف في عنيزة - خبرة في نقل القطع النادرة والانتيكات',
+      'electronics-moving': 'نقل الأجهزة الإلكترونية في عنيزة - نقل آمن للأجهزة الحساسة',
+      'piano-moving': 'نقل البيانو في عنيزة - خدمة متخصصة في نقل آلات البيانو',
+      'gym-equipment-moving': 'نقل معدات الجيم في عنيزة - خبرة في نقل الأجهزة الرياضية',
+      'medical-equipment-moving': 'نقل المعدات الطبية في عنيزة - نقل احترافي للأجهزة الطبية',
+
+      // أنواع النقل
+      'local-moving': 'نقل محلي في عنيزة - خدمة نقل داخل المدينة بأفضل الأسعار',
+      'intercity-moving': 'نقل بين المدن من عنيزة - خدمة نقل آمنة لجميع مدن المملكة',
+      'long-distance-moving': 'نقل لمسافات طويلة من عنيزة - خدمة نقل للمسافات البعيدة',
+      'international-moving': 'نقل دولي من عنيزة - خدمة شحن دولي لجميع دول العالم',
+
+      // توقيت الخدمة
+      'same-day-moving': 'نقل في نفس اليوم بعنيزة - خدمة نقل سريعة وفورية',
+      'emergency-moving': 'نقل طارئ في عنيزة - خدمة نقل عاجلة على مدار الساعة',
+      'weekend-moving': 'نقل في العطلة بعنيزة - خدمة نقل متوفرة في أيام الإجازات',
+      'night-moving': 'نقل ليلي في عنيزة - خدمة نقل متوفرة في الفترة المسائية'
     }
   },
   'al-kharj': {
@@ -604,7 +645,7 @@ const foodServiceMoving = {
 // دمج كل العناوين
 const pageTitles = {
   ...mainServices,
-  ...cities,
+  ...citiesServices,
   ...additionalCities,
   ...remainingCities,
   ...majorCityServices,
@@ -685,16 +726,16 @@ const specializedServices = {
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { city, service } = params
   
-  // التحقق من نوع الصفحة (خدمة رئيسية أم صفحة مدينة)
-  if (mainServices[service]) {
+  // التحقق من نوع الصفحة
+  if (mainServices[service as keyof typeof mainServices]) {
     return {
-      title: mainServices[service],
+      title: mainServices[service as keyof typeof mainServices],
       description: `خدمة ${service} - خدمة نقل عفش احترافية مع الضمان. نقدم أفضل خدمات نقل الأثاث في جميع مدن المملكة.`,
       alternates: {
         canonical: `https://saudimoving.com/services/${service}`
       },
       openGraph: {
-        title: mainServices[service],
+        title: mainServices[service as keyof typeof mainServices],
         description: `خدمة ${service} - خدمة نقل عفش احترافية مع الضمان. نقدم أفضل خدمات نقل الأثاث في جميع مدن المملكة.`,
         url: `https://saudimoving.com/services/${service}`,
         siteName: 'سعودي موفينج',
@@ -705,12 +746,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 
   // باقي المنطق للمدن والخدمات
-  const cityTitle = pageTitles[city]?.base || `نقل عفش في ${city}`
-  const serviceTitle = pageTitles[city]?.services?.[service] || specializedServices[service]
+  const cityTitle = pageTitles[city as keyof typeof pageTitles]?.base || `نقل عفش في ${city}`
+  const serviceTitle = pageTitles[city as keyof typeof pageTitles]?.services?.[service] || specializedServices[service as keyof typeof specializedServices]
   
   const title = serviceTitle ? 
     `${serviceTitle} في ${city}` : 
-    `${specializedServices[service]} - ${cityTitle}`
+    `${specializedServices[service as keyof typeof specializedServices]} - ${cityTitle}`
 
   const description = `خدمات ${service} في ${city} - نقل عفش احترافي مع الضمان وبأسعار مناسبة. فك وتركيب ونقل جميع أنواع الأثاث والمفروشات مع عمالة مدربة ومتخصصة.`
 
@@ -733,13 +774,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 // التحقق من صحة المعلمات
 export async function generateStaticParams() {
-  const paths = cities.flatMap(city => 
-    city.services.map(service => ({
+  return citiesFromConstants.flatMap(city => 
+    Object.keys(city.services).map(service => ({
       city: city.slug,
-      service: service
+      service
     }))
   )
-  return paths
 }
 
 export default function CityServicePage({ params }: Props) {
