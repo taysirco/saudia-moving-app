@@ -52,6 +52,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // المدن الرئيسية وخدماتها
   const cities = [
+    // المدن الكبرى
     {
       slug: 'riyadh',
       name: 'Riyadh',
@@ -120,6 +121,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       slug: 'makkah',
+      name: 'Makkah',
       services: [
         'moving-furniture-company',
         'furniture-moving-company',
@@ -141,6 +143,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       slug: 'madinah',
+      name: 'Madinah',
       services: [
         'moving-furniture-company',
         'furniture-moving-company',
@@ -160,8 +163,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
         'motorcycle-moving'
       ]
     },
+    // المنطقة الشرقية
     {
       slug: 'khobar',
+      name: 'Khobar',
       services: [
         'moving-furniture-company',
         'furniture-moving-company',
@@ -181,8 +186,76 @@ export default function sitemap(): MetadataRoute.Sitemap {
         'motorcycle-moving'
       ]
     },
+    {
+      slug: 'dhahran',
+      name: 'Dhahran',
+      services: [
+        'moving-furniture-company',
+        'furniture-moving-company',
+        'best-moving-company',
+        'cheap-moving-company',
+        'moving-with-disassembly',
+        'moving-with-assembly',
+        'moving-with-packaging',
+        'house-moving-company',
+        'office-moving-company',
+        'villa-moving-company',
+        'apartment-moving-company',
+        'furniture-storage-company',
+        'crane-lifting-service',
+        'filipino-movers',
+        'pickup-moving',
+        'motorcycle-moving'
+      ]
+    },
+    {
+      slug: 'jubail',
+      name: 'Jubail',
+      services: [
+        'moving-furniture-company',
+        'furniture-moving-company',
+        'best-moving-company',
+        'cheap-moving-company',
+        'moving-with-disassembly',
+        'moving-with-assembly',
+        'moving-with-packaging',
+        'house-moving-company',
+        'office-moving-company',
+        'villa-moving-company',
+        'apartment-moving-company',
+        'furniture-storage-company',
+        'crane-lifting-service',
+        'filipino-movers',
+        'pickup-moving',
+        'motorcycle-moving'
+      ]
+    },
+    {
+      slug: 'qatif',
+      name: 'Qatif',
+      services: [
+        'moving-furniture-company',
+        'furniture-moving-company',
+        'best-moving-company',
+        'cheap-moving-company',
+        'moving-with-disassembly',
+        'moving-with-assembly',
+        'moving-with-packaging',
+        'house-moving-company',
+        'office-moving-company',
+        'villa-moving-company',
+        'apartment-moving-company',
+        'furniture-storage-company',
+        'crane-lifting-service',
+        'filipino-movers',
+        'pickup-moving',
+        'motorcycle-moving'
+      ]
+    },
+    // المنطقة الشمالية
     {
       slug: 'tabuk',
+      name: 'Tabuk',
       services: [
         'moving-furniture-company',
         'furniture-moving-company',
@@ -203,7 +276,164 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ]
     },
     {
+      slug: 'hail',
+      name: 'Hail',
+      services: [
+        'moving-furniture-company',
+        'furniture-moving-company',
+        'best-moving-company',
+        'cheap-moving-company',
+        'moving-with-disassembly',
+        'moving-with-assembly',
+        'moving-with-packaging',
+        'house-moving-company',
+        'office-moving-company',
+        'villa-moving-company',
+        'apartment-moving-company',
+        'furniture-storage-company',
+        'crane-lifting-service',
+        'filipino-movers',
+        'pickup-moving',
+        'motorcycle-moving'
+      ]
+    },
+    {
+      slug: 'arar',
+      name: 'Arar',
+      services: [
+        'moving-furniture-company',
+        'furniture-moving-company',
+        'best-moving-company',
+        'cheap-moving-company',
+        'moving-with-disassembly',
+        'moving-with-assembly',
+        'moving-with-packaging',
+        'house-moving-company',
+        'office-moving-company',
+        'villa-moving-company',
+        'apartment-moving-company',
+        'furniture-storage-company',
+        'crane-lifting-service',
+        'filipino-movers',
+        'pickup-moving',
+        'motorcycle-moving'
+      ]
+    },
+    // المنطقة الجنوبية
+    {
       slug: 'khamis-mushait',
+      name: 'Khamis Mushait',
+      services: [
+        'moving-furniture-company',
+        'furniture-moving-company',
+        'best-moving-company',
+        'cheap-moving-company',
+        'moving-with-disassembly',
+        'moving-with-assembly',
+        'moving-with-packaging',
+        'house-moving-company',
+        'office-moving-company',
+        'villa-moving-company',
+        'apartment-moving-company',
+        'furniture-storage-company',
+        'crane-lifting-service',
+        'filipino-movers',
+        'pickup-moving',
+        'motorcycle-moving'
+      ]
+    },
+    {
+      slug: 'abha',
+      name: 'Abha',
+      services: [
+        'moving-furniture-company',
+        'furniture-moving-company',
+        'best-moving-company',
+        'cheap-moving-company',
+        'moving-with-disassembly',
+        'moving-with-assembly',
+        'moving-with-packaging',
+        'house-moving-company',
+        'office-moving-company',
+        'villa-moving-company',
+        'apartment-moving-company',
+        'furniture-storage-company',
+        'crane-lifting-service',
+        'filipino-movers',
+        'pickup-moving',
+        'motorcycle-moving'
+      ]
+    },
+    {
+      slug: 'najran',
+      name: 'Najran',
+      services: [
+        'moving-furniture-company',
+        'furniture-moving-company',
+        'best-moving-company',
+        'cheap-moving-company',
+        'moving-with-disassembly',
+        'moving-with-assembly',
+        'moving-with-packaging',
+        'house-moving-company',
+        'office-moving-company',
+        'villa-moving-company',
+        'apartment-moving-company',
+        'furniture-storage-company',
+        'crane-lifting-service',
+        'filipino-movers',
+        'pickup-moving',
+        'motorcycle-moving'
+      ]
+    },
+    {
+      slug: 'jizan',
+      name: 'Jizan',
+      services: [
+        'moving-furniture-company',
+        'furniture-moving-company',
+        'best-moving-company',
+        'cheap-moving-company',
+        'moving-with-disassembly',
+        'moving-with-assembly',
+        'moving-with-packaging',
+        'house-moving-company',
+        'office-moving-company',
+        'villa-moving-company',
+        'apartment-moving-company',
+        'furniture-storage-company',
+        'crane-lifting-service',
+        'filipino-movers',
+        'pickup-moving',
+        'motorcycle-moving'
+      ]
+    },
+    // المنطقة الوسطى
+    {
+      slug: 'buraidah',
+      name: 'Buraidah',
+      services: [
+        'moving-furniture-company',
+        'furniture-moving-company',
+        'best-moving-company',
+        'cheap-moving-company',
+        'moving-with-disassembly',
+        'moving-with-assembly',
+        'moving-with-packaging',
+        'house-moving-company',
+        'office-moving-company',
+        'villa-moving-company',
+        'apartment-moving-company',
+        'furniture-storage-company',
+        'crane-lifting-service',
+        'filipino-movers',
+        'pickup-moving',
+        'motorcycle-moving'
+      ]
+    },
+    {
+      slug: 'unaizah',
+      name: 'Unaizah',
       services: [
         'moving-furniture-company',
         'furniture-moving-company',
@@ -224,6 +454,54 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ]
     }
   ]
+
+  // قائمة الخدمات الموحدة لكل مدينة
+  const standardServices = [
+    // خدمات نقل العفش الأساسية
+    'moving-furniture-company',
+    'furniture-moving-company',
+    'best-moving-company',
+    'cheap-moving-company',
+    
+    // خدمات متخصصة
+    'house-moving-company',
+    'villa-moving-company',
+    'apartment-moving-company',
+    'office-moving-company',
+    
+    // خدمات إضافية
+    'moving-with-packaging',
+    'moving-with-disassembly',
+    'moving-with-assembly',
+    'moving-with-storage',
+    
+    // خدمات خاصة
+    'furniture-storage-company',
+    'crane-lifting-service',
+    'filipino-movers',
+    'pickup-moving',
+    'motorcycle-moving',
+    
+    // خدمات حسب نوع المنقولات
+    'heavy-furniture-moving',
+    'delicate-furniture-moving',
+    'electronics-moving',
+    
+    // خدمات حسب المسافة
+    'local-moving-company',
+    'long-distance-moving',
+    'international-moving',
+    
+    // خدمات حسب الوقت
+    'same-day-moving',
+    'weekend-moving',
+    'night-moving-service'
+  ]
+
+  // تحديث خدمات كل مدينة
+  cities.forEach(city => {
+    city.services = standardServices
+  })
 
   // صفحات المدن
   const cityPages = cities.map(city => ({
