@@ -163,9 +163,55 @@ const citiesServices = {
   'jizan': {
     base: 'نقل عفش في جازان - خدمات نقل متكاملة | سعودي موفينج',
     services: {
-      'moving-furniture': 'نقل عفش في جازان - خدمة نقل منزلي شاملة',
-      'furniture-moving': 'نقل اثاث في جازان - خدمة نقل متكاملة',
-      'furniture-transport': 'شركة نقل عفش في جازان - خدمة نقل احترافية'
+      'moving-furniture': 'نقل عفش في جازان - خدمة نقل منزلي شاملة مع التغليف',
+      'furniture-moving': 'نقل اثاث في جازان - خدمة نقل متكاملة مع الفك والتركيب',
+      'furniture-transport': 'شركة نقل عفش في جازان - خدمة نقل احترافية بأحدث المعدات',
+      'moving-company': 'شركة نقل اثاث في جازان - خدمة متميزة مع الضمان',
+      'furniture-moving-company': 'افضل شركة نقل عفش في جازان - خبرة 15 عام في النقل',
+      'best-moving-company': 'شركة قل عفش موثوقة في جازان - جودة عالية وأسعار منافسة',
+      'cheap-moving-company': 'شركة نقل عفش رخيصة في جازان - اسعار تنافسية مع جودة الخدمة',
+      'professional-moving-company': 'شركة نقل اثاث محترفة في جازان - خدمة متميزة وعمالة مدربة',
+      'licensed-moving-company': 'شركة نقل عفش مرخصة في جازان - ضمان وموثوقية في النقل',
+
+      // خدمات نقل المباني
+      'house-moving': 'نقل منازل في جازان - خدمة نقل منزلي شاملة مع الضمان',
+      'villa-moving': 'نقل فلل في جازان - خدمة متخصصة لنقل الفلل والقصور',
+      'apartment-moving': 'نقل شقق في جازان - خدمة نقل الشقق السكنية مع الفك والتركيب',
+      'office-moving': 'نقل مكاتب في جازان - خدمة نقل الشركات والمكاتب التجارية',
+      'shop-moving': 'نقل محلات في جازان - خدمة نقل المحلات التجارية والمعارض',
+      'warehouse-moving': 'نقل مستودعات في جازان - خدمة نقل المخازن والبضائع',
+      'company-moving': 'نقل شركات في جازان - خدمة نقل مقرات الشركات والمؤسسات',
+      'hotel-moving': 'نقل فنادق في جازان - خدمة نقل المنشآت الفندقية والمفروشات',
+
+      // خدمات النقل المتخصصة
+      'moving-with-packaging': 'نقل مع التغليف في جازان - خدمة تغليف وحماية الأثاث',
+      'moving-with-assembly': 'نقل مع التركيب في جازان - فك وتركيب الأثاث احترافياً',
+      'moving-with-disassembly': 'نقل مع الفك في جازان - خدمة فك الأثاث بأيدي متخصصة',
+      'moving-with-storage': 'نقل مع التخزين في جازان - تخزين آمن في مستودعات مؤمنة',
+      'moving-with-insurance': 'نقل مع التأمين في جازان - خدمة نقل مؤمنة ضد المخاطر',
+      'moving-with-guarantee': 'نقل مع الضمان في جازان - خدمة نقل مضمونة بالكامل',
+      'moving-with-cleaning': 'نقل مع التنظيف في جازان - خدمة تنظيف شاملة مع النقل',
+
+      // نقل الأثاث المتخصص
+      'heavy-furniture-moving': 'نقل الأثاث الثقيل في جازان - خدمة متخصصة للقطع الثقيلة',
+      'delicate-furniture-moving': 'نقل الأثاث الحساس في جازان - عناية خاصة بالقطع الثمينة',
+      'antiques-moving': 'نقل التحف في جازان - خبرة في نقل القطع النادرة والانتيكات',
+      'electronics-moving': 'نقل الأجهزة الإلكترونية في جازان - نقل آمن للأجهزة الحساسة',
+      'piano-moving': 'نقل البيانو في جازان - خدمة متخصصة في نقل آلات البيانو',
+      'gym-equipment-moving': 'نقل معدات الجيم في جازان - خبرة في نقل الأجهزة الرياضية',
+      'medical-equipment-moving': 'نقل المعدات الطبية في جازان - نقل احترافي للأجهزة الطبية',
+
+      // أنواع النقل
+      'local-moving': 'نقل محلي في جازان - خدمة نقل داخل المدينة بأفضل الأسعار',
+      'intercity-moving': 'نقل بين المدن من جازان - خدمة نقل آمنة لجميع مدن المملكة',
+      'long-distance-moving': 'نقل لمسافات طويلة من جازان - خدمة نقل للمسافات البعيدة',
+      'international-moving': 'نقل دولي من جازان - خدمة شحن دولي لجميع دول العالم',
+
+      // توقيت الخدمة
+      'same-day-moving': 'نقل في نفس اليوم بعنيزة - خدمة نقل سريعة وفورية',
+      'emergency-moving': 'نقل طارئ في جازان - خدمة نقل عاجلة على مدار الساعة',
+      'weekend-moving': 'نقل في العطلة بعنيزة - خدمة نقل متوفرة في أيام الإجازات',
+      'night-moving': 'نقل ليلي في جازان - خدمة نقل متوفرة في الفترة المسائية'
     }
   },
   'al-baha': {
@@ -897,8 +943,63 @@ const specializedServices = {
   'moving-furniture': 'نقل عفش منزلي - خدمة نقل منزلية شاملة ومضمونة'
 }
 
+// تعريف المدن مع slugs موحدة
+const cityMappings = {
+  'riyadh': 'الرياض',
+  'jeddah': 'جدة',
+  'makkah': 'مكة المكرمة',
+  'madinah': 'المدينة المنورة',
+  'dammam': 'الدمام',
+  'taif': 'الطائف',
+  'khobar': 'الخبر',
+  'tabuk': 'تبوك',
+  'buraidah': 'بريدة',
+  'hail': 'حائل',
+  'hafr-albatin': 'حفر الباطن',
+  'hofuf': 'الهفوف',
+  'jubail': 'الجبيل',
+  'najran': 'نجران',
+  'yanbu': 'ينبع',
+  'arar': 'عرعر',
+  'jazan': 'جازان', // توحيد جازان/جيزان تحت slug واحد
+  'sakaka': 'سكاكا',
+  'qatif': 'القطيف',
+  'albaha': 'الباحة',
+  'wadi-aldawasir': 'وادي الدواسر',
+  'abha': 'أبها',
+  'khamis-mushait': 'خميس مشيط',
+  'qunfudah': 'القنفذة',
+  'alkharj': 'الخرج',
+  'unaizah': 'عنيزة',
+  'zulfi': 'الزلفي',
+  'alrass': 'الرس',
+  'saihat': 'سيهات',
+  'bisha': 'بيشة',
+  'qurayyat': 'القريات',
+  'alahsa': 'الأحساء',
+  'almajmaah': 'المجمعة',
+  'rabigh': 'رابغ',
+  'shaqra': 'شقراء',
+  'dawadmi': 'الدوادمي',
+  'sabya': 'صبيا',
+  'laith': 'الليث',
+  'balqarn': 'بلجرشي',
+  'khafji': 'الخفجي',
+  'turaif': 'طريف',
+  'alwajh': 'الوجه',
+  'aflaj': 'الأفلاج',
+  'rafha': 'رفحاء',
+  'shnan': 'الشنان',
+  'duba': 'ضباء',
+  'tarut': 'تاروت',
+  'diriyah': 'الدرعية',
+  'buqayq': 'بقيق',
+  'umluj': 'أملج'
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { city, service } = params
+  const cityName = cityMappings[city as keyof typeof cityMappings] || city
   
   // التحقق من نوع الصفحة
   if (mainServices[service as keyof typeof mainServices]) {
@@ -924,10 +1025,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const serviceTitle = pageTitles[city as keyof typeof pageTitles]?.services?.[service] || specializedServices[service as keyof typeof specializedServices]
   
   const title = serviceTitle ? 
-    `${serviceTitle} في ${city}` : 
+    `${serviceTitle} في ${cityName}` : 
     `${specializedServices[service as keyof typeof specializedServices]} - ${cityTitle}`
 
-  const description = `خدمات ${service} في ${city} - نقل عفش احترافي مع الضمان وبأسعار مناسبة. فك وتركيب ونقل جميع أنواع الأثاث والمفروشات مع عمالة مدربة ومتخصصة.`
+  const description = `خدمات ${service} في ${cityName} - نقل عفش احترافي مع الضمان وبأسعار مناسبة. فك وتركيب ونقل جميع أنواع الأثاث والمفروشات مع عمالة مدربة ومتخصصة.`
 
   return {
     title,
@@ -946,11 +1047,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-// التحقق من صحة المعلمات
+// التحديث خدمات المدن
+const citiesServices = {
+  'jazan': { // استخدام slug موحد
+    base: 'نقل عفش في جازان - خدمات نقل متكاملة | سعودي موفينج',
+    services: {
+      'moving-furniture': 'نقل عفش في جازان - خدمة نقل منزلي شاملة مع التغليف',
+      'furniture-moving': 'نقل اثاث في جازان - خدمة نقل متكاملة مع الفك والتركيب',
+      // ... باقي الخدمات
+    }
+  },
+  // ... باقي المدن
+}
+
+// تحديث دالة generateStaticParams
 export async function generateStaticParams() {
-  return citiesFromConstants.flatMap(city => 
-    Object.keys(city.services).map(service => ({
-      city: city.slug,
+  return Object.keys(cityMappings).flatMap(citySlug => 
+    Object.keys(specializedServices).map(service => ({
+      city: citySlug,
       service
     }))
   )
