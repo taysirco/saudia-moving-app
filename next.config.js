@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  images: {
+    formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 60,
+  },
+  compress: true,
   poweredByHeader: false,
   env: {
     NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || 'https://www.saudimoving.com'
@@ -60,6 +65,11 @@ const nextConfig = {
         ],
       },
     ]
+  },
+  i18n: {
+    locales: ['ar'],
+    defaultLocale: 'ar',
+    localeDetection: false
   }
 }
 

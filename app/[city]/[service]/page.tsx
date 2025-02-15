@@ -1,5 +1,5 @@
 import { Metadata } from 'next'
-import { cities, keywords } from '@/lib/utils/data'
+import { cities } from '@/lib/constants'
 import CityServiceClient from './CityServiceClient'
 import { arabicToSlug, getArabicText } from '@/lib/utils/text'
 
@@ -11,20 +11,19 @@ interface Props {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const { city, service } = params
-  const cityName = getArabicText(city)
-  const serviceName = getArabicText(service)
+  const city = cities.find(c => c.slug === params.city)
+  const service = city?.services.find(s => s === params.service)
 
   return {
-    title: `${serviceName} ${cityName} - سعودي موفينج`,
-    description: `خدمة ${serviceName} في ${cityName} - نقل عفش آمن وسريع مع ضمان سلامة الأثاث`,
+    title: `${service} في ${city?.name}`,
+    description: `خدمة ${service} في ${city?.name} - خدمة احترافية وأسعار مناسبة`,
     alternates: {
-      canonical: `https://your-domain.com/${city}/${service}`
+      canonical: `https://your-domain.com/${params.city}/${params.service}`
     },
     openGraph: {
-      title: `${serviceName} ${cityName}`,
-      description: `خدمة ${serviceName} في ${cityName} - نقل عفش آمن وسريع مع ضمان سلامة الأثاث`,
-      url: `https://your-domain.com/${city}/${service}`,
+      title: `${service} في ${city?.name}`,
+      description: `خدمة ${service} في ${city?.name} - خدمة احترافية وأسعار مناسبة`,
+      url: `https://your-domain.com/${params.city}/${params.service}`,
       siteName: 'سعودي موفينج',
       locale: 'ar_SA',
       type: 'website'
@@ -32,25 +31,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
 }
 
-// توليد جميع المسارات الممكنة
+// التحقق من صحة المعلمات
 export async function generateStaticParams() {
-  // قراءة المدن من الملف
-  const allCities = cities.map(city => arabicToSlug(city))
-  
-  // قراءة الخدمات من الملف
-  const allServices = keywords.map(service => arabicToSlug(service))
-  
-  // توليد جميع التركيبات الممكنة
-  const paths = []
-  for (const city of allCities) {
-    for (const service of allServices) {
-      paths.push({
-        city: city,
-        service: service
-      })
-    }
-  }
-
+  const paths = cities.flatMap(city => 
+    city.services.map(service => ({
+      city: city.slug,
+      service: service
+    }))
+  )
   return paths
 }
 
