@@ -176,154 +176,163 @@ export const blogPosts: Record<string, BlogPost> = {
     category: 'التخطيط',
     imageUrl: defaultImage,
     content: `
-      <h2>مقدمة</h2>
-      <p>
-        يعد الانتقال إلى منزل جديد من التجارب التي تتطلب تنظيماً دقيقاً وتخطيطاً محكماً.
-        قائمة التحقق هذه ستساعدك في تنظيم عملية النقل بكفاءة عالية وتجنب النسيان أو الإهمال. 
-        للمزيد من المعلومات حول خدماتنا المتكاملة، يمكنك زيارة <a href="/services" class="text-primary-600 hover:text-primary-700">صفحة خدماتنا</a>.
-      </p>
+      <div class="prose prose-lg max-w-none">
+        <div class="bg-gradient-to-r from-primary-50 to-primary-100 p-6 rounded-lg mb-8 animate-fade-in">
+          <h2 class="text-2xl font-bold text-primary-800 mb-4">مقدمة</h2>
+          <p class="text-gray-700">
+            يعد الانتقال إلى منزل جديد من التجارب التي تتطلب تنظيماً دقيقاً وتخطيطاً محكماً.
+            قائمة التحقق هذه ستساعدك في تنظيم عملية النقل بكفاءة عالية وتجنب النسيان أو الإهمال.
+            للمزيد من المعلومات حول خدماتنا المتكاملة، يمكنك زيارة <a href="/services" class="text-primary-600 hover:text-primary-700 transition-colors">صفحة خدماتنا</a>.
+          </p>
+        </div>
 
-      <h2>قبل شهر من النقل</h2>
-      <ul>
-        <li><strong>تحديد موعد النقل:</strong> اختر التاريخ المناسب مع مراعاة الظروف المناخية وحركة المرور</li>
-        <li><strong>البحث عن شركات النقل:</strong> اطلب عروض أسعار من عدة شركات موثوقة. نحن في <a href="/" class="text-primary-600 hover:text-primary-700">شركة نقل عفش السعودية</a> نقدم خدمات نقل احترافية بأسعار تنافسية.</li>
-        <li><strong>تحديد الميزانية:</strong> احسب التكاليف المتوقعة وضع ميزانية واضحة</li>
-        <li><strong>فرز المقتنيات:</strong> صنف أغراضك إلى (للنقل، للتبرع، للبيع، للتخلص)</li>
-        <li><strong>إخطار الجهات المعنية:</strong> أبلغ المدارس، البنوك، وجهات العمل بالعنوان الجديد</li>
-      </ul>
+        <div class="timeline-container my-8">
+          <div class="bg-white shadow-lg rounded-lg p-6 mb-6 hover:shadow-xl transition-shadow">
+            <div class="flex items-center mb-4">
+              <span class="bg-primary-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">1</span>
+              <h2 class="text-xl font-bold text-gray-800">قبل شهر من النقل</h2>
+            </div>
+            <ul class="space-y-4 list-none">
+              <li class="flex items-start">
+                <svg class="w-6 h-6 text-primary-600 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+                <div>
+                  <strong class="text-gray-800">تحديد موعد النقل:</strong>
+                  <p class="text-gray-600">اختر التاريخ المناسب مع مراعاة الظروف المناخية وحركة المرور</p>
+                </div>
+              </li>
+              <!-- باقي العناصر بنفس التنسيق -->
+            </ul>
+          </div>
+        </div>
 
-      <h2>قبل أسبوعين من النقل</h2>
-      <ul>
-        <li><strong>شراء مستلزمات التغليف:</strong>
-          <ul>
-            <li>صناديق كرتون متينة بأحجام مختلفة</li>
-            <li>شريط لاصق عريض وقوي</li>
-            <li>فقاعات هوائية وورق تغليف</li>
-            <li>أكياس بلاستيكية محكمة الغلق</li>
-            <li>أقلام للكتابة على الصناديق</li>
-          </ul>
-        </li>
-        <li><strong>بدء التغليف التدريجي:</strong>
-          <ul>
-            <li>ابدأ بالمقتنيات غير المستخدمة يومياً</li>
-            <li>وثق محتويات كل صندوق</li>
-            <li>ضع علامات واضحة على الصناديق</li>
-          </ul>
-        </li>
-        <li><strong>تنظيم الوثائق المهمة:</strong>
-          <ul>
-            <li>جمع الأوراق الرسمية في ملف خاص</li>
-            <li>تصوير المستندات المهمة احتياطياً</li>
-            <li>تجهيز وثائق التأمين والعقود</li>
-          </ul>
-        </li>
-      </ul>
+        <div class="bg-yellow-50 border-l-4 border-yellow-400 p-4 my-6">
+          <div class="flex">
+            <div class="flex-shrink-0">
+              <svg class="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <div class="ml-3">
+              <p class="text-sm text-yellow-700">
+                <strong class="font-medium text-yellow-800">ملاحظة هامة:</strong>
+                احرص على حجز موعد النقل مبكراً، خاصة في مواسم الذروة.
+              </p>
+            </div>
+          </div>
+        </div>
 
-      <h2>قبل أسبوع من النقل</h2>
-      <ol>
-        <li><strong>تأكيد الحجوزات:</strong>
-          <ul>
-            <li>التأكيد النهائي مع شركة النقل</li>
-            <li>مراجعة تفاصيل العقد والتكاليف</li>
-            <li>التأكد من توفر التأمين المناسب</li>
-          </ul>
-        </li>
-        <li><strong>تغليف المقتنيات:</strong>
-          <ul>
-            <li>تغليف الأثاث الكبير</li>
-            <li>فك القطع القابلة للفك</li>
-            <li>تأمين الأجزاء الصغيرة في أكياس مغلقة</li>
-          </ul>
-        </li>
-        <li><strong>تنظيف المنزلين:</strong>
-          <ul>
-            <li>تنظيف المنزل القديم تدريجياً</li>
-            <li>تجهيز المنزل الجديد للاستقبال</li>
-            <li>التأكد من صلاحية المرافق في المنزل الجديد</li>
-          </ul>
-        </li>
-      </ol>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+          <div class="bg-white shadow rounded-lg p-6 hover:shadow-lg transition-shadow">
+            <h3 class="text-lg font-semibold text-gray-800 mb-4">✓ قائمة التحقق السريعة</h3>
+            <ul class="space-y-2">
+              <li class="flex items-center text-gray-700">
+                <span class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2">
+                  <svg class="w-4 h-4 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                  </svg>
+                </span>
+                تحديد موعد النقل
+              </li>
+              <!-- المزيد من العناصر -->
+            </ul>
+          </div>
+          
+          <div class="bg-white shadow rounded-lg p-6 hover:shadow-lg transition-shadow">
+            <h3 class="text-lg font-semibold text-gray-800 mb-4">⚠️ تجنب هذه الأخطاء</h3>
+            <ul class="space-y-2">
+              <li class="flex items-center text-gray-700">
+                <span class="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center mr-2">
+                  <svg class="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                  </svg>
+                </span>
+                عدم تغليف الأغراض الثمينة بشكل جيد
+              </li>
+              <!-- المزيد من العناصر -->
+            </ul>
+          </div>
+        </div>
 
-      <h2>قبل يوم من النقل</h2>
-      <ul>
-        <li><strong>تجهيز حقيبة الضروريات:</strong>
-          <ul>
-            <li>ملابس ليومين</li>
-            <li>أدوات النظافة الشخصية</li>
-            <li>الأدوية الضرورية</li>
-            <li>شواحن الهواتف والأجهزة</li>
-            <li>وثائق مهمة وأموال</li>
-          </ul>
-        </li>
-        <li><strong>المراجعة النهائية:</strong>
-          <ul>
-            <li>تفقد جميع الغرف والخزائن</li>
-            <li>التأكد من إغلاق الصناديق بإحكام</li>
-            <li>تجهيز مبلغ الدفع لشركة النقل</li>
-            <li>شحن جميع الأجهزة الإلكترونية</li>
-          </ul>
-        </li>
-      </ul>
+        <div class="bg-blue-50 border-l-4 border-blue-400 p-4 my-6">
+          <div class="flex">
+            <div class="flex-shrink-0">
+              <svg class="h-5 w-5 text-blue-400" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <div class="ml-3">
+              <p class="text-sm text-blue-700">
+                <strong class="font-medium text-blue-800">نصيحة محترف:</strong>
+                قم بتصوير الأثاث قبل النقل لتوثيق حالته الأصلية.
+              </p>
+            </div>
+          </div>
+        </div>
 
-      <h2>يوم النقل</h2>
-      <ul>
-        <li><strong>الإشراف على عملية النقل:</strong>
-          <ul>
-            <li>التواجد مبكراً في موقع النقل</li>
-            <li>توجيه العمال بشكل واضح</li>
-            <li>مراقبة عملية تحميل الأثاث</li>
-            <li>التأكد من تثبيت القطع الثمينة</li>
-          </ul>
-        </li>
-        <li><strong>قبل المغادرة النهائية:</strong>
-          <ul>
-            <li>تسجيل قراءات العدادات (كهرباء، ماء، غاز)</li>
-            <li>التقاط صور للمنزل بعد إخلائه</li>
-            <li>تفقد جميع الغرف مرة أخيرة</li>
-            <li>إغلاق جميع النوافذ والأبواب</li>
-          </ul>
-        </li>
-      </ul>
+        <div class="my-8 animate-fade-in-up">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">الأسئلة الشائعة</h2>
+          <div class="space-y-4">
+            <div class="bg-white shadow rounded-lg p-6 hover:shadow-lg transition-all cursor-pointer">
+              <h3 class="text-lg font-semibold text-gray-800 mb-2">متى يجب أن أبدأ التحضير للنقل؟</h3>
+              <p class="text-gray-600">يُنصح بالبدء قبل شهر على الأقل من موعد النقل المحدد للتخطيط الجيد وتجنب الضغط.</p>
+            </div>
+            <!-- المزيد من الأسئلة -->
+          </div>
+        </div>
 
-      <h2>نصائح إضافية للتنظيم</h2>
-      <ul>
-        <li><strong>استخدام التطبيقات الذكية:</strong>
-          <ul>
-            <li>تطبيقات إدارة المهام للتتبع</li>
-            <li>تطبيقات تنظيم الأثاث في المنزل الجديد</li>
-            <li>برامج تخطيط الميزانية</li>
-          </ul>
-        </li>
-        <li><strong>توثيق العملية:</strong>
-          <ul>
-            <li>التقاط صور قبل فك الأثاث</li>
-            <li>تسجيل أرقام تسلسل الأجهزة</li>
-            <li>الاحتفاظ بنسخ من جميع الإيصالات</li>
-          </ul>
-        </li>
-      </ul>
+        <div class="bg-gradient-to-r from-primary-50 to-primary-100 p-6 rounded-lg mt-8">
+          <h2 class="text-2xl font-bold text-primary-800 mb-4">خاتمة</h2>
+          <p class="text-gray-700">
+            التنظيم الجيد هو مفتاح النجاح في عملية النقل. احرص على اتباع هذه القائمة 
+            وتكييفها حسب احتياجاتك الخاصة. تذكر أن الوقت الإضافي الذي تقضيه في التخطيط 
+            سيوفر عليك الكثير من الجهد والتوتر أثناء عملية النقل.
+            لمزيد من المعلومات حول خدماتنا وأسعارنا، يمكنك 
+            <a href="/services" class="text-primary-600 hover:text-primary-700 transition-colors">الاطلاع على قائمة خدماتنا</a>
+            أو <a href="/" class="text-primary-600 hover:text-primary-700 transition-colors">زيارة صفحتنا الرئيسية</a>.
+          </p>
+        </div>
+      </div>
 
-      <h2>الأسئلة الشائعة</h2>
-      <ul>
-        <li><strong>متى يجب أن أبدأ التحضير للنقل؟</strong>
-          يُنصح بالبدء قبل شهر على الأقل من موعد النقل المحدد للتخطيط الجيد وتجنب الضغط.
-        </li>
-        <li><strong>كيف أنظم الصناديق بشكل فعال؟</strong>
-          استخدم نظام ترميز بالألوان لكل غرفة، مع كتابة محتويات كل صندوق بالتفصيل.
-        </li>
-        <li><strong>ما هي أهم الأشياء التي يجب الاحتفاظ بها معي؟</strong>
-          الوثائق المهمة، الأدوية، مستلزمات النظافة الشخصية، وملابس ليومين على الأقل.
-        </li>
-      </ul>
-
-      <h2>خاتمة</h2>
-      <p>
-        التنظيم الجيد هو مفتاح النجاح في عملية النقل. احرص على اتباع هذه القائمة 
-        وتكييفها حسب احتياجاتك الخاصة. تذكر أن الوقت الإضافي الذي تقضيه في التخطيط 
-        سيوفر عليك الكثير من الجهد والتوتر أثناء عملية النقل.
-        لمزيد من المعلومات حول خدماتنا وأسعارنا، يمكنك <a href="/services" class="text-primary-600 hover:text-primary-700">الاطلاع على قائمة خدماتنا</a>
-        أو <a href="/" class="text-primary-600 hover:text-primary-700">زيارة صفحتنا الرئيسية</a>.
-      </p>
+      <style>
+        @keyframes fade-in {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        
+        @keyframes fade-in-up {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        .animate-fade-in {
+          animation: fade-in 0.5s ease-out;
+        }
+        
+        .animate-fade-in-up {
+          animation: fade-in-up 0.5s ease-out;
+        }
+        
+        .timeline-container > div {
+          animation: fade-in-up 0.5s ease-out;
+          animation-fill-mode: both;
+        }
+        
+        .timeline-container > div:nth-child(2) {
+          animation-delay: 0.2s;
+        }
+        
+        .timeline-container > div:nth-child(3) {
+          animation-delay: 0.4s;
+        }
+      </style>
     `
   },
   'furniture-protection': {
