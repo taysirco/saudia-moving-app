@@ -1,6 +1,5 @@
 import { withAuth } from 'next-auth/middleware'
 import { NextResponse } from 'next/server'
-import { NextRequest } from 'next/server'
 
 export default withAuth(
   function middleware(req) {
@@ -32,13 +31,4 @@ export const config = {
   matcher: [
     '/ads/:path*'
   ]
-}
-
-export function middleware(request: NextRequest) {
-  // إضافة هيدرز الأمان
-  const headers = new Headers(request.headers)
-  headers.set('X-Robots-Tag', 'index, follow')
-  headers.set('X-Content-Type-Options', 'nosniff')
-  headers.set('Referrer-Policy', 'strict-origin-when-cross-origin')
-  headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains')
 } 

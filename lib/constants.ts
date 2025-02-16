@@ -1,33 +1,5 @@
 export const DOMAIN = process.env.NEXT_PUBLIC_DOMAIN || 'https://www.saudimoving.com'
 
-export const cities = [
-  // المنطقة الوسطى
-  {
-    slug: 'riyadh',
-    name: 'الرياض',
-    districts: ['north-riyadh', 'south-riyadh', 'east-riyadh', 'west-riyadh'],
-    services: [
-      'moving-furniture',
-      'furniture-moving-company',
-      // ... باقي الخدمات
-    ]
-  },
-  // ... باقي المدن
-]
-
-export const mainServices = [
-  {
-    path: '/filipino-movers',
-    name: 'نقل عفش عمالة فلبينية',
-    subServices: [
-      'professional-filipino-movers',
-      'experienced-filipino-workers',
-      'trained-filipino-team'
-    ]
-  },
-  // ... باقي الخدمات
-]
-
 export const services = [
   {
     id: 'filipino-movers',
