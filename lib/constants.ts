@@ -8,11 +8,11 @@ export type CityInfo = {
 
 // تعريف المدن الرئيسية مع slugs بالإنجليزية وأسماء عربية
 export const CITIES: CityInfo[] = [
-  { slug: 'moving-furniture-riyadh', name: 'نقل عفش بالرياض' },
-  { slug: 'moving-furniture-jeddah', name: 'نقل عفش بجدة' },
-  { slug: 'moving-furniture-mecca', name: 'نقل عفش بمكة' },
-  { slug: 'moving-furniture-medina', name: 'نقل عفش بالمدينة' },
-  { slug: 'moving-furniture-dammam', name: 'نقل عفش بالدمام' }
+  { slug: 'riyadh/moving-companies', name: 'نقل عفش بالرياض' },
+  { slug: 'jeddah/moving-companies', name: 'نقل عفش بجدة' },
+  { slug: 'mecca/moving-companies', name: 'نقل عفش بمكة' },
+  { slug: 'medina/moving-companies', name: 'نقل عفش بالمدينة' },
+  { slug: 'dammam/moving-companies', name: 'نقل عفش بالدمام' }
 ]
 
 // تعريف نوع للخدمة يحتوي على slug بالإنجليزية والاسم بالعربية
@@ -23,11 +23,11 @@ export type ServiceInfo = {
 
 // تعريف الخدمات مع slugs بالإنجليزية وأسماء عربية
 export const SERVICES: ServiceInfo[] = [
-  { slug: 'moving-furniture', name: 'نقل عفش' },
-  { slug: 'moving-furniture-with-installation', name: 'نقل عفش مع التركيب' },
-  { slug: 'moving-furniture-with-packaging', name: 'نقل عفش مع التغليف' },
-  { slug: 'moving-furniture-cars', name: 'سيارات نقل عفش' },
-  { slug: 'furniture-storage', name: 'تخزين اثاث' }
+  { slug: 'moving-companies', name: 'نقل عفش' },
+  { slug: 'moving-with-installation', name: 'نقل عفش مع التركيب' },
+  { slug: 'moving-with-packaging', name: 'نقل عفش مع التغليف' },
+  { slug: 'moving-cars', name: 'سيارات نقل عفش' },
+  { slug: 'storage', name: 'تخزين اثاث' }
 ]
 
 // تعريف نوع للصفحات الثابتة
@@ -39,9 +39,9 @@ export type StaticPageInfo = {
 // تعريف الصفحات الثابتة مع slugs بالإنجليزية وأسماء عربية
 export const STATIC_PAGES: StaticPageInfo[] = [
   { slug: '', name: 'الرئيسية' },
-  { slug: 'about-us', name: 'من نحن' },
-  { slug: 'contact-us', name: 'اتصل بنا' },
-  { slug: 'privacy-policy', name: 'سياسة الخصوصية' },
-  { slug: 'terms-and-conditions', name: 'الشروط والأحكام' },
+  { slug: 'about', name: 'من نحن' },
+  { slug: 'contact', name: 'اتصل بنا' },
+  { slug: 'privacy', name: 'سياسة الخصوصية' },
+  { slug: 'terms', name: 'الشروط والأحكام' },
   { slug: 'add-company', name: 'أضف شركتك للدليل' }
 ] 
