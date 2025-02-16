@@ -20,7 +20,7 @@ const mainServices = {
   'furniture-storage': 'تخزين عفش - مستودعات آمنة ومؤمنة | سعودي موفينج'
 }
 
-// Consolidate all city services into one object
+// Define all city services in a single object
 const citiesServices = {
   'riyadh': {
     base: 'نقل عفش في الرياض - خدمات نقل متكاملة | سعودي موفينج',
@@ -143,11 +143,13 @@ const cityMappings = {
   // ... keep existing city mappings
 }
 
-// Combine all services for page titles
+// Update pageTitles to use the single citiesServices object
 const pageTitles = {
   ...mainServices,
   ...citiesServices,
-  // Remove duplicate service definitions and only include unique ones
+  ...additionalCities,
+  ...remainingCities,
+  // ... rest of the spread operators ...
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
