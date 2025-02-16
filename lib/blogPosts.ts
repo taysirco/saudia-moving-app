@@ -8,6 +8,9 @@ export type BlogPost = {
   imageUrl: string
 }
 
+// تحديث جميع مسارات الصور لتستخدم صورة افتراضية مؤقتة
+const defaultImage = '/images/blog/placeholder.webp'
+
 export const blogPosts: Record<string, BlogPost> = {
   'tips-for-moving-furniture': {
     title: 'نصائح هامة لنقل العفش بأمان',
@@ -15,7 +18,7 @@ export const blogPosts: Record<string, BlogPost> = {
     date: '2024-03-20',
     author: 'فريق نقل عفش',
     category: 'نصائح ونقل',
-    imageUrl: '/images/blog/moving-tips.webp',
+    imageUrl: defaultImage,
     content: `
       <h2>مقدمة</h2>
       <p>يعد نقل العفش من المهام التي تحتاج إلى تخطيط وعناية خاصة. في هذا الدليل الشامل، سنقدم لكم أهم النصائح والإرشادات لضمان نقل آمن وسليم لأثاثكم.</p>
@@ -63,7 +66,7 @@ export const blogPosts: Record<string, BlogPost> = {
     date: '2024-03-18',
     author: 'خبير التغليف',
     category: 'تغليف',
-    imageUrl: '/images/blog/packing.webp',
+    imageUrl: defaultImage,
     content: `
       <h2>أهمية التغليف الصحيح</h2>
       <p>يعتبر التغليف السليم للأثاث من أهم عوامل نجاح عملية النقل. يساعد التغليف المناسب في حماية قطع الأثاث من الخدوش والكسور والتلف أثناء النقل.</p>
@@ -102,7 +105,7 @@ export const blogPosts: Record<string, BlogPost> = {
     date: '2024-03-15',
     author: 'خبير نقل العفش',
     category: 'شركات النقل',
-    imageUrl: '/images/blog/company.webp',
+    imageUrl: defaultImage,
     content: `
       <h2>معايير اختيار شركة نقل العفش</h2>
       <p>يعد اختيار شركة نقل العفش المناسبة من أهم الخطوات لضمان نقل آمن وموثوق لأثاثك. إليك أهم المعايير التي يجب مراعاتها:</p>
@@ -164,7 +167,7 @@ export const blogPosts: Record<string, BlogPost> = {
     date: '2024-03-12',
     author: 'خبير التكاليف',
     category: 'التكاليف',
-    imageUrl: '/images/blog/cost.webp',
+    imageUrl: defaultImage,
     content: `
       <h2>العوامل المؤثرة في تكلفة نقل العفش</h2>
       <p>تختلف تكلفة نقل العفش حسب عدة عوامل رئيسية. فهم هذه العوامل يساعدك في تقدير التكلفة المتوقعة وإدارة ميزانيتك بشكل أفضل.</p>
@@ -218,7 +221,7 @@ export const blogPosts: Record<string, BlogPost> = {
     date: '2024-03-10',
     author: 'خبير التخزين',
     category: 'التخزين',
-    imageUrl: '/images/blog/storage.webp',
+    imageUrl: defaultImage,
     content: `
       <h2>أهمية التخزين السليم للأثاث</h2>
       <p>يحتاج الكثير منا لتخزين الأثاث لفترات متفاوتة. التخزين السليم يحافظ على الأثاث من التلف ويضمن بقاءه بحالة جيدة.</p>
@@ -263,7 +266,7 @@ export const blogPosts: Record<string, BlogPost> = {
     date: '2024-03-08',
     author: 'خبير التنظيم',
     category: 'التخطيط',
-    imageUrl: '/images/blog/checklist.webp',
+    imageUrl: defaultImage,
     content: `
       <h2>قائمة التحقق قبل شهر من النقل</h2>
       <ul>
@@ -313,7 +316,7 @@ export const blogPosts: Record<string, BlogPost> = {
     date: '2024-03-05',
     author: 'خبير الحماية',
     category: 'الحماية والتغليف',
-    imageUrl: '/images/blog/protection.webp',
+    imageUrl: defaultImage,
     content: `
       <h2>أهمية حماية الأثاث</h2>
       <p>حماية الأثاث أثناء النقل تضمن وصوله سليماً وتجنب التكاليف الإضافية للإصلاح أو الاستبدال.</p>
@@ -358,7 +361,7 @@ export const blogPosts: Record<string, BlogPost> = {
     date: '2024-03-03',
     author: 'خبير النقل الثقيل',
     category: 'نقل متخصص',
-    imageUrl: '/images/blog/heavy.webp',
+    imageUrl: defaultImage,
     content: `
       <h2>تحضيرات نقل الأثاث الثقيل</h2>
       <p>نقل القطع الثقيلة مثل الخزائن الكبيرة والأجهزة الكهربائية الضخمة يتطلب تخطيطاً خاصاً وأدوات مناسبة.</p>
@@ -404,7 +407,7 @@ export const blogPosts: Record<string, BlogPost> = {
     date: '2024-03-01',
     author: 'خبير النقل الموسمي',
     category: 'نصائح موسمية',
-    imageUrl: '/images/blog/seasonal.webp',
+    imageUrl: defaultImage,
     content: `
       <h2>النقل في فصل الصيف</h2>
       <ul>
@@ -445,7 +448,7 @@ export const blogPosts: Record<string, BlogPost> = {
     date: '2024-02-28',
     author: 'خبير التأمين',
     category: 'التأمين والضمان',
-    imageUrl: '/images/blog/insurance.webp',
+    imageUrl: defaultImage,
     content: `
       <h2>أهمية تأمين نقل العفش</h2>
       <p>يوفر تأمين نقل العفش حماية مالية في حالة حدوث أي ضرر أو خسارة أثناء عملية النقل.</p>
