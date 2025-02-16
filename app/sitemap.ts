@@ -97,6 +97,23 @@ const SERVICES_AND_KEYWORDS = [
   {
     slug: 'furniture-storage',
     title: 'تخزين اثاث'
+  },
+  // إضافة الخدمات الجديدة مع عناوينها العربية
+  {
+    slug: 'emergency-moving',
+    title: 'نقل عفش طوارئ'
+  },
+  {
+    slug: 'hotel-moving',
+    title: 'نقل عفش فنادق'
+  },
+  {
+    slug: 'moving-with-guarantee',
+    title: 'نقل عفش مع الضمان'
+  },
+  {
+    slug: 'same-day-moving',
+    title: 'نقل عفش في نفس اليوم'
   }
 ]
 
