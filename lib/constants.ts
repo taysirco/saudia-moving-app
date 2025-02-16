@@ -1,6 +1,20 @@
-export const SITE_URL = 'https://saudiamoving.com'
+export const SITE_URL: string = 'https://saudiamoving.com'
 
-export const CITIES = [
+export type City = 
+  | 'riyadh'
+  | 'jeddah'
+  | 'dammam'
+  | 'mecca'
+  | 'medina'
+  | 'tabuk'
+  | 'abha'
+  | 'khamis-mushait'
+  | 'taif'
+  | 'yanbu'
+  | 'jubail'
+  | 'khobar'
+
+export const CITIES: City[] = [
   'riyadh',
   'jeddah', 
   'dammam',
@@ -15,7 +29,15 @@ export const CITIES = [
   'khobar',
 ]
 
-export const SERVICES = [
+export type Service = 
+  | 'furniture-moving'
+  | 'office-moving'
+  | 'villa-moving'
+  | 'apartment-moving'
+  | 'storage'
+  | 'packing'
+
+export const SERVICES: Service[] = [
   'furniture-moving',
   'office-moving',
   'villa-moving',
@@ -24,7 +46,17 @@ export const SERVICES = [
   'packing',
 ]
 
-export const STATIC_PAGES = [
+export type StaticPage = 
+  | ''
+  | 'about'
+  | 'contact'
+  | 'services'
+  | 'cities'
+  | 'blog'
+  | 'terms'
+  | 'privacy'
+
+export const STATIC_PAGES: StaticPage[] = [
   '',
   'about',
   'contact',

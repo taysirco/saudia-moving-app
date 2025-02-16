@@ -1,10 +1,10 @@
-import { SITE_URL, CITIES, SERVICES, STATIC_PAGES } from '@/lib/constants'
+import { SITE_URL, CITIES, SERVICES, STATIC_PAGES, type City, type Service, type StaticPage } from '@/lib/constants'
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [
     // الصفحات الثابتة
-    ...STATIC_PAGES.map((page) => ({
+    ...STATIC_PAGES.map((page: StaticPage) => ({
       url: `${SITE_URL}${page ? `/${page}` : ''}`,
       lastModified: new Date().toISOString(),
       changeFrequency: 'daily' as const,
@@ -12,7 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
 
     // صفحات المدن
-    ...CITIES.map((city) => ({
+    ...CITIES.map((city: City) => ({
       url: `${SITE_URL}/cities/${city}`,
       lastModified: new Date().toISOString(),
       changeFrequency: 'weekly' as const,
@@ -20,7 +20,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
 
     // صفحات الخدمات
-    ...SERVICES.map((service) => ({
+    ...SERVICES.map((service: Service) => ({
       url: `${SITE_URL}/services/${service}`,
       lastModified: new Date().toISOString(),
       changeFrequency: 'weekly' as const,
@@ -28,8 +28,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })),
 
     // صفحات الخدمات في المدن
-    ...CITIES.flatMap((city) =>
-      SERVICES.map((service) => ({
+    ...CITIES.flatMap((city: City) =>
+      SERVICES.map((service: Service) => ({
         url: `${SITE_URL}/cities/${city}/${service}`,
         lastModified: new Date().toISOString(),
         changeFrequency: 'weekly' as const,
