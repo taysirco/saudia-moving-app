@@ -1083,5 +1083,64 @@ export async function generateStaticParams() {
 }
 
 export default function CityServicePage({ params }: Props) {
-  return <CityServiceClient city={params.city} service={params.service} />
-} 
+  const { city, service } = params
+  const cityName = cityMappings[city as keyof typeof cityMappings] || city
+  const serviceTitle = getServiceTitle(service, cityName)
+  
+  return (
+    <div>
+      <h1>{serviceTitle}</h1>
+      <CityServiceClient city={city} service={service} />
+    </div>
+  )
+}
+
+// دالة مساعدة للحصول على العنوان العربي الصحيح
+function getServiceTitle(service: string, cityName: string): string {
+  const serviceMap: { [key: string]: string } = {
+    'moving-furniture': 'نقل عفش',
+    'furniture-moving': 'نقل اثاث',
+    'furniture-transport': 'شركة نقل عفش',
+    'moving-company': 'شركة نقل اثاث',
+    'furniture-moving-company': 'افضل شركة نقل عفش',
+    'best-moving-company': 'شركة نقل عفش موثوقة',
+    'cheap-moving-company': 'شركة نقل عفش رخيصة',
+    'professional-moving-company': 'شركة نقل اثاث محترفة',
+    'licensed-moving-company': 'شركة نقل عفش مرخصة',
+    'moving-with-packaging': 'نقل عفش مع التغليف',
+    'moving-with-assembly': 'نقل عفش مع التركيب',
+    'moving-with-disassembly': 'نقل عفش مع الفك',
+    // ... إضافة المزيد من الخدمات
+  }
+
+  return `${serviceMap[service] || service} في ${cityName}`
+}
+
+// تحديث تعريف الخدمات المتخصصة
+const specializedServices = {
+  'moving-furniture': 'نقل عفش',
+  'furniture-moving': 'نقل اثاث',
+  'furniture-transport': 'شركة نقل عفش',
+  'moving-company': 'شركة نقل اثاث',
+  'furniture-moving-company': 'افضل شركة نقل عفش',
+  'best-moving-company': 'شركة نقل عفش موثوقة',
+  'cheap-moving-company': 'ارخص شركة نقل عفش',
+  'professional-moving-company': 'شركة نقل اثاث محترفة',
+  'licensed-moving-company': 'شركة نقل عفش مرخصة',
+  // ... باقي الخدمات المتخصصة
+}
+
+// تحديث تعريف خدمات المدن
+const citiesServices = {
+  'riyadh': {
+    base: 'نقل عفش في الرياض',
+    services: {
+      'moving-furniture': 'نقل عفش في الرياض - خدمة نقل منزلي شاملة',
+      'furniture-moving': 'نقل اثاث في الرياض - خدمة نقل متكاملة',
+      // ... باقي الخدمات
+    }
+  },
+  // ... باقي المدن
+}
+
+// ... rest of the code ... 
