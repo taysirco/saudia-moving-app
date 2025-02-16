@@ -1,56 +1,42 @@
+import { SITE_URL, CITIES, SERVICES, STATIC_PAGES } from '@/lib/constants'
 import { MetadataRoute } from 'next'
-import { cities } from '@/lib/constants'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://your-domain.com'
-  
-  // Static pages
-  const staticPages = [
-    '',
-    '/about',
-    '/contact',
-    '/privacy',
-    '/terms',
-    '/services',
-    '/calculator',
-    '/add-company'
-  ].map(route => ({
-    url: `${baseUrl}${route}`,
-    lastModified: new Date(),
-    changeFrequency: 'daily' as const,
-    priority: route === '' ? 1 : 0.8
-  }))
+  const routes = [
+    // الصفحات الثابتة
+    ...STATIC_PAGES.map((page) => ({
+      url: `${SITE_URL}${page ? `/${page}` : ''}`,
+      lastModified: new Date().toISOString(),
+      changeFrequency: 'daily' as const,
+      priority: page === '' ? 1 : 0.8,
+    })),
 
-  // City pages
-  const cityPages = cities.map(city => ({
-    url: `${baseUrl}/${city.slug}`,
-    lastModified: new Date(),
-    changeFrequency: 'daily' as const,
-    priority: 0.9
-  }))
+    // صفحات المدن
+    ...CITIES.map((city) => ({
+      url: `${SITE_URL}/cities/${city}`,
+      lastModified: new Date().toISOString(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    })),
 
-  // Service pages for each city
-  const services = [
-    'moving-furniture',
-    'moving-company',
-    'best-moving-company',
-    'furniture-moving',
-    'cheap-moving-company',
-    'moving-companies',
-    'moving-prices',
-    'moving-with-installation',
-    'moving-with-packaging',
-    'moving-trucks'
+    // صفحات الخدمات
+    ...SERVICES.map((service) => ({
+      url: `${SITE_URL}/services/${service}`,
+      lastModified: new Date().toISOString(),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
+    })),
+
+    // صفحات الخدمات في المدن
+    ...CITIES.flatMap((city) =>
+      SERVICES.map((service) => ({
+        url: `${SITE_URL}/cities/${city}/${service}`,
+        lastModified: new Date().toISOString(),
+        changeFrequency: 'weekly' as const,
+        priority: 0.7,
+      }))
+    ),
   ]
 
-  const servicePages = cities.flatMap(city =>
-    services.map(service => ({
-      url: `${baseUrl}/${city.slug}/${service}`,
-      lastModified: new Date(),
-      changeFrequency: 'daily' as const,
-      priority: 0.7
-    }))
-  )
-
-  return [...staticPages, ...cityPages, ...servicePages]
+  return routes
 } 

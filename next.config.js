@@ -6,9 +6,8 @@ const nextConfig = {
     NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || 'https://saudiamoving.com'
   },
   experimental: {
-    // تعطيل webpack cache مؤقتاً لحل المشكلة
-    webpackBuildWorker: false,
-    serverActions: true,
+    // إزالة serverActions لأنه متاح افتراضياً الآن
+    webpackBuildWorker: true
   },
   // Add these settings to help with build
   typescript: {
@@ -44,6 +43,11 @@ const nextConfig = {
         ]
       }
     ]
+  },
+  // إضافة تكوين الصفحات الثابتة
+  output: 'standalone',
+  images: {
+    domains: ['saudiamoving.com'],
   }
 }
 
