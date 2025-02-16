@@ -1,219 +1,132 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.saudiamoving.com</loc>
-    <lastmod>2025-02-14T16:49:57.699Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
+    <loc>https://saudiamoving.com/</loc>
+    <lastmod>2025-02-16T01:29:04.868Z</lastmod>
   </url>
 
   <url>
-    <loc>https://www.saudiamoving.com/about</loc>
-    <lastmod>2025-02-14T16:49:57.700Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <loc>https://saudiamoving.com/about</loc>
+    <lastmod>2025-02-16T01:29:04.868Z</lastmod>
   </url>
 
   <url>
-    <loc>https://www.saudiamoving.com/ads</loc>
-    <lastmod>2025-02-14T16:49:57.700Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <loc>https://saudiamoving.com/contact</loc>
+    <lastmod>2025-02-16T01:29:04.868Z</lastmod>
   </url>
 
   <url>
-    <loc>https://www.saudiamoving.com/add-company</loc>
-    <lastmod>2025-02-14T16:49:57.700Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <loc>https://saudiamoving.com/services</loc>
+    <lastmod>2025-02-16T01:29:04.868Z</lastmod>
   </url>
 
   <url>
-    <loc>https://www.saudiamoving.com/[city]</loc>
-    <lastmod>2025-02-14T16:49:57.700Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <loc>https://saudiamoving.com/cities</loc>
+    <lastmod>2025-02-16T01:29:04.868Z</lastmod>
   </url>
 
   <url>
-    <loc>https://www.saudiamoving.com/calculator</loc>
-    <lastmod>2025-02-14T16:49:57.700Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <loc>https://saudiamoving.com/blog</loc>
+    <lastmod>2025-02-16T01:29:04.868Z</lastmod>
   </url>
 
   <url>
-    <loc>https://www.saudiamoving.com/cities</loc>
-    <lastmod>2025-02-14T16:49:57.700Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <loc>https://saudiamoving.com/terms</loc>
+    <lastmod>2025-02-16T01:29:04.868Z</lastmod>
   </url>
 
   <url>
-    <loc>https://www.saudiamoving.com/contact</loc>
-    <lastmod>2025-02-14T16:49:57.700Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <loc>https://saudiamoving.com/privacy</loc>
+    <lastmod>2025-02-16T01:29:04.868Z</lastmod>
   </url>
 
   <url>
-    <loc>https://www.saudiamoving.com/privacy</loc>
-    <lastmod>2025-02-14T16:49:57.700Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <loc>https://saudiamoving.com/cities/riyadh</loc>
+    <lastmod>2025-02-16T01:29:04.869Z</lastmod>
   </url>
 
   <url>
-    <loc>https://www.saudiamoving.com/services</loc>
-    <lastmod>2025-02-14T16:49:57.700Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <loc>https://saudiamoving.com/cities/jeddah</loc>
+    <lastmod>2025-02-16T01:29:04.869Z</lastmod>
   </url>
 
   <url>
-    <loc>https://www.saudiamoving.com/terms</loc>
-    <lastmod>2025-02-14T16:49:57.700Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <loc>https://saudiamoving.com/cities/dammam</loc>
+    <lastmod>2025-02-16T01:29:04.869Z</lastmod>
   </url>
 
   <url>
-    <loc>https://www.saudiamoving.com/sitemap</loc>
-    <lastmod>2025-02-14T16:49:57.700Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <loc>https://saudiamoving.com/cities/mecca</loc>
+    <lastmod>2025-02-16T01:29:04.869Z</lastmod>
   </url>
 
   <url>
-    <loc>https://www.saudiamoving.com/ads/new</loc>
-    <lastmod>2025-02-14T16:49:57.700Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <loc>https://saudiamoving.com/cities/medina</loc>
+    <lastmod>2025-02-16T01:29:04.869Z</lastmod>
   </url>
 
   <url>
-    <loc>https://www.saudiamoving.com/[city]/[service]</loc>
-    <lastmod>2025-02-14T16:49:57.700Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <loc>https://saudiamoving.com/cities/tabuk</loc>
+    <lastmod>2025-02-16T01:29:04.869Z</lastmod>
   </url>
 
   <url>
-    <loc>https://www.saudiamoving.com/[city]/moving-trucks</loc>
-    <lastmod>2025-02-14T16:49:57.700Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <loc>https://saudiamoving.com/cities/abha</loc>
+    <lastmod>2025-02-16T01:29:04.869Z</lastmod>
   </url>
 
   <url>
-    <loc>https://www.saudiamoving.com/[city]/moving-with-installation</loc>
-    <lastmod>2025-02-14T16:49:57.700Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <loc>https://saudiamoving.com/cities/khamis-mushait</loc>
+    <lastmod>2025-02-16T01:29:04.869Z</lastmod>
   </url>
 
   <url>
-    <loc>https://www.saudiamoving.com/auth/signin</loc>
-    <lastmod>2025-02-14T16:49:57.700Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <loc>https://saudiamoving.com/cities/taif</loc>
+    <lastmod>2025-02-16T01:29:04.869Z</lastmod>
   </url>
 
   <url>
-    <loc>https://www.saudiamoving.com/services/[city]</loc>
-    <lastmod>2025-02-14T16:49:57.700Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <loc>https://saudiamoving.com/cities/yanbu</loc>
+    <lastmod>2025-02-16T01:29:04.869Z</lastmod>
   </url>
 
   <url>
-    <loc>https://www.saudiamoving.com/services/filipino-movers</loc>
-    <lastmod>2025-02-14T16:49:57.700Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <loc>https://saudiamoving.com/cities/jubail</loc>
+    <lastmod>2025-02-16T01:29:04.869Z</lastmod>
   </url>
 
   <url>
-    <loc>https://www.saudiamoving.com/services/furniture-storage</loc>
-    <lastmod>2025-02-14T16:49:57.700Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <loc>https://saudiamoving.com/cities/khobar</loc>
+    <lastmod>2025-02-16T01:29:04.869Z</lastmod>
   </url>
 
   <url>
-    <loc>https://www.saudiamoving.com/services/motorcycle-moving</loc>
-    <lastmod>2025-02-14T16:49:57.700Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <loc>https://saudiamoving.com/services/furniture-moving</loc>
+    <lastmod>2025-02-16T01:29:04.869Z</lastmod>
   </url>
 
   <url>
-    <loc>https://www.saudiamoving.com/[city]/services/[service]</loc>
-    <lastmod>2025-02-14T16:49:57.700Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <loc>https://saudiamoving.com/services/office-moving</loc>
+    <lastmod>2025-02-16T01:29:04.869Z</lastmod>
   </url>
 
   <url>
-    <loc>https://www.saudiamoving.com/services/pickup-moving</loc>
-    <lastmod>2025-02-14T16:49:57.700Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <loc>https://saudiamoving.com/services/villa-moving</loc>
+    <lastmod>2025-02-16T01:29:04.869Z</lastmod>
   </url>
 
   <url>
-    <loc>https://www.saudiamoving.com/services/trained-movers</loc>
-    <lastmod>2025-02-14T16:49:57.700Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <loc>https://saudiamoving.com/services/apartment-moving</loc>
+    <lastmod>2025-02-16T01:29:04.869Z</lastmod>
   </url>
 
   <url>
-    <loc>https://www.saudiamoving.com/services/crane-lifting</loc>
-    <lastmod>2025-02-14T16:49:57.700Z</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>0.8</priority>
+    <loc>https://saudiamoving.com/services/storage</loc>
+    <lastmod>2025-02-16T01:29:04.869Z</lastmod>
   </url>
 
   <url>
-    <loc>https://www.saudiamoving.com/services/filipino-movers</loc>
-    <lastmod>2025-02-14T16:49:57.700Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://www.saudiamoving.com/services/pickup-moving</loc>
-    <lastmod>2025-02-14T16:49:57.700Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://www.saudiamoving.com/services/motorcycle-moving</loc>
-    <lastmod>2025-02-14T16:49:57.700Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://www.saudiamoving.com/services/trained-movers</loc>
-    <lastmod>2025-02-14T16:49:57.700Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://www.saudiamoving.com/services/crane-lifting</loc>
-    <lastmod>2025-02-14T16:49:57.700Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://www.saudiamoving.com/services/furniture-storage</loc>
-    <lastmod>2025-02-14T16:49:57.700Z</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
+    <loc>https://saudiamoving.com/services/packing</loc>
+    <lastmod>2025-02-16T01:29:04.869Z</lastmod>
   </url>
 </urlset>
