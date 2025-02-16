@@ -13,7 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     // صفحات المدن
     ...CITIES.map((city: City) => ({
-      url: `${SITE_URL}/cities/${city}`,
+      url: `${SITE_URL}/${city}`,
       lastModified: new Date().toISOString(),
       changeFrequency: 'weekly' as const,
       priority: 0.8,
@@ -30,7 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // صفحات الخدمات في المدن
     ...CITIES.flatMap((city: City) =>
       SERVICES.map((service: Service) => ({
-        url: `${SITE_URL}/cities/${city}/${service}`,
+        url: `${SITE_URL}/${city}/${service}`,
         lastModified: new Date().toISOString(),
         changeFrequency: 'weekly' as const,
         priority: 0.7,
