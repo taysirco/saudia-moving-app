@@ -8,7 +8,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   experimental: {
-    optimizeCss: true,
+    optimizeCss: false,
     optimizePackageImports: ['react-hot-toast', '@/components'],
   },
   compiler: {
@@ -62,6 +62,7 @@ const nextConfig = {
   },
   // إضافة تكوين الصفحات الثابتة
   output: 'standalone',
+  optimizeFonts: true,
 }
 
 module.exports = nextConfig 

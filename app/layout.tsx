@@ -12,21 +12,19 @@ const ChatBot = dynamic(() => import('@/components/ChatBot'), {
   ssr: false
 })
 
-const StatCounter = dynamic(() => import('@/components/StatCounter'), {
-  ssr: false
-})
-
 const ToasterProvider = dynamic(() => import('@/components/providers/ToasterProvider'), {
   ssr: false
 })
 
-// تحسين تحميل الخط
-const font = Noto_Kufi_Arabic({ 
+const StatCounter = dynamic(() => import('@/components/StatCounter'), {
+  ssr: false
+})
+
+const notoKufiArabic = Noto_Kufi_Arabic({
   subsets: ['arabic'],
+  weight: ['400', '500', '600', '700'],
   display: 'swap',
-  preload: true,
-  adjustFontFallback: true,
-  weight: ['400', '500', '600', '700']
+  variable: '--font-noto-kufi-arabic'
 })
 
 export const metadata: Metadata = {
@@ -44,12 +42,12 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({
-  children,
+  children
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="ar" dir="rtl">
+    <html lang="ar" dir="rtl" className={notoKufiArabic.className}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="google-site-verification" content="7Q9FsYxtglZcnse9V8wp5qw5qaGPGst7-PJc-gktbow" />
@@ -62,7 +60,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://www.statcounter.com" />
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
       </head>
-      <body className={font.className}>
+      <body>
         <RootProvider>
           <PageWrapper>
             {children}
