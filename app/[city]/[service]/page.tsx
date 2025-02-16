@@ -129,8 +129,34 @@ const citiesServices = {
       'weekend-moving': 'نقل في العطلة بعنيزة - خدمة نقل متوفرة في أيام الإجازات',
       'night-moving': 'نقل ليلي في جازان - خدمة نقل متوفرة في الفترة المسائية'
     }
+  },
+  'buraidah': {
+    // ... existing buraidah services
+  },
+  'unaizah': {
+    // ... existing unaizah services
+  },
+  'al-kharj': {
+    // ... existing al-kharj services
+  },
+  'dhahran': {
+    // ... existing dhahran services
+  },
+  'al-ahsa': {
+    // ... existing al-ahsa services
+  },
+  'hafar-al-batin': {
+    // ... existing hafar-al-batin services
+  },
+  'khafji': {
+    // ... existing khafji services
+  },
+  'al-baha': {
+    // ... existing al-baha services
+  },
+  'sharorah': {
+    // ... existing sharorah services
   }
-  // ... continue with other cities
 }
 
 // Define specialized services
@@ -149,6 +175,7 @@ const pageTitles = {
   ...citiesServices,
   ...additionalCities,
   ...remainingCities,
+  ...majorCityServices,
   // ... rest of the spread operators ...
 }
 
