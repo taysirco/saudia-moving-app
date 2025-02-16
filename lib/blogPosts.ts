@@ -180,9 +180,13 @@ export const blogPosts: Record<string, BlogPost> = {
         <div class="bg-gradient-to-r from-primary-50 to-primary-100 p-6 rounded-lg mb-8 animate-fade-in">
           <h2 class="text-2xl font-bold text-primary-800 mb-4">مقدمة</h2>
           <p class="text-gray-700 leading-relaxed">
-            يعد الانتقال إلى منزل جديد من التجارب التي تتطلب تنظيماً دقيقاً وتخطيطاً محكماً.
-            قائمة التحقق هذه ستساعدك في تنظيم عملية النقل بكفاءة عالية وتجنب النسيان أو الإهمال.
-            للمزيد من المعلومات حول خدماتنا المتكاملة، يمكنك زيارة 
+            يعد الانتقال إلى منزل جديد من أكثر التجارب التي تتطلب عناية فائقة وتنسيقاً دقيقاً بين العديد من الخطوات.
+            يحتاج الفرد في هذه المرحلة إلى التأكد من حصر جميع ممتلكاته، وتنسيق مواعيد النقل، والتواصل مع الجهات المختلفة من
+            مزودي الخدمات والهيئات المعنية. إن وضع <strong>قائمة تحقق واضحة</strong> يُسهم بشكل كبير في جعل عملية الانتقال
+            أكثر سهولة ويسراً، ويحد من الأخطاء التي قد تقع بسبب الاستعجال أو النسيان.
+            <br/><br/>
+            في هذا الدليل، جمعنا لك خلاصة خبرتنا في مجال نقل العفش والتنظيم المنزلي؛ لتقديم حزمة من الإرشادات والنصائح العملية
+            التي تضمن لك تجربة نقل مريحة وأقل تكلفة. للمزيد من المعلومات حول خدماتنا المتكاملة، يمكنك زيارة
             <a href="/services" class="text-primary-600 hover:text-primary-700 transition-colors">صفحة خدماتنا</a>.
           </p>
         </div>
@@ -216,8 +220,67 @@ export const blogPosts: Record<string, BlogPost> = {
                 <div>
                   <strong class="text-gray-800">تحديد الميزانية:</strong>
                   <p class="text-gray-600">
-                    احسب التكاليف المتوقعة وضع ميزانية واضحة تشمل أي خدمات إضافية 
-                    مثل التنظيف أو التخزين.
+                    احسب التكاليف المتوقعة وضع ميزانية واضحة تشمل أي خدمات إضافية مثل التنظيف أو التخزين.
+                    احرص على التواصل مع شركة نقل مرموقة وإجراء مقارنات بين عدة عروض سعر.
+                  </p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-6 h-6 text-primary-600 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+                <div>
+                  <strong class="text-gray-800">فرز الأغراض:</strong>
+                  <p class="text-gray-600">
+                    ابدأ بفرز الأغراض غير الضرورية التي يمكن التبرع بها أو بيعها. 
+                    هذا الإجراء يخفف من وزن النقل ويُتيح لك فرصة البدء في ترتيب منزلك الجديد دون متاعب زائدة.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="timeline-container my-8">
+          <div class="bg-white shadow-lg rounded-lg p-6 mb-6 hover:shadow-xl transition-shadow animate-fade-in-up">
+            <div class="flex items-center mb-4">
+              <span class="bg-primary-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">2</span>
+              <h2 class="text-xl font-bold text-gray-800">قبل أسبوعين من النقل</h2>
+            </div>
+            <ul class="space-y-4 list-none">
+              <li class="flex items-start">
+                <svg class="w-6 h-6 text-primary-600 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+                <div>
+                  <strong class="text-gray-800">شراء مواد التغليف:</strong>
+                  <p class="text-gray-600">
+                    جهّز صناديق كرتونية بأحجام مختلفة، ونايلون فقاعي، وشريط لاصق قوي.
+                    تأكد أيضاً من توفير أغلفة خاصة للأثاث القيم والإلكترونيات الحساسة.
+                  </p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-6 h-6 text-primary-600 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+                <div>
+                  <strong class="text-gray-800">إخطار الجهات المعنية:</strong>
+                  <p class="text-gray-600">
+                    أبلغ الجهات المختصة والجمعيات الخدمية مثل مزوّدي الإنترنت، شركات الكهرباء والماء، 
+                    بالإضافة إلى أي مؤسسات رسمية تحتاج تحديثاً لعنوانك الجديد.
+                  </p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-6 h-6 text-primary-600 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+                <div>
+                  <strong class="text-gray-800">التجهيز التدريجي للتغليف:</strong>
+                  <p class="text-gray-600">
+                    باشر تغليف المقتنيات التي لا تستخدمها يومياً مثل الملابس الموسمية والأدوات الكهربائية القليلة الاستخدام.
+                    قم بتوثيق محتوى كل صندوق واستخدام ورق ملاحظات لاصق لكتابة الغرض المحفوظ لجعل عملية التفريغ أسهل لاحقاً.
                   </p>
                 </div>
               </li>
@@ -235,7 +298,7 @@ export const blogPosts: Record<string, BlogPost> = {
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                   </svg>
                 </span>
-                حجز شركات النقل مبكراً
+                شراء مواد تغليف ذات جودة
               </li>
               <li class="flex items-center text-gray-700">
                 <span class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2">
@@ -243,7 +306,7 @@ export const blogPosts: Record<string, BlogPost> = {
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                   </svg>
                 </span>
-                ترتيب الأغراض غير الضرورية للبيع أو التبرع
+                إعداد وثائق التأمين والضمان
               </li>
               <li class="flex items-center text-gray-700">
                 <span class="w-6 h-6 bg-green-100 rounded-full flex items-center justify-center mr-2">
@@ -251,7 +314,7 @@ export const blogPosts: Record<string, BlogPost> = {
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
                   </svg>
                 </span>
-                التواصل مع المالك أو الحارس للتأكد من جاهزية المنزل الجديد
+                تنظيم الملفات الرسمية في مكان آمن
               </li>
             </ul>
           </div>
@@ -275,6 +338,14 @@ export const blogPosts: Record<string, BlogPost> = {
                 </span>
                 عدم إعلام مزوّدي الخدمات (الإنترنت، الكهرباء) مبكراً
               </li>
+              <li class="flex items-center text-gray-700">
+                <span class="w-6 h-6 bg-red-100 rounded-full flex items-center justify-center mr-2">
+                  <svg class="w-4 h-4 text-red-500" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                  </svg>
+                </span>
+                التهاون في تأمين الأثاث والأجهزة الثمينة
+              </li>
             </ul>
           </div>
         </div>
@@ -286,18 +357,28 @@ export const blogPosts: Record<string, BlogPost> = {
               <h3 class="text-lg font-semibold text-gray-800 mb-2">متى يجب أن أبدأ التحضير للنقل؟</h3>
               <p class="text-gray-600 leading-relaxed">
                 يُنصح بالبدء قبل شهر على الأقل من موعد النقل المحدد للتخطيط الجيد وتجنب الضغط.
+                حيث تمنحك هذه الفترة الوقت الكافي لإتمام جميع الإجراءات الضرورية.
               </p>
             </div>
             <div class="bg-white shadow rounded-lg p-6 hover:shadow-lg transition-all cursor-pointer">
               <h3 class="text-lg font-semibold text-gray-800 mb-2">كيف أنظم الأفكار عند التغليف؟</h3>
               <p class="text-gray-600 leading-relaxed">
                 اكتب قائمة بكل غرفة وأغراضها، وقم بوضع علامة على كل صندوق توضح محتوياته والغرفة المخصصة له في المنزل الجديد.
+                يمكنك أيضاً استخدام ألوان مختلفة لكل غرفة لجعل التفريغ أكثر سهولة.
               </p>
             </div>
             <div class="bg-white shadow rounded-lg p-6 hover:shadow-lg transition-all cursor-pointer">
               <h3 class="text-lg font-semibold text-gray-800 mb-2">ما أهمية تصوير الأثاث؟</h3>
               <p class="text-gray-600 leading-relaxed">
                 التصوير يعد دليلاً على حالة الأثاث قبل النقل، مما يسهل إثبات أي ضرر ينجم خلال عملية النقل في حال أردت المطالبة بتعويض.
+                اجعل الصور بتاريخ واضح للمزيد من المصداقية.
+              </p>
+            </div>
+            <div class="bg-white shadow rounded-lg p-6 hover:shadow-lg transition-all cursor-pointer">
+              <h3 class="text-lg font-semibold text-gray-800 mb-2">كيف أتعامل مع الأغراض القابلة للكسر؟</h3>
+              <p class="text-gray-600 leading-relaxed">
+                يُنصح بتغليفها بمواد واقية كالنايلون الفقاعي أو البطانيات المبطنة. 
+                افصل الأغراض الزجاجية والخزفية عن بقية الحمولات، مع وضع علامات تحذيرية كـ "قابل للكسر" و "هش" على العبوات.
               </p>
             </div>
           </div>
@@ -307,11 +388,18 @@ export const blogPosts: Record<string, BlogPost> = {
           <h2 class="text-2xl font-bold text-primary-800 mb-4">خاتمة</h2>
           <p class="text-gray-700 leading-relaxed">
             التنظيم الجيد هو مفتاح النجاح في عملية النقل. احرص على اتباع هذه القائمة 
-            وتكييفها حسب احتياجاتك الخاصة. تذكر أن الوقت الإضافي الذي تقضيه في التخطيط 
-            سيوفر عليك الكثير من الجهد والتوتر أثناء عملية النقل.
-            لمزيد من المعلومات حول خدماتنا وأسعارنا، يمكنك 
+            وتكييفها حسب احتياجاتك الخاصة، فمن خلال التخطيط المسبق واستخدام الأدوات الصحيحة،
+            تستطيع تفادي الكثير من المشكلات التي قد تنجم عن الارتجال والعشوائية.
+            تذكر أن الوقت الإضافي الذي تقضيه في وضع خطة متكاملة لإدارة النقل سيعود عليك
+            بالراحة ويجنبك التوتر. لمزيد من المعلومات حول خدماتنا وأسعارنا، يمكنك
             <a href="/services" class="text-primary-600 hover:text-primary-700 transition-colors">الاطلاع على قائمة خدماتنا</a>
             أو <a href="/" class="text-primary-600 hover:text-primary-700 transition-colors">زيارة صفحتنا الرئيسية</a>.
+          </p>
+          <p class="text-gray-700 leading-relaxed mt-4">
+            للاطلاع على هذا المقال بالكامل وتنسيقاته، يمكنك زيارة الرابط التالي:
+            <a href="https://www.saudimoving.com/blog/moving-checklist" class="text-primary-600 hover:text-primary-700 transition-colors">قائمة التحقق قبل النقل</a>.
+            نأمل أن تكون هذه المعلومات مفيدة لك في رحلتك نحو منزل جديد يبدأ بنظام
+            ويستمر بالراحة والطمأنينة.
           </p>
         </div>
       </div>
