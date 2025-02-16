@@ -56,18 +56,48 @@ const ALL_CITIES = [
   'buqayq'
 ]
 
-// تعريف جميع الخدمات والكلمات المفتاحية
+// تعريف الخدمات مع العناوين العربية
 const SERVICES_AND_KEYWORDS = [
-  'moving-companies',
-  'furniture-moving',
-  'moving-company',
-  'best-moving-company',
-  'cheap-moving-company',
-  'moving-with-installation',
-  'moving-with-packaging',
-  'moving-cars',
-  'storage',
-  'furniture-storage'
+  {
+    slug: 'moving-companies',
+    title: 'شركات نقل العفش'
+  },
+  {
+    slug: 'furniture-moving',
+    title: 'نقل عفش'
+  },
+  {
+    slug: 'moving-company',
+    title: 'شركة نقل عفش'
+  },
+  {
+    slug: 'best-moving-company',
+    title: 'افضل شركة نقل عفش'
+  },
+  {
+    slug: 'cheap-moving-company',
+    title: 'شركة نقل عفش رخيصة'
+  },
+  {
+    slug: 'moving-with-installation',
+    title: 'نقل عفش مع التركيب'
+  },
+  {
+    slug: 'moving-with-packaging',
+    title: 'نقل عفش مع التغليف'
+  },
+  {
+    slug: 'moving-cars',
+    title: 'سيارات نقل عفش'
+  },
+  {
+    slug: 'storage',
+    title: 'تخزين عفش'
+  },
+  {
+    slug: 'furniture-storage',
+    title: 'تخزين اثاث'
+  }
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -91,7 +121,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // صفحات المدن مع جميع الخدمات والكلمات المفتاحية
     ...ALL_CITIES.flatMap((city) => 
       SERVICES_AND_KEYWORDS.map(service => ({
-        url: `${SITE_URL}/${city}/${service}`,
+        url: `${SITE_URL}/${city}/${service.slug}`,
         lastModified: new Date().toISOString(),
         changeFrequency: 'weekly' as const,
         priority: 0.7,
