@@ -1,42 +1,73 @@
 import { SITE_URL, STATIC_PAGES } from '@/lib/constants'
 import { MetadataRoute } from 'next'
 
-// تعريف كل المدن
+// تعريف كل المدن حسب الروابط الفعلية
 const ALL_CITIES = [
-  // المنطقة الوسطى
-  'riyadh', 'al-kharj', 'majmaah', 'zulfi', 'dawadmi', 'afif', 'al-ghat', 'shaqra', 
-  'hotat-bani-tamim', 'aflaj', 'wadi-aldawasir',
-
-  // المنطقة الشرقية
-  'dammam', 'khobar', 'dhahran', 'qatif', 'jubail', 'al-ahsa', 'hafar-al-batin',
-  'khafji', 'ras-tanura', 'abqaiq', 'nariyah',
-
-  // منطقة مكة المكرمة
-  'mecca', 'jeddah', 'taif', 'rabigh', 'qunfudah', 'lith', 'khulais', 'al-jumum', 'bahra',
-
-  // المنطقة الشمالية
-  'tabuk', 'arar', 'sakaka', 'rafha', 'turaif', 'haql', 'duba',
-
-  // المنطقة الجنوبية
-  'abha', 'khamis-mushait', 'najran', 'jizan', 'sabya', 'abu-arish', 'muhayil', 'bisha',
-
-  // منطقة المدينة المنورة
-  'medina', 'yanbu', 'al-ula', 'badr', 'khaybar', 'mahd-adh-dhahab',
-
-  // منطقة القصيم
-  'buraidah', 'unaizah', 'ar-rass', 'al-badayea', 'al-mithnab', 'bukayriyah',
-
-  // منطقة حائل
-  'hail', 'baqaa', 'ghazalah', 'ash-shinan'
+  // المدن الرئيسية
+  'riyadh',
+  'jeddah',
+  'makkah',
+  'dammam',
+  'madinah',
+  'taif',
+  'khobar',
+  'tabuk',
+  'umluj',
+  'buraidah',
+  'hofuf',
+  'hafer-albatin',
+  'hail',
+  'jubail',
+  'najran',
+  'yanbu',
+  'sakaka',
+  'jazan',
+  'arar',
+  'qatif',
+  'baha',
+  'wadi-aldawasir',
+  'qunfudhah',
+  'khamis-mushait',
+  'abha',
+  'kharj',
+  'unaizah',
+  'zulfi',
+  'bisha',
+  'saihat',
+  'rass',
+  'qurayyat',
+  'ahsa',
+  'majmaah',
+  'dawadmi',
+  'shaqra',
+  'rabigh',
+  'sabya',
+  'laith',
+  'baljurashi',
+  'wajh',
+  'turaif',
+  'khafji',
+  'aflaj',
+  'rafha',
+  'shanan',
+  'diriyah',
+  'tarut',
+  'duba',
+  'buqayq'
 ]
 
-// تعريف الخدمات المتاحة لكل مدينة
-const CITY_SERVICES = [
+// تعريف جميع الخدمات والكلمات المفتاحية
+const SERVICES_AND_KEYWORDS = [
   'moving-companies',
+  'furniture-moving',
+  'moving-company',
+  'best-moving-company',
+  'cheap-moving-company',
   'moving-with-installation',
   'moving-with-packaging',
   'moving-cars',
-  'storage'
+  'storage',
+  'furniture-storage'
 ]
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -57,17 +88,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.9,
     })),
 
-    // صفحات المدن مع شركات النقل
-    ...ALL_CITIES.map((city) => ({
-      url: `${SITE_URL}/${city}/moving-companies`,
-      lastModified: new Date().toISOString(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.9,
-    })),
-
-    // صفحات المدن مع الخدمات المختلفة
+    // صفحات المدن مع جميع الخدمات والكلمات المفتاحية
     ...ALL_CITIES.flatMap((city) => 
-      CITY_SERVICES.filter(service => service !== 'moving-companies').map(service => ({
+      SERVICES_AND_KEYWORDS.map(service => ({
         url: `${SITE_URL}/${city}/${service}`,
         lastModified: new Date().toISOString(),
         changeFrequency: 'weekly' as const,
@@ -86,6 +109,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${SITE_URL}/blog`,
       lastModified: new Date().toISOString(),
       changeFrequency: 'weekly' as const,
+      priority: 0.6,
+    },
+    {
+      url: `${SITE_URL}/add-company`,
+      lastModified: new Date().toISOString(),
+      changeFrequency: 'monthly' as const,
       priority: 0.6,
     }
   ]
