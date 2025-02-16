@@ -8,34 +8,9 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   experimental: {
-    optimizeCss: false,
-    optimizePackageImports: ['react-hot-toast', '@/components'],
+    optimizeCss: true,
+    optimizeServerComponents: true,
   },
-  compiler: {
-    removeConsole: process.env.NODE_ENV === 'production',
-  },
-  headers: async () => [
-    {
-      source: '/:all*(svg|jpg|png)',
-      locale: false,
-      headers: [
-        {
-          key: 'Cache-Control',
-          value: 'public, max-age=31536000, immutable',
-        },
-      ],
-    },
-    {
-      source: '/fonts/:all*',
-      locale: false,
-      headers: [
-        {
-          key: 'Cache-Control',
-          value: 'public, max-age=31536000, immutable',
-        },
-      ],
-    },
-  ],
   env: {
     NEXT_PUBLIC_SITE_URL: process.env.NEXT_PUBLIC_SITE_URL || 'https://saudiamoving.com'
   },
@@ -60,9 +35,41 @@ const nextConfig = {
     }
     return config
   },
+  async headers() {
+    return [
+      {
+        source: '/:all*(svg|jpg|png)',
+        locale: false,
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, must-revalidate'
+          }
+        ],
+      },
+      {
+        source: '/fonts/:all*',
+        locale: false,
+        headers: [
+          {
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, must-revalidate'
+          }
+        ],
+      },
+      {
+        source: '/api/:path*',
+        headers: [
+          { key: 'Access-Control-Allow-Credentials', value: 'true' },
+          { key: 'Access-Control-Allow-Origin', value: '*' },
+          { key: 'Access-Control-Allow-Methods', value: 'GET,DELETE,PATCH,POST,PUT' },
+          { key: 'Access-Control-Allow-Headers', value: 'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version' },
+        ]
+      }
+    ]
+  },
   // إضافة تكوين الصفحات الثابتة
   output: 'standalone',
-  optimizeFonts: true,
 }
 
 module.exports = nextConfig 

@@ -3,70 +3,74 @@ import { Metadata } from 'next'
 import { Noto_Kufi_Arabic } from 'next/font/google'
 import RootProvider from '@/components/providers/RootProvider'
 import './globals.css'
-import dynamic from 'next/dynamic'
-import PageWrapper from '@/components/PageWrapper'
+import ChatBot from '@/components/ChatBot'
+import { Toaster } from 'react-hot-toast'
+import StatCounter from '@/components/StatCounter'
 
-// تحميل المكونات بشكل متأخر
-const ChatBot = dynamic(() => import('@/components/ChatBot'), {
-  loading: () => null,
-  ssr: false
-})
-
-const ToasterProvider = dynamic(() => import('@/components/providers/ToasterProvider'), {
-  ssr: false
-})
-
-const StatCounter = dynamic(() => import('@/components/StatCounter'), {
-  ssr: false
-})
-
-const notoKufiArabic = Noto_Kufi_Arabic({
+const font = Noto_Kufi_Arabic({ 
   subsets: ['arabic'],
-  weight: ['400', '500', '600', '700'],
   display: 'swap',
-  variable: '--font-noto-kufi-arabic'
+  preload: true
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://saudiamoving.com'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://www.saudimoving.com'),
   title: {
     default: 'نقل عفش - خدمات نقل الأثاث في المملكة العربية السعودية',
     template: '%s | نقل عفش'
   },
-  description: 'خدمات نقل العفش والأثاث في جميع مدن المملكة العربية السعودية مع أفضل الشركات المرخصة',
+  description: 'خدمات نقل العفش والأثاث في جميع مدن المملكة العربية السعودية مع أفضل الشركات المرخصة. نقل عفش آمن مع الضمان، فك وتركيب، تغليف احترافي، وخدمة 24 ساعة.',
   openGraph: {
     type: 'website',
     locale: 'ar_SA',
-    siteName: 'نقل عفش'
+    siteName: 'نقل عفش',
+    images: [
+      {
+        url: '/og-image.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'نقل عفش في السعودية'
+      }
+    ]
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'نقل عفش - خدمات نقل الأثاث في المملكة العربية السعودية',
+    description: 'خدمات نقل العفش والأثاث في جميع مدن المملكة العربية السعودية',
+    images: ['/og-image.jpg']
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: '7Q9FsYxtglZcnse9V8wp5qw5qaGPGst7-PJc-gktbow'
   }
 }
 
 export default function RootLayout({
-  children
+  children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="ar" dir="rtl" className={notoKufiArabic.className}>
+    <html lang="ar" dir="rtl">
       <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta name="google-site-verification" content="7Q9FsYxtglZcnse9V8wp5qw5qaGPGst7-PJc-gktbow" />
-        
-        {/* Preconnect to external domains */}
-        <link rel="preconnect" href="https://www.statcounter.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        
-        {/* DNS Prefetch */}
-        <link rel="dns-prefetch" href="https://www.statcounter.com" />
-        <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+        <link rel="canonical" href={process.env.NEXT_PUBLIC_SITE_URL} />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
       </head>
-      <body>
+      <body className={font.className}>
         <RootProvider>
-          <PageWrapper>
-            {children}
-          </PageWrapper>
+          {children}
           <ChatBot />
-          <ToasterProvider />
+          <Toaster position="top-center" />
           <StatCounter />
         </RootProvider>
       </body>

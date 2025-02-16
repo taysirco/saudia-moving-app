@@ -4,7 +4,7 @@ import Script from 'next/script'
 export default function StatCounter() {
   return (
     <>
-      <Script strategy="lazyOnload" id="statcounter-config">
+      <Script strategy="afterInteractive">
         {`
           var sc_project=13087897; 
           var sc_invisible=1; 
@@ -12,10 +12,9 @@ export default function StatCounter() {
         `}
       </Script>
       <Script
-        strategy="lazyOnload"
+        strategy="afterInteractive"
         src="https://www.statcounter.com/counter/counter.js"
         async
-        id="statcounter-script"
       />
       <noscript>
         <div className="statcounter">
@@ -30,7 +29,6 @@ export default function StatCounter() {
               src="https://c.statcounter.com/13087897/0/5d107ca6/1/"
               alt="Web Analytics"
               referrerPolicy="no-referrer-when-downgrade"
-              loading="lazy"
             />
           </a>
         </div>

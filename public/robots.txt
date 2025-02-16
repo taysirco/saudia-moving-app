@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /api/
 
-Sitemap: https://saudiamoving.com/sitemap.xml 
+Sitemap: https://www.saudimoving.com/sitemap.xml 
