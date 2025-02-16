@@ -4,7 +4,7 @@ import { Noto_Kufi_Arabic } from 'next/font/google'
 import RootProvider from '@/components/providers/RootProvider'
 import './globals.css'
 import ChatBot from '@/components/ChatBot'
-import { Toaster } from 'react-hot-toast'
+import ClientToaster from '@/components/ClientToaster'
 import StatCounter from '@/components/StatCounter'
 
 const font = Noto_Kufi_Arabic({ 
@@ -70,7 +70,7 @@ export default function RootLayout({
         <RootProvider>
           {children}
           <ChatBot />
-          <Toaster position="top-center" />
+          <ClientToaster />
           <StatCounter />
         </RootProvider>
       </body>
