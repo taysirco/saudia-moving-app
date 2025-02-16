@@ -4,6 +4,7 @@ import { Noto_Kufi_Arabic } from 'next/font/google'
 import RootProvider from '@/components/providers/RootProvider'
 import './globals.css'
 import dynamic from 'next/dynamic'
+import PageWrapper from '@/components/PageWrapper'
 
 // تحميل المكونات بشكل متأخر
 const ChatBot = dynamic(() => import('@/components/ChatBot'), {
@@ -63,7 +64,9 @@ export default function RootLayout({
       </head>
       <body className={font.className}>
         <RootProvider>
-          {children}
+          <PageWrapper>
+            {children}
+          </PageWrapper>
           <ChatBot />
           <Toaster position="top-center" />
           <StatCounter />
