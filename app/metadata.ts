@@ -4,6 +4,9 @@ export const metadata = {
     default: 'نقل عفش | خدمات نقل الأثاث في السعودية',
     template: '%s | نقل عفش'
   },
+  verification: {
+    google: '7Q9FsYxtglZcnse9V8wp5qw5qaGPGst7-PJc-gktbow',
+  },
   description: 'خدمات نقل عفش احترافية في جميع مدن المملكة العربية السعودية. نقل آمن وسريع مع ضمان سلامة الأثاث',
   keywords: ['نقل عفش', 'نقل اثاث', 'شركة نقل', 'خدمات نقل', 'السعودية'],
   authors: [{ name: 'نقل عفش' }],
