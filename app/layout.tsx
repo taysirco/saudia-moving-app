@@ -5,6 +5,7 @@ import RootProvider from '@/components/providers/RootProvider'
 import './globals.css'
 import ChatBot from '@/components/ChatBot'
 import { Toaster } from 'react-hot-toast'
+import StatCounter from '@/components/StatCounter'
 
 const font = Noto_Kufi_Arabic({ subsets: ['arabic'] })
 
@@ -40,6 +41,7 @@ export default function RootLayout({
           {children}
           <ChatBot />
           <Toaster position="top-center" />
+          <StatCounter />
         </RootProvider>
       </body>
     </html>
