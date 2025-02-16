@@ -16,7 +16,7 @@ const StatCounter = dynamic(() => import('@/components/StatCounter'), {
   ssr: false
 })
 
-const Toaster = dynamic(() => import('react-hot-toast').then(mod => mod.Toaster), {
+const ToasterProvider = dynamic(() => import('@/components/providers/ToasterProvider'), {
   ssr: false
 })
 
@@ -68,7 +68,7 @@ export default function RootLayout({
             {children}
           </PageWrapper>
           <ChatBot />
-          <Toaster position="top-center" />
+          <ToasterProvider />
           <StatCounter />
         </RootProvider>
       </body>
