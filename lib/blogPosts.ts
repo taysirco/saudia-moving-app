@@ -20,40 +20,193 @@ export const blogPosts: Record<string, BlogPost> = {
     category: 'نصائح ونقل',
     imageUrl: defaultImage,
     content: `
-      <h2>مقدمة</h2>
-      <p>
-        يعد نقل العفش من المهام التي تتطلب تخطيطاً دقيقاً وعناية فائقة. 
-        يتضمن هذا الاختيار المناسب لشركة النقل، وتحديد المواد اللازمة للتغليف، 
-        بالإضافة إلى وضع جدول زمني واضح للانتقال. تخطيط عملية النقل يساعدك على 
-        تقليل المتاعب والتكاليف، وضمان وصول أثاثك بسلام ودون أضرار.
-      </p>
-      
-      <h2>تقييم حجم العفش وتخطيط المسار</h2>
-      <p>
-        قبل البدء في نقل أثاثك، قم بقياس كل قطعة أثاث وتدوين ملاحظات حول 
-        وزنها وأبعادها، خاصة للأشياء الكبيرة أو الضخمة. هذا يساعدك في تحديد 
-        نوع المركبة المطلوبة وعدد العمال اللازمين. كما يُنصح بالتعرف على 
-        المسار بين منزلك الحالي والجديد، ومعرفة أي صعوبات مثل الطرق الضيقة 
-        أو الازدحام المروري.
-      </p>
-      
-      <h2>الأسئلة الأكثر شيوعاً</h2>
-      <ul>
-        <li><strong>هل هناك وقت محدد أفضل لنقل العفش؟</strong> 
-          يفضل الانتقال في أيام منتصف الأسبوع والابتعاد عن فترات الذروة 
-          لتجنب الازدحام وزيادة التكاليف.
-        </li>
-        <li><strong>كيف أحافظ على سلامة الأثاث القيم؟</strong>
-          بتغليفه جيداً بمواد عالية الجودة والتأكد من تثبيته بإحكام 
-          أثناء عملية النقل.
-        </li>
-      </ul>
-      
-      <h2>نصائح إضافية</h2>
-      <p>
-        احرص على التواصل المستمر مع شركة النقل لتجنب أي تأخير مفاجئ، 
-        وتأمين الأثاث إن أمكن، لضمان تغطية أي أضرار محتملة قد تحدث في الطريق.
-      </p>
+      <div class="prose prose-lg max-w-none">
+        <div class="bg-gradient-to-r from-primary-50 to-primary-100 p-6 rounded-lg mb-8 animate-fade-in">
+          <h2 class="text-2xl font-bold text-primary-800 mb-4">مقدمة</h2>
+          <p class="text-gray-700 leading-relaxed">
+            يعد نقل العفش من أكثر التجارب التي تحتاج إلى تخطيط صارم ودقيق لضمان أن تتم العملية بأمان وسلاسة. في هذه المرحلة، 
+            يتعين عليك وضع جدول زمني واضح وتحديد الأولويات التي ستمكّنك من تفادي المتاعب المحتملة. إن اختيار شركة نقل موثوقة 
+            وتوفير المواد اللازمة للتغليف ليس إلا جزءاً واحداً من المعادلة؛ حيث يُلزم الأمر أيضاً بمعرفة ما يجب فعله في المنزل 
+            القديم قبل المغادرة وخطوات استقبال الأثاث في المنزل الجديد. يعتبر تحديد عدد العاملين المطلوب، ومعرفة حجم الأثاث 
+            ووزنه، وكذلك التعرف على أي عقبات على الطريق من العناصر الجوهرية لتجربة نقل ناجحة.
+            <br/><br/>
+            في هذا الدليل الشامل، سنقدم لك نصائح عملية للحفاظ على سلامة عفشك وتجنّب التلف، بالإضافة إلى إرشادات تتعلق بالتواصل 
+            مع الجهات الرسمية كالكهرباء والماء ومزوّدي الإنترنت. كل ذلك يهدف إلى تسهيل عملية النقل وضمان خلوّها من المفاجآت 
+            غير المرغوب فيها. للمزيد من المعلومات حول خدماتنا المتكاملة في مجال نقل العفش، يمكنك زيارة 
+            <a href="/services" class="text-primary-600 hover:text-primary-700 transition-colors">صفحة خدماتنا</a>.
+          </p>
+        </div>
+        
+        <div class="timeline-container my-8">
+          <div class="bg-white shadow-lg rounded-lg p-6 mb-6 hover:shadow-xl transition-shadow">
+            <div class="flex items-center mb-4">
+              <span class="bg-primary-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">1</span>
+              <h2 class="text-xl font-bold text-gray-800">تقييم حجم العفش وتخطيط المسار</h2>
+            </div>
+            <p class="text-gray-700 leading-relaxed">
+              قبل البدء في نقل أثاثك، قم بقياس كل قطعة وتدوين أبعادها الدقيقة. يساعد هذا الأمر في معرفة عدد الصناديق أو 
+              نوع المركبة المطلوبة، فضلاً عن عدد العمال أو الفنيين الذين ستحتاج إليهم. تذكّر أيضاً الاطلاع على طرقات 
+              المنطقة وفحص أي عقبات مثل الطرق الضيقة أو التحويلات المرورية، الأمر الذي قد يؤثر على وقت وتكلفة النقل.
+              <br/><br/>
+              إن كنت من سكان المناطق المزدحمة، يُفضل اختيار توقيت مناسب خارج ساعات الذروة، وعادة ما تكون الفترة الصباحية 
+              أو منتصف الأسبوع هي الأفضل لتفادي الازدحام وتلافي تكلفة إضافية محتملة. لا تنس إخطار جيرانك أو استئذانهم عند 
+              استخدام المصاعد أو إيقاف الشاحنات بالقرب من المداخل، فذلك يترك انطباعاً جيداً ويسهّل العملية.
+            </p>
+          </div>
+        </div>
+        
+        <div class="timeline-container my-8">
+          <div class="bg-white shadow-lg rounded-lg p-6 mb-6 hover:shadow-xl transition-shadow animate-fade-in-up">
+            <div class="flex items-center mb-4">
+              <span class="bg-primary-600 text-white w-8 h-8 rounded-full flex items-center justify-center mr-3">2</span>
+              <h2 class="text-xl font-bold text-gray-800">تجهيز مواد التغليف وبدء التحضيرات</h2>
+            </div>
+            <ul class="space-y-4 list-none">
+              <li class="flex items-start">
+                <svg class="w-6 h-6 text-primary-600 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+                <div>
+                  <strong class="text-gray-800">اختيار المواد المناسبة:</strong>
+                  <p class="text-gray-600">
+                    حضّر صناديق كرتونية قوية بأحجام مختلفة، ونايلون فقاعي، وأشرطة لاصقة متينة. 
+                    لا تنسَ توفير قطع من الورق المقوّى أو الأغطية الخاصة لحماية الأسطح الحادة أو الثمينة مثل الزجاج والتحف.
+                  </p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-6 h-6 text-primary-600 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+                <div>
+                  <strong class="text-gray-800">فرز المُقتنيات:</strong>
+                  <p class="text-gray-600">
+                    ابدأ بفرز الأغراض التي لا تستخدمها بانتظام مثل الملابس الموسمية أو المكتبات الكبيرة. 
+                    يمكنك التبرع ببعض الكتب القديمة أو الأثاث الزائد. كل غرض تتخلص منه الآن هو مساحة إضافية 
+                    توفّرها في منزلك الجديد.
+                  </p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <svg class="w-6 h-6 text-primary-600 mr-2 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+                <div>
+                  <strong class="text-gray-800">تغليف مُبكِّر:</strong>
+                  <p class="text-gray-600">
+                    يُنصح ببدء التغليف قبل أسبوعين على الأقل من موعد النقل إذا كانت لديك مساحة لتخزين الصناديق. 
+                    قم بتسجيل محتويات كل صندوق بوضوح، ولا تنسَ وضع ملاحظات مثل "قابل للكسر" و"علبة الشتاء" لتسهيل 
+                    عملية التفريغ لاحقاً.
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="my-8 animate-fade-in-up">
+          <h2 class="text-2xl font-bold text-gray-800 mb-6">الأسئلة الأكثر شيوعاً</h2>
+          <div class="space-y-4">
+            <div class="bg-white shadow rounded-lg p-6 hover:shadow-lg transition-all cursor-pointer">
+              <h3 class="text-lg font-semibold text-gray-800 mb-2">هل هناك وقت محدد أفضل لنقل العفش؟</h3>
+              <p class="text-gray-600 leading-relaxed">
+                يفضل الانتقال في أيام منتصف الأسبوع والابتعاد عن فترات الذروة لتجنب الازدحام وزيادة التكاليف. 
+                كما أن صباح الأيام العادية يكون في الغالب أكثر هدوءًا من عطلات نهاية الأسبوع، وقد تحصل على أسعار أفضل 
+                من بعض شركات النقل.
+              </p>
+            </div>
+            <div class="bg-white shadow rounded-lg p-6 hover:shadow-lg transition-all cursor-pointer">
+              <h3 class="text-lg font-semibold text-gray-800 mb-2">كيف أحافظ على سلامة الأثاث القيم؟</h3>
+              <p class="text-gray-600 leading-relaxed">
+                تأكد من تغليفه جيداً بمواد عالية الجودة والتأكد من تثبيته بإحكام أثناء عملية النقل. 
+                يمكنك أيضاً استخدام بطانيات ثقيلة أو زوايا حماية معدنية للمواضع الحادة أو الزجاجية. 
+                إذا كانت لديك قطع فنية أو تحف ثمينة، استشر متخصصين في تغليف الأعمال الفنية لاستعمال مواد خاصة 
+                تمنع الاهتزاز والرطوبة.
+              </p>
+            </div>
+            <div class="bg-white shadow rounded-lg p-6 hover:shadow-lg transition-all cursor-pointer">
+              <h3 class="text-lg font-semibold text-gray-800 mb-2">ما أهمية التأمين على الأثاث؟</h3>
+              <p class="text-gray-600 leading-relaxed">
+                قد يحدث أحياناً تلف للبضائع أثناء النقل بسبب عوامل مختلفة. لذا، يوفّر لك التأمين حماية مالية إذا 
+                تعرضت أغراضك للضرر أو الفقد. ينصح بالبحث عن شركة نقل توفر تغطية تأمينية جيدة أو التعاقد مع شركة تأمين 
+                منفصلة لضمان أعلى مستوى من الأمان للقطع القيمة.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-blue-50 border-l-4 border-blue-400 p-4 my-6">
+          <div class="flex">
+            <div class="flex-shrink-0">
+              <svg class="h-5 w-5 text-blue-400" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clip-rule="evenodd"/>
+              </svg>
+            </div>
+            <div class="ml-3">
+              <p class="text-sm text-blue-700 leading-relaxed">
+                <strong class="font-medium text-blue-800">إضافة مهمة:</strong> 
+                احرص على التواصل المستمر مع شركة النقل لتجنب أي تأخير مفاجئ، وتأمين الأثاث إن أمكن، 
+                لضمان تغطية أي أضرار محتملة قد تحدث في الطريق. ومن الجيد أيضاً تجهيز حقيبة صغيرة تحتوي على 
+                مستلزمات أساسية مثل أدوات النظافة الشخصية والملابس للأيام الأولى في منزلك الجديد.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="bg-gradient-to-r from-primary-50 to-primary-100 p-6 rounded-lg mt-8">
+          <h2 class="text-2xl font-bold text-primary-800 mb-4">خاتمة</h2>
+          <p class="text-gray-700 leading-relaxed">
+            عند اتباع النصائح والإرشادات المذكورة أعلاه، يمكنك تحويل عملية نقل الأثاث من مهمة مرهقة إلى تجربة أكثر سلاسة 
+            وإيجابية. تذكّر دائماً أن الاستعداد المسبق هو أساس كل خطوة ناجحة؛ فاستخدام الأدوات المناسبة، وفرز الأغراض، 
+            واختيار وقت النقل بعناية كلها عوامل تصنع فرقاً كبيراً في النهاية.
+            <br/><br/>
+            ننصحك أيضاً بقراءة المزيد من النصائح والتجارب المتعلقة بـ
+            <a href="https://www.saudimoving.com/blog" class="text-primary-600 hover:text-primary-700 transition-colors">مدونة نقل العفش السعودية</a>
+            للحصول على حصيلة أكبر من المعلومات المفيدة. وللاطلاع على خيارات الخدمة المتاحة، يُمكنك دائماً زيارة 
+            <a href="/services" class="text-primary-600 hover:text-primary-700 transition-colors">صفحة خدماتنا</a>
+            أو العودة إلى <a href="/" class="text-primary-600 hover:text-primary-700 transition-colors">الصفحة الرئيسية</a>.
+          </p>
+        </div>
+      </div>
+
+      <style>
+        @keyframes fade-in {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+        
+        @keyframes fade-in-up {
+          from {
+            opacity: 0;
+            transform: translateY(20px);
+          }
+          to {
+            opacity: 1;
+            transform: translateY(0);
+          }
+        }
+        
+        .animate-fade-in {
+          animation: fade-in 0.5s ease-out;
+        }
+        
+        .animate-fade-in-up {
+          animation: fade-in-up 0.5s ease-out;
+        }
+        
+        .timeline-container > div {
+          animation: fade-in-up 0.5s ease-out;
+          animation-fill-mode: both;
+        }
+        
+        .timeline-container > div:nth-child(2) {
+          animation-delay: 0.2s;
+        }
+        
+        .timeline-container > div:nth-child(3) {
+          animation-delay: 0.4s;
+        }
+      </style>
     `
   },
   'packing-guide': {
